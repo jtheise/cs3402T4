@@ -119,6 +119,7 @@
             this.buttonEvents.TabIndex = 8;
             this.buttonEvents.Text = "Events";
             this.buttonEvents.UseVisualStyleBackColor = true;
+            this.buttonEvents.Click += new System.EventHandler(this.buttonEvents_Click);
             // 
             // buttonNotifications
             // 
@@ -130,6 +131,7 @@
             this.buttonNotifications.TabIndex = 11;
             this.buttonNotifications.Text = "Notifications";
             this.buttonNotifications.UseVisualStyleBackColor = true;
+            this.buttonNotifications.Click += new System.EventHandler(this.buttonNotifications_Click);
             // 
             // buttonOrganizations
             // 
@@ -141,6 +143,7 @@
             this.buttonOrganizations.TabIndex = 12;
             this.buttonOrganizations.Text = "Organizations";
             this.buttonOrganizations.UseVisualStyleBackColor = true;
+            this.buttonOrganizations.Click += new System.EventHandler(this.buttonOrganizations_Click);
             // 
             // buttonReports
             // 
@@ -152,6 +155,7 @@
             this.buttonReports.TabIndex = 13;
             this.buttonReports.Text = "Reports";
             this.buttonReports.UseVisualStyleBackColor = true;
+            this.buttonReports.Click += new System.EventHandler(this.buttonReports_Click);
             // 
             // buttonHelp
             // 

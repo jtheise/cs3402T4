@@ -100,6 +100,30 @@
     <Compile Include="SidePanels\ClassSidePanel.Designer.cs">
       <DependentUpon>ClassSidePanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="SidePanels\EventsSidePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SidePanels\EventsSidePanel.Designer.cs">
+      <DependentUpon>EventsSidePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SidePanels\NotificationsSidePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SidePanels\NotificationsSidePanel.Designer.cs">
+      <DependentUpon>NotificationsSidePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SidePanels\OrganizationsSidePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SidePanels\OrganizationsSidePanel.Designer.cs">
+      <DependentUpon>OrganizationsSidePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SidePanels\ReportsSidePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SidePanels\ReportsSidePanel.Designer.cs">
+      <DependentUpon>ReportsSidePanel.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="formLogin.resx">
       <DependentUpon>formLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +150,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SidePanels\ClassSidePanel.resx">
       <DependentUpon>ClassSidePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SidePanels\EventsSidePanel.resx">
+      <DependentUpon>EventsSidePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SidePanels\NotificationsSidePanel.resx">
+      <DependentUpon>NotificationsSidePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SidePanels\OrganizationsSidePanel.resx">
+      <DependentUpon>OrganizationsSidePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SidePanels\ReportsSidePanel.resx">
+      <DependentUpon>ReportsSidePanel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

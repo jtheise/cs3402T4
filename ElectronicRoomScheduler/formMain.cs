@@ -11,58 +11,53 @@ namespace ElectronicRoomScheduler
 {
     public partial class formMain : Form
     {
-        private List<string> History = new List<string>();
+        private Stack<string> History = new Stack<string>();
 
         public void GoBack()
         {
-
+            LoadScreen(History.Pop());
         }
+
 
         public void ClearScreen()
         {
+            ClearScreen(false);
+        }
+
+        public void ClearScreen(bool clearBoth)
+        {
             containerLeftRight.Panel2.Controls.Clear();
+            
+            
+            if (clearBoth)
+                containerLeftRight.Panel1.Controls.Clear();
+
         }
 
         public void Login(string Name)
         {
             if (Name == "student")
             {
-                
                 buttonReports.Visible = false;
-                
-
             }
         }
 
 
         public void LoadScreen(string screenName)
         {
-            History.Add(screenName);
-
+            History.Push(screenName);
 
             if (screenName == "AddClass")
             {
-                Screens.AddClassScreen addClass = new Screens.AddClassScreen();
-                
-
                 containerLeftRight.Panel2.Controls.Clear();
-                containerLeftRight.Panel2.Controls.Add(addClass);
-
-                
-
-                addClass.Focus();
+                containerLeftRight.Panel2.Controls.Add(new Screens.AddClassScreen());
             }
 
             if (screenName == "EditClass")
             {
-                Screens.EditClassScreen editClass = new Screens.EditClassScreen();
                 containerLeftRight.Panel2.Controls.Clear();
-                containerLeftRight.Panel2.Controls.Add(editClass);
-
-                
+                containerLeftRight.Panel2.Controls.Add(new Screens.EditClassScreen());   
             }
-
-
         }
 
 
@@ -78,31 +73,61 @@ namespace ElectronicRoomScheduler
 
         private void formMain_Load(object sender, EventArgs e)
         {
-
             formLogin login = new formLogin();
 
             this.Visible = false;
             login.ShowDialog();
             this.Visible = true;
 
+            containerLeftRight.Panel2.Controls.Add(new Screens.HomeScreen());
         }
 
         private void buttonHome_Click(object sender, EventArgs e)
         {
-            buttonOrganizations.Visible = true;
+            ClearScreen(true);
+
+            containerLeftRight.Panel2.Controls.Add(new Screens.HomeScreen());
         }
 
         private void buttonHelp_Click(object sender, EventArgs e)
         {
-            buttonOrganizations.Visible = false;
+
         }
 
         private void buttonClasses_Click(object sender, EventArgs e)
         {
-            containerLeftRight.Panel1.Controls.Clear();
-            containerLeftRight.Panel1.Controls.Add(new SidePanels.ClassSidePanel());
+            ClearScreen(true);
 
-            ClearScreen();
+            containerLeftRight.Panel1.Controls.Add(new SidePanels.ClassSidePanel());
+        }
+
+        private void buttonEvents_Click(object sender, EventArgs e)
+        {
+            ClearScreen(true);
+
+            containerLeftRight.Panel1.Controls.Add(new SidePanels.EventsSidePanel());
+        }
+
+        private void buttonNotifications_Click(object sender, EventArgs e)
+        {
+            ClearScreen(true);
+
+            containerLeftRight.Panel1.Controls.Add(new SidePanels.NotificationsSidePanel());
+        }
+
+        private void buttonOrganizations_Click(object sender, EventArgs e)
+        {
+            ClearScreen(true);
+
+            containerLeftRight.Panel1.Controls.Add(new SidePanels.OrganizationsSidePanel());
+        }
+
+        private void buttonReports_Click(object sender, EventArgs e)
+        {
+            ClearScreen(true);
+
+            
+            containerLeftRight.Panel1.Controls.Add(new SidePanels.ReportsSidePanel());
         }
 
     }

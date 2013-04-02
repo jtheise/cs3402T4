@@ -73,7 +73,7 @@
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkLabel1);
             this.Name = "ClassSidePanel";
-            this.Size = new System.Drawing.Size(155, 436);
+            this.Size = new System.Drawing.Size(160, 600);
             this.ResumeLayout(false);
             this.PerformLayout();
 
