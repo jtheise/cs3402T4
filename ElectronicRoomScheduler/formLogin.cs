@@ -16,22 +16,24 @@ namespace ElectronicRoomScheduler
             InitializeComponent();
         }
 
+        bool Authenticated = false;
+
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             if (textBoxName.Text == "student")
             {
                 Program.GetParent().Login("student");
-
+                Authenticated = true;
                 this.Close();
             }
             else if (textBoxName.Text == "professor")
             {
-
+                Authenticated = true;
                 this.Close();
             }
             else if (textBoxName.Text == "admin")
             {
-
+                Authenticated = true;
                 this.Close();
             }
             else
@@ -52,7 +54,13 @@ namespace ElectronicRoomScheduler
 
         private void formLogin_Load(object sender, EventArgs e)
         {
-            textBoxName.Focus();
+            textBoxName.Select();
+        }
+
+        private void formLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!Authenticated)
+                Application.Exit();
         }
     }
 }
