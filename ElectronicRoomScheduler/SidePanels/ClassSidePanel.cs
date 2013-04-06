@@ -52,5 +52,10 @@ namespace ElectronicRoomScheduler.SidePanels
         {
             Program.GetParent().LoadScreen("EditRooms");
         }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Program.GetParent().LoadScreen("DeleteClass");
+        }
     }
 }

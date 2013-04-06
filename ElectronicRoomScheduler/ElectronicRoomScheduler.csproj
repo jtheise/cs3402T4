@@ -88,6 +88,12 @@
     <Compile Include="Screens\AssignRoomsScreen.Designer.cs">
       <DependentUpon>AssignRoomsScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\DefaultBuildingsScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\DefaultBuildingsScreen.Designer.cs">
+      <DependentUpon>DefaultBuildingsScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\DefaultClassScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -117,6 +123,12 @@
     </Compile>
     <Compile Include="Screens\HomeScreen.Designer.cs">
       <DependentUpon>HomeScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SidePanels\BuildingsSidePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SidePanels\BuildingsSidePanel.Designer.cs">
+      <DependentUpon>BuildingsSidePanel.cs</DependentUpon>
     </Compile>
     <Compile Include="SidePanels\ClassSidePanel.cs">
       <SubType>UserControl</SubType>
@@ -169,6 +181,9 @@
     <EmbeddedResource Include="Screens\AssignRoomsScreen.resx">
       <DependentUpon>AssignRoomsScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\DefaultBuildingsScreen.resx">
+      <DependentUpon>DefaultBuildingsScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\DefaultClassScreen.resx">
       <DependentUpon>DefaultClassScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -183,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\HomeScreen.resx">
       <DependentUpon>HomeScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SidePanels\BuildingsSidePanel.resx">
+      <DependentUpon>BuildingsSidePanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SidePanels\ClassSidePanel.resx">
       <DependentUpon>ClassSidePanel.cs</DependentUpon>

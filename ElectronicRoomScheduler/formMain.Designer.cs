@@ -37,6 +37,7 @@
             this.buttonOrganizations = new System.Windows.Forms.Button();
             this.buttonReports = new System.Windows.Forms.Button();
             this.containerLeftRight = new System.Windows.Forms.SplitContainer();
+            this.buttonBuildings = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.containerTopBottom)).BeginInit();
             this.containerTopBottom.Panel1.SuspendLayout();
             this.containerTopBottom.Panel2.SuspendLayout();
@@ -73,6 +74,7 @@
             // 
             this.flowLayoutPanel1.Controls.Add(this.buttonHome);
             this.flowLayoutPanel1.Controls.Add(this.buttonClasses);
+            this.flowLayoutPanel1.Controls.Add(this.buttonBuildings);
             this.flowLayoutPanel1.Controls.Add(this.buttonEvents);
             this.flowLayoutPanel1.Controls.Add(this.buttonNotifications);
             this.flowLayoutPanel1.Controls.Add(this.buttonOrganizations);
@@ -110,7 +112,7 @@
             // buttonEvents
             // 
             this.buttonEvents.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEvents.Location = new System.Drawing.Point(226, 13);
+            this.buttonEvents.Location = new System.Drawing.Point(336, 13);
             this.buttonEvents.Margin = new System.Windows.Forms.Padding(6, 13, 4, 4);
             this.buttonEvents.Name = "buttonEvents";
             this.buttonEvents.Size = new System.Drawing.Size(100, 50);
@@ -122,7 +124,7 @@
             // buttonNotifications
             // 
             this.buttonNotifications.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonNotifications.Location = new System.Drawing.Point(336, 13);
+            this.buttonNotifications.Location = new System.Drawing.Point(446, 13);
             this.buttonNotifications.Margin = new System.Windows.Forms.Padding(6, 13, 4, 4);
             this.buttonNotifications.Name = "buttonNotifications";
             this.buttonNotifications.Size = new System.Drawing.Size(100, 50);
@@ -134,7 +136,7 @@
             // buttonOrganizations
             // 
             this.buttonOrganizations.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonOrganizations.Location = new System.Drawing.Point(446, 13);
+            this.buttonOrganizations.Location = new System.Drawing.Point(556, 13);
             this.buttonOrganizations.Margin = new System.Windows.Forms.Padding(6, 13, 4, 4);
             this.buttonOrganizations.Name = "buttonOrganizations";
             this.buttonOrganizations.Size = new System.Drawing.Size(100, 50);
@@ -146,7 +148,7 @@
             // buttonReports
             // 
             this.buttonReports.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonReports.Location = new System.Drawing.Point(556, 13);
+            this.buttonReports.Location = new System.Drawing.Point(666, 13);
             this.buttonReports.Margin = new System.Windows.Forms.Padding(6, 13, 4, 4);
             this.buttonReports.Name = "buttonReports";
             this.buttonReports.Size = new System.Drawing.Size(100, 50);
@@ -171,6 +173,18 @@
             this.containerLeftRight.SplitterDistance = 172;
             this.containerLeftRight.SplitterWidth = 5;
             this.containerLeftRight.TabIndex = 0;
+            // 
+            // buttonBuildings
+            // 
+            this.buttonBuildings.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBuildings.Location = new System.Drawing.Point(226, 13);
+            this.buttonBuildings.Margin = new System.Windows.Forms.Padding(6, 13, 4, 4);
+            this.buttonBuildings.Name = "buttonBuildings";
+            this.buttonBuildings.Size = new System.Drawing.Size(100, 50);
+            this.buttonBuildings.TabIndex = 14;
+            this.buttonBuildings.Text = "Buildings";
+            this.buttonBuildings.UseVisualStyleBackColor = true;
+            this.buttonBuildings.Click += new System.EventHandler(this.buttonBuildings_Click);
             // 
             // formMain
             // 
@@ -207,5 +221,6 @@
         private System.Windows.Forms.Button buttonNotifications;
         private System.Windows.Forms.Button buttonOrganizations;
         private System.Windows.Forms.Button buttonReports;
+        private System.Windows.Forms.Button buttonBuildings;
     }
 }

@@ -42,6 +42,7 @@ namespace ElectronicRoomScheduler
             if (Name == "student")
             {
                 buttonReports.Visible = false;
+                buttonBuildings.Visible = false;
             }
         }
 
@@ -60,6 +61,12 @@ namespace ElectronicRoomScheduler
             {
                 containerLeftRight.Panel2.Controls.Clear();
                 containerLeftRight.Panel2.Controls.Add(new Screens.EditClassScreen());
+            }
+
+            if (screenName == "DeleteClass")
+            {
+                containerLeftRight.Panel2.Controls.Clear();
+                containerLeftRight.Panel2.Controls.Add(new Screens.DeleteClassScreen());
             }
 
             if (screenName == "AssignRooms")
@@ -137,6 +144,14 @@ namespace ElectronicRoomScheduler
 
             
             containerLeftRight.Panel1.Controls.Add(new SidePanels.ReportsSidePanel());
+        }
+
+        private void buttonBuildings_Click(object sender, EventArgs e)
+        {
+            ClearScreen(true);
+
+            containerLeftRight.Panel1.Controls.Add(new SidePanels.BuildingsSidePanel());
+            containerLeftRight.Panel2.Controls.Add(new Screens.DefaultBuildingsScreen());
         }
 
     }
