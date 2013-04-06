@@ -76,6 +76,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screens\AddBuildingScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\AddBuildingScreen.Designer.cs">
+      <DependentUpon>AddBuildingScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\AddClassScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -100,11 +106,23 @@
     <Compile Include="Screens\DefaultClassScreen.Designer.cs">
       <DependentUpon>DefaultClassScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\DeleteBuildingScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\DeleteBuildingScreen.Designer.cs">
+      <DependentUpon>DeleteBuildingScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\DeleteClassScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Screens\DeleteClassScreen.Designer.cs">
       <DependentUpon>DeleteClassScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\EditBuildingScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\EditBuildingScreen.Designer.cs">
+      <DependentUpon>EditBuildingScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\EditClassScreen.cs">
       <SubType>UserControl</SubType>
@@ -160,6 +178,12 @@
     <Compile Include="SidePanels\ReportsSidePanel.Designer.cs">
       <DependentUpon>ReportsSidePanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="SidePanels\RoomsSidePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SidePanels\RoomsSidePanel.Designer.cs">
+      <DependentUpon>RoomsSidePanel.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="formLogin.resx">
       <DependentUpon>formLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +199,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Screens\AddBuildingScreen.resx">
+      <DependentUpon>AddBuildingScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\AddClassScreen.resx">
       <DependentUpon>AddClassScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -187,8 +214,14 @@
     <EmbeddedResource Include="Screens\DefaultClassScreen.resx">
       <DependentUpon>DefaultClassScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\DeleteBuildingScreen.resx">
+      <DependentUpon>DeleteBuildingScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\DeleteClassScreen.resx">
       <DependentUpon>DeleteClassScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\EditBuildingScreen.resx">
+      <DependentUpon>EditBuildingScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\EditClassScreen.resx">
       <DependentUpon>EditClassScreen.cs</DependentUpon>
@@ -216,6 +249,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SidePanels\ReportsSidePanel.resx">
       <DependentUpon>ReportsSidePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SidePanels\RoomsSidePanel.resx">
+      <DependentUpon>RoomsSidePanel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

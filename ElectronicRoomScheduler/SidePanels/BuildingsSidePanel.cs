@@ -15,5 +15,23 @@ namespace ElectronicRoomScheduler.SidePanels
         {
             InitializeComponent();
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Program.GetParent().LoadScreen("AddBuilding");
+
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Program.GetParent().LoadScreen("EditBuilding");
+
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Program.GetParent().LoadScreen("DeleteBuilding");
+
+        }
     }
 }

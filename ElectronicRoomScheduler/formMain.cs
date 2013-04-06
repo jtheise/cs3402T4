@@ -28,8 +28,11 @@ namespace ElectronicRoomScheduler
         public void ClearScreen(bool clearBoth)
         {
             containerLeftRight.Panel2.Controls.Clear();
+
             
-            
+            containerLeftRight.SplitterDistance = 170;
+            containerLeftRight.Panel1.Show();
+
             if (clearBoth)
                 containerLeftRight.Panel1.Controls.Clear();
 
@@ -80,6 +83,24 @@ namespace ElectronicRoomScheduler
                 containerLeftRight.Panel2.Controls.Clear();
                 containerLeftRight.Panel2.Controls.Add(new Screens.EditRoomScreen());
             }
+
+            if (screenName == "AddBuilding")
+            {
+                containerLeftRight.Panel2.Controls.Clear();
+                containerLeftRight.Panel2.Controls.Add(new Screens.AddBuildingScreen());
+            }
+
+            if (screenName == "EditBuilding")
+            {
+                containerLeftRight.Panel2.Controls.Clear();
+                containerLeftRight.Panel2.Controls.Add(new Screens.EditBuildingScreen());
+            }
+
+            if (screenName == "DeleteBuilding")
+            {
+                containerLeftRight.Panel2.Controls.Clear();
+                containerLeftRight.Panel2.Controls.Add(new Screens.DeleteBuildingScreen());
+            }
         }
 
 
@@ -98,12 +119,19 @@ namespace ElectronicRoomScheduler
             login.ShowDialog();
             this.Visible = true;
 
+
+            containerLeftRight.Panel1.Hide();
+            containerLeftRight.SplitterDistance = 0;
+
             containerLeftRight.Panel2.Controls.Add(new Screens.HomeScreen());
         }
 
         private void buttonHome_Click(object sender, EventArgs e)
         {
             ClearScreen(true);
+
+            containerLeftRight.Panel1.Hide();
+            containerLeftRight.SplitterDistance = 0;
 
             containerLeftRight.Panel2.Controls.Add(new Screens.HomeScreen());
         }
@@ -152,6 +180,14 @@ namespace ElectronicRoomScheduler
 
             containerLeftRight.Panel1.Controls.Add(new SidePanels.BuildingsSidePanel());
             containerLeftRight.Panel2.Controls.Add(new Screens.DefaultBuildingsScreen());
+        }
+
+        private void buttonRooms_Click(object sender, EventArgs e)
+        {
+            ClearScreen(true);
+
+            containerLeftRight.Panel1.Controls.Add(new SidePanels.RoomsSidePanel());
+            //containerLeftRight.Panel2.Controls.Add(new Screens.DefaultRoomsScreen());
         }
 
     }

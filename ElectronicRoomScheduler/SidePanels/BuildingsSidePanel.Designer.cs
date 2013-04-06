@@ -53,6 +53,7 @@
             this.linkLabel3.TabIndex = 8;
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "Delete Building";
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
             // linkLabel2
             // 
@@ -63,6 +64,7 @@
             this.linkLabel2.TabIndex = 7;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Edit Building";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // linkLabel1
             // 
@@ -73,6 +75,7 @@
             this.linkLabel1.TabIndex = 6;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Add Building";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // BuildingsSidePanel
             // 
