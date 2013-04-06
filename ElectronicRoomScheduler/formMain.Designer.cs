@@ -36,7 +36,6 @@
             this.buttonNotifications = new System.Windows.Forms.Button();
             this.buttonOrganizations = new System.Windows.Forms.Button();
             this.buttonReports = new System.Windows.Forms.Button();
-            this.buttonHelp = new System.Windows.Forms.Button();
             this.containerLeftRight = new System.Windows.Forms.SplitContainer();
             ((System.ComponentModel.ISupportInitialize)(this.containerTopBottom)).BeginInit();
             this.containerTopBottom.Panel1.SuspendLayout();
@@ -65,7 +64,7 @@
             // containerTopBottom.Panel2
             // 
             this.containerTopBottom.Panel2.Controls.Add(this.containerLeftRight);
-            this.containerTopBottom.Size = new System.Drawing.Size(1284, 708);
+            this.containerTopBottom.Size = new System.Drawing.Size(1271, 674);
             this.containerTopBottom.SplitterDistance = 75;
             this.containerTopBottom.SplitterWidth = 5;
             this.containerTopBottom.TabIndex = 0;
@@ -78,11 +77,10 @@
             this.flowLayoutPanel1.Controls.Add(this.buttonNotifications);
             this.flowLayoutPanel1.Controls.Add(this.buttonOrganizations);
             this.flowLayoutPanel1.Controls.Add(this.buttonReports);
-            this.flowLayoutPanel1.Controls.Add(this.buttonHelp);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1284, 75);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1271, 75);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // buttonHome
@@ -157,18 +155,6 @@
             this.buttonReports.UseVisualStyleBackColor = true;
             this.buttonReports.Click += new System.EventHandler(this.buttonReports_Click);
             // 
-            // buttonHelp
-            // 
-            this.buttonHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonHelp.Location = new System.Drawing.Point(666, 13);
-            this.buttonHelp.Margin = new System.Windows.Forms.Padding(6, 13, 4, 4);
-            this.buttonHelp.Name = "buttonHelp";
-            this.buttonHelp.Size = new System.Drawing.Size(100, 50);
-            this.buttonHelp.TabIndex = 14;
-            this.buttonHelp.Text = "?";
-            this.buttonHelp.UseVisualStyleBackColor = true;
-            this.buttonHelp.Click += new System.EventHandler(this.buttonHelp_Click);
-            // 
             // containerLeftRight
             // 
             this.containerLeftRight.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -181,7 +167,7 @@
             // containerLeftRight.Panel1
             // 
             this.containerLeftRight.Panel1.BackColor = System.Drawing.Color.White;
-            this.containerLeftRight.Size = new System.Drawing.Size(1284, 628);
+            this.containerLeftRight.Size = new System.Drawing.Size(1271, 594);
             this.containerLeftRight.SplitterDistance = 172;
             this.containerLeftRight.SplitterWidth = 5;
             this.containerLeftRight.TabIndex = 0;
@@ -190,7 +176,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1284, 708);
+            this.ClientSize = new System.Drawing.Size(1271, 674);
             this.Controls.Add(this.containerTopBottom);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -221,6 +207,5 @@
         private System.Windows.Forms.Button buttonNotifications;
         private System.Windows.Forms.Button buttonOrganizations;
         private System.Windows.Forms.Button buttonReports;
-        private System.Windows.Forms.Button buttonHelp;
     }
 }

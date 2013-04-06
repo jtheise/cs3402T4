@@ -1,6 +1,6 @@
-﻿namespace ElectronicRoomScheduler.SidePanels
+﻿namespace ElectronicRoomScheduler.Screens
 {
-    partial class ReportsSidePanel
+    partial class DeleteClassScreen
     {
         /// <summary> 
         /// Required designer variable.
@@ -34,19 +34,21 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 28);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(24, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "reports";
+            this.label1.Size = new System.Drawing.Size(223, 37);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Delete a Class";
             // 
-            // ReportsSidePanel
+            // DeleteClassScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label1);
-            this.Name = "ReportsSidePanel";
-            this.Size = new System.Drawing.Size(160, 666);
+            this.Name = "DeleteClassScreen";
+            this.Size = new System.Drawing.Size(820, 480);
+            this.Load += new System.EventHandler(this.DeleteClassScreen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

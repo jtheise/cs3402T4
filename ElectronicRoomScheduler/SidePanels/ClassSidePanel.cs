@@ -31,5 +31,26 @@ namespace ElectronicRoomScheduler.SidePanels
             Program.GetParent().LoadScreen("EditClass");
 
         }
+
+        private void ClassSidePanel_Load(object sender, EventArgs e)
+        {
+            if (Program.GetParent().LoggedInUser == "student")
+            {
+                linkLabelAssignRooms.Visible = false;
+                linkLabelEditRooms.Visible = false;
+            }
+
+
+        }
+
+        private void linkLabelAssignRooms_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Program.GetParent().LoadScreen("AssignRooms");
+        }
+
+        private void linkLabelEditRooms_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Program.GetParent().LoadScreen("EditRooms");
+        }
     }
 }

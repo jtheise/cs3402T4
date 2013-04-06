@@ -82,11 +82,35 @@
     <Compile Include="Screens\AddClassScreen.Designer.cs">
       <DependentUpon>AddClassScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\AssignRoomsScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\AssignRoomsScreen.Designer.cs">
+      <DependentUpon>AssignRoomsScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\DefaultClassScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\DefaultClassScreen.Designer.cs">
+      <DependentUpon>DefaultClassScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\DeleteClassScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\DeleteClassScreen.Designer.cs">
+      <DependentUpon>DeleteClassScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\EditClassScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Screens\EditClassScreen.Designer.cs">
       <DependentUpon>EditClassScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\EditRoomScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\EditRoomScreen.Designer.cs">
+      <DependentUpon>EditRoomScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\HomeScreen.cs">
       <SubType>UserControl</SubType>
@@ -142,8 +166,20 @@
     <EmbeddedResource Include="Screens\AddClassScreen.resx">
       <DependentUpon>AddClassScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\AssignRoomsScreen.resx">
+      <DependentUpon>AssignRoomsScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\DefaultClassScreen.resx">
+      <DependentUpon>DefaultClassScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\DeleteClassScreen.resx">
+      <DependentUpon>DeleteClassScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\EditClassScreen.resx">
       <DependentUpon>EditClassScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\EditRoomScreen.resx">
+      <DependentUpon>EditRoomScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\HomeScreen.resx">
       <DependentUpon>HomeScreen.cs</DependentUpon>

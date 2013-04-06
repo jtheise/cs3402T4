@@ -12,6 +12,7 @@ namespace ElectronicRoomScheduler
     public partial class formMain : Form
     {
         private Stack<string> History = new Stack<string>();
+        public string LoggedInUser { get; set; }
 
         public void GoBack()
         {
@@ -36,6 +37,8 @@ namespace ElectronicRoomScheduler
 
         public void Login(string Name)
         {
+            LoggedInUser = Name;
+
             if (Name == "student")
             {
                 buttonReports.Visible = false;
@@ -56,12 +59,21 @@ namespace ElectronicRoomScheduler
             if (screenName == "EditClass")
             {
                 containerLeftRight.Panel2.Controls.Clear();
-                containerLeftRight.Panel2.Controls.Add(new Screens.EditClassScreen());   
+                containerLeftRight.Panel2.Controls.Add(new Screens.EditClassScreen());
+            }
+
+            if (screenName == "AssignRooms")
+            {
+                containerLeftRight.Panel2.Controls.Clear();
+                containerLeftRight.Panel2.Controls.Add(new Screens.AssignRoomsScreen());
+            }
+
+            if (screenName == "EditRooms")
+            {
+                containerLeftRight.Panel2.Controls.Clear();
+                containerLeftRight.Panel2.Controls.Add(new Screens.EditRoomScreen());
             }
         }
-
-
-
 
 
 
@@ -89,16 +101,13 @@ namespace ElectronicRoomScheduler
             containerLeftRight.Panel2.Controls.Add(new Screens.HomeScreen());
         }
 
-        private void buttonHelp_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonClasses_Click(object sender, EventArgs e)
         {
             ClearScreen(true);
 
             containerLeftRight.Panel1.Controls.Add(new SidePanels.ClassSidePanel());
+            containerLeftRight.Panel2.Controls.Add(new Screens.DefaultClassScreen());
+
         }
 
         private void buttonEvents_Click(object sender, EventArgs e)

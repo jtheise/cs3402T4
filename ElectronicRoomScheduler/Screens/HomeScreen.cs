@@ -15,5 +15,10 @@ namespace ElectronicRoomScheduler.Screens
         {
             InitializeComponent();
         }
+
+        private void HomeScreen_Load(object sender, EventArgs e)
+        {
+            this.Dock = DockStyle.Fill;
+        }
     }
 }

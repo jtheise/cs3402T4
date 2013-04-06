@@ -65,7 +65,8 @@
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.label1);
             this.Name = "HomeScreen";
-            this.Size = new System.Drawing.Size(840, 600);
+            this.Size = new System.Drawing.Size(820, 480);
+            this.Load += new System.EventHandler(this.HomeScreen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

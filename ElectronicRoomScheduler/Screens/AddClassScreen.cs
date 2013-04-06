@@ -26,5 +26,11 @@ namespace ElectronicRoomScheduler.Screens
                 Program.GetParent().ClearScreen();
 
         }
+
+        private void AddClassScreen_Load(object sender, EventArgs e)
+        {
+            textBoxCourseName.Select();
+            this.Dock = DockStyle.Fill;
+        }
     }
 }

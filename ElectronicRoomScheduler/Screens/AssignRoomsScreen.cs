@@ -9,17 +9,16 @@ using System.Windows.Forms;
 
 namespace ElectronicRoomScheduler.Screens
 {
-    public partial class EditClassScreen : UserControl
+    public partial class AssignRoomsScreen : UserControl
     {
-        public EditClassScreen()
+        public AssignRoomsScreen()
         {
             InitializeComponent();
         }
 
-        private void EditClassScreen_Load(object sender, EventArgs e)
+        private void AssignRoomsScreen_Load(object sender, EventArgs e)
         {
             this.Dock = DockStyle.Fill;
-            textBoxClassLookup.Select();
         }
     }
 }
