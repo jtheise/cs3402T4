@@ -19,6 +19,11 @@ namespace ElectronicRoomScheduler.Screens
         private void DefaultClassScreen_Load(object sender, EventArgs e)
         {
             this.Dock = DockStyle.Fill;
+
+
+            // add something to listview
+
+            listView.Items.Add(new ListViewItem(new string[] { "1", "HIST 2011: Introduction to Art History", "Art Department", "Paul Picasso" }));
         }
     }
 }

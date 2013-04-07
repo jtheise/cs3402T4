@@ -50,5 +50,10 @@ namespace ElectronicRoomScheduler.SidePanels
         {
             Program.GetParent().LoadScreen("EditQuestion");
         }
+
+        private void labelHeader_Click(object sender, EventArgs e)
+        {
+            Program.GetParent().LoadScreen("DefaultReport");
+        }
     }
 }

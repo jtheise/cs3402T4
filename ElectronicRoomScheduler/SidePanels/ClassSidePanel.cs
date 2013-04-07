@@ -54,5 +54,10 @@ namespace ElectronicRoomScheduler.SidePanels
         {
             Program.GetParent().LoadScreen("DeleteClass");
         }
+
+        private void labelHeader_Click(object sender, EventArgs e)
+        {
+            Program.GetParent().LoadScreen("DefaultClass");
+        }
     }
 }

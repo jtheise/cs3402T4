@@ -53,6 +53,44 @@ namespace ElectronicRoomScheduler
         {
             History.Push(screenName);
 
+            if (screenName == "DefaultBuilding")
+            {
+                containerLeftRight.Panel2.Controls.Clear();
+                containerLeftRight.Panel2.Controls.Add(new Screens.DefaultBuildingsScreen());
+            }
+
+            if (screenName == "DefaultClass")
+            {
+                containerLeftRight.Panel2.Controls.Clear();
+                containerLeftRight.Panel2.Controls.Add(new Screens.DefaultClassScreen());
+            }
+            if (screenName == "DefaultEvent")
+            {
+                containerLeftRight.Panel2.Controls.Clear();
+                containerLeftRight.Panel2.Controls.Add(new Screens.DefaultEventScreen());
+            }
+            if (screenName == "DefaultNotification")
+            {
+                containerLeftRight.Panel2.Controls.Clear();
+                containerLeftRight.Panel2.Controls.Add(new Screens.DefaultNotificationScreen());
+            }
+            if (screenName == "DefaultOrganization")
+            {
+                containerLeftRight.Panel2.Controls.Clear();
+                containerLeftRight.Panel2.Controls.Add(new Screens.DefaultOrganizationScreen());
+            }
+            if (screenName == "DefaultReport")
+            {
+                containerLeftRight.Panel2.Controls.Clear();
+                containerLeftRight.Panel2.Controls.Add(new Screens.DefaultReportScreen());
+            }
+            if (screenName == "DefaultRoom")
+            {
+                containerLeftRight.Panel2.Controls.Clear();
+                containerLeftRight.Panel2.Controls.Add(new Screens.DefaultRoomScreen());
+            }
+
+
             if (screenName == "AddClass")
             {
                 containerLeftRight.Panel2.Controls.Clear();
@@ -149,8 +187,6 @@ namespace ElectronicRoomScheduler
                 containerLeftRight.Panel2.Controls.Clear();
                 containerLeftRight.Panel2.Controls.Add(new Screens.DeleteOrganizationScreen());
             }
-
-
 
             if (screenName == "NewReport")
             {
