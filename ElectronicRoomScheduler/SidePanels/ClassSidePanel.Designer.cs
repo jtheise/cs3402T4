@@ -39,7 +39,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(12, 39);
+            this.linkLabel1.Location = new System.Drawing.Point(26, 33);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(54, 13);
             this.linkLabel1.TabIndex = 0;
@@ -50,7 +50,7 @@
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(12, 56);
+            this.linkLabel2.Location = new System.Drawing.Point(26, 54);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(53, 13);
             this.linkLabel2.TabIndex = 1;
@@ -61,7 +61,7 @@
             // linkLabel3
             // 
             this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Location = new System.Drawing.Point(12, 73);
+            this.linkLabel3.Location = new System.Drawing.Point(26, 75);
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.Size = new System.Drawing.Size(66, 13);
             this.linkLabel3.TabIndex = 2;
@@ -73,7 +73,7 @@
             // 
             this.labelHeader.AutoSize = true;
             this.labelHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHeader.Location = new System.Drawing.Point(12, 7);
+            this.labelHeader.Location = new System.Drawing.Point(26, 10);
             this.labelHeader.Name = "labelHeader";
             this.labelHeader.Size = new System.Drawing.Size(99, 13);
             this.labelHeader.TabIndex = 3;
@@ -82,7 +82,7 @@
             // linkLabelAssignRooms
             // 
             this.linkLabelAssignRooms.AutoSize = true;
-            this.linkLabelAssignRooms.Location = new System.Drawing.Point(12, 104);
+            this.linkLabelAssignRooms.Location = new System.Drawing.Point(26, 116);
             this.linkLabelAssignRooms.Name = "linkLabelAssignRooms";
             this.linkLabelAssignRooms.Size = new System.Drawing.Size(74, 13);
             this.linkLabelAssignRooms.TabIndex = 4;
@@ -93,7 +93,7 @@
             // linkLabelEditRooms
             // 
             this.linkLabelEditRooms.AutoSize = true;
-            this.linkLabelEditRooms.Location = new System.Drawing.Point(12, 121);
+            this.linkLabelEditRooms.Location = new System.Drawing.Point(26, 137);
             this.linkLabelEditRooms.Name = "linkLabelEditRooms";
             this.linkLabelEditRooms.Size = new System.Drawing.Size(56, 13);
             this.linkLabelEditRooms.TabIndex = 5;
@@ -112,7 +112,7 @@
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkLabel1);
             this.Name = "ClassSidePanel";
-            this.Size = new System.Drawing.Size(160, 600);
+            this.Size = new System.Drawing.Size(150, 600);
             this.Load += new System.EventHandler(this.ClassSidePanel_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

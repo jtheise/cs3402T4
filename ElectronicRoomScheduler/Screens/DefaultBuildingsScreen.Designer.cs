@@ -37,9 +37,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(20, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 37);
+            this.label1.Size = new System.Drawing.Size(366, 37);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Buildings";
+            this.label1.Text = "Buildings Default Screen";
             // 
             // DefaultBuildingsScreen
             // 

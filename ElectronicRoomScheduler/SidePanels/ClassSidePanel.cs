@@ -18,12 +18,7 @@ namespace ElectronicRoomScheduler.SidePanels
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
             Program.GetParent().LoadScreen("AddClass");
-
-
-            
-
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

@@ -33,5 +33,10 @@ namespace ElectronicRoomScheduler.SidePanels
             Program.GetParent().LoadScreen("DeleteBuilding");
 
         }
+
+        private void BuildingsSidePanel_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

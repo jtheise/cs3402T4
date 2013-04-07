@@ -7,17 +7,16 @@ namespace ElectronicRoomScheduler
 {
     static class Program
     {
-        public static formMain GetParent()
+        public static FormMain GetParent()
         {
             foreach (Form item in Application.OpenForms)
             {
-                if (item.Name == "formMain")
-                    return (formMain)item;
+                if (item.Name == "FormMain")
+                    return (FormMain)item;
             }
 
             return null;
         }
-
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -26,7 +25,7 @@ namespace ElectronicRoomScheduler
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formMain());
+            Application.Run(new FormMain());
         }
     }
 }

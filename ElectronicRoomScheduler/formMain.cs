@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace ElectronicRoomScheduler
 {
-    public partial class formMain : Form
+    public partial class FormMain : Form
     {
         private Stack<string> History = new Stack<string>();
         public string LoggedInUser { get; set; }
@@ -38,17 +38,16 @@ namespace ElectronicRoomScheduler
 
         }
 
-        public void Login(string Name)
+        public void Login(string name)
         {
-            LoggedInUser = Name;
+            LoggedInUser = name;
 
-            if (Name == "student")
+            if (name == "student")
             {
                 buttonReports.Visible = false;
                 buttonBuildings.Visible = false;
             }
         }
-
 
         public void LoadScreen(string screenName)
         {
@@ -105,7 +104,7 @@ namespace ElectronicRoomScheduler
 
 
 
-        public formMain()
+        public FormMain()
         {
             InitializeComponent();
         }
@@ -113,7 +112,8 @@ namespace ElectronicRoomScheduler
 
         private void formMain_Load(object sender, EventArgs e)
         {
-            formLogin login = new formLogin();
+            FormLogin login = new FormLogin();
+            LoggedInUser = "";
 
             this.Visible = false;
             login.ShowDialog();

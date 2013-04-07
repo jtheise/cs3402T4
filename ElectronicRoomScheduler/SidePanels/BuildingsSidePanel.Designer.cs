@@ -38,7 +38,7 @@
             // 
             this.labelHeader.AutoSize = true;
             this.labelHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHeader.Location = new System.Drawing.Point(16, 10);
+            this.labelHeader.Location = new System.Drawing.Point(22, 10);
             this.labelHeader.Name = "labelHeader";
             this.labelHeader.Size = new System.Drawing.Size(107, 13);
             this.labelHeader.TabIndex = 9;
@@ -47,7 +47,7 @@
             // linkLabel3
             // 
             this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Location = new System.Drawing.Point(16, 76);
+            this.linkLabel3.Location = new System.Drawing.Point(22, 75);
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.Size = new System.Drawing.Size(78, 13);
             this.linkLabel3.TabIndex = 8;
@@ -58,7 +58,7 @@
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(16, 59);
+            this.linkLabel2.Location = new System.Drawing.Point(22, 54);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(65, 13);
             this.linkLabel2.TabIndex = 7;
@@ -69,7 +69,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(16, 42);
+            this.linkLabel1.Location = new System.Drawing.Point(22, 33);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(66, 13);
             this.linkLabel1.TabIndex = 6;
@@ -86,7 +86,8 @@
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkLabel1);
             this.Name = "BuildingsSidePanel";
-            this.Size = new System.Drawing.Size(160, 600);
+            this.Size = new System.Drawing.Size(150, 600);
+            this.Load += new System.EventHandler(this.BuildingsSidePanel_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

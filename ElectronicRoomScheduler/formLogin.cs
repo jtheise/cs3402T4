@@ -1,48 +1,41 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace ElectronicRoomScheduler
 {
-    public partial class formLogin : Form
+    public partial class FormLogin : Form
     {
-        public formLogin()
+        public FormLogin()
         {
             InitializeComponent();
         }
 
-        bool Authenticated = false;
+        bool _authenticated = false;
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             if (textBoxName.Text == "student")
             {
                 Program.GetParent().Login("student");
-                Authenticated = true;
-                this.Close();
+                _authenticated = true;
+                Close();
             }
             else if (textBoxName.Text == "professor")
             {
-                Authenticated = true;
-                this.Close();
+                Program.GetParent().Login("professor");
+                _authenticated = true;
+                Close();
             }
             else if (textBoxName.Text == "admin")
             {
-                Authenticated = true;
-                this.Close();
+                Program.GetParent().Login("admin");
+                _authenticated = true;
+                Close();
             }
             else
             {
                 MessageBox.Show("Invalid username or password.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
-
-
 
             
         }
@@ -54,12 +47,13 @@ namespace ElectronicRoomScheduler
 
         private void formLogin_Load(object sender, EventArgs e)
         {
-            textBoxName.Select();
+            if (textBoxName != null) 
+                textBoxName.Select();
         }
 
         private void formLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (!Authenticated)
+            if (!_authenticated)
                 Application.Exit();
         }
     }
