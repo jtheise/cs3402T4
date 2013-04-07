@@ -29,6 +29,8 @@ namespace ElectronicRoomScheduler.SidePanels
 
         private void ClassSidePanel_Load(object sender, EventArgs e)
         {
+            this.Dock = DockStyle.Fill;
+
             if (Program.GetParent().LoggedInUser == "student")
             {
                 linkLabelAssignRooms.Visible = false;
@@ -40,12 +42,12 @@ namespace ElectronicRoomScheduler.SidePanels
 
         private void linkLabelAssignRooms_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Program.GetParent().LoadScreen("AssignRooms");
+            Program.GetParent().LoadScreen("AssignRoom");
         }
 
         private void linkLabelEditRooms_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Program.GetParent().LoadScreen("EditRooms");
+            Program.GetParent().LoadScreen("EditRoom");
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

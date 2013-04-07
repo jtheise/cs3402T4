@@ -71,13 +71,13 @@ namespace ElectronicRoomScheduler
                 containerLeftRight.Panel2.Controls.Add(new Screens.DeleteClassScreen());
             }
 
-            if (screenName == "AssignRooms")
+            if (screenName == "AssignRoom")
             {
                 containerLeftRight.Panel2.Controls.Clear();
                 containerLeftRight.Panel2.Controls.Add(new Screens.AssignRoomsScreen());
             }
 
-            if (screenName == "EditRooms")
+            if (screenName == "EditRoom")
             {
                 containerLeftRight.Panel2.Controls.Clear();
                 containerLeftRight.Panel2.Controls.Add(new Screens.EditRoomScreen());
@@ -99,6 +99,105 @@ namespace ElectronicRoomScheduler
             {
                 containerLeftRight.Panel2.Controls.Clear();
                 containerLeftRight.Panel2.Controls.Add(new Screens.DeleteBuildingScreen());
+            }
+
+            if (screenName == "AddEvent")
+            {
+                containerLeftRight.Panel2.Controls.Clear();
+                containerLeftRight.Panel2.Controls.Add(new Screens.AddEventScreen());
+            }
+            if (screenName == "EditEvent")
+            {
+                containerLeftRight.Panel2.Controls.Clear();
+                containerLeftRight.Panel2.Controls.Add(new Screens.EditEventScreen());
+            }
+            if (screenName == "DeleteEvent")
+            {
+                containerLeftRight.Panel2.Controls.Clear();
+                containerLeftRight.Panel2.Controls.Add(new Screens.DeleteEventScreen());
+            }
+
+
+            if (screenName == "AddNotification")
+            {
+                containerLeftRight.Panel2.Controls.Clear();
+                containerLeftRight.Panel2.Controls.Add(new Screens.AddNotificationScreen());
+            }
+            if (screenName == "EditNotification")
+            {
+                containerLeftRight.Panel2.Controls.Clear();
+                containerLeftRight.Panel2.Controls.Add(new Screens.EditNotificationScreen());
+            }
+            if (screenName == "SetNotificationPreferences")
+            {
+                containerLeftRight.Panel2.Controls.Clear();
+                containerLeftRight.Panel2.Controls.Add(new Screens.SetNotificationPreferencesScreen());
+            }
+
+            if (screenName == "AddOrganization")
+            {
+                containerLeftRight.Panel2.Controls.Clear();
+                containerLeftRight.Panel2.Controls.Add(new Screens.AddOrganizationScreen());
+            }
+            if (screenName == "EditOrganization")
+            {
+                containerLeftRight.Panel2.Controls.Clear();
+                containerLeftRight.Panel2.Controls.Add(new Screens.EditOrganizationScreen());
+            }
+            if (screenName == "DeleteOrganization")
+            {
+                containerLeftRight.Panel2.Controls.Clear();
+                containerLeftRight.Panel2.Controls.Add(new Screens.DeleteOrganizationScreen());
+            }
+
+
+
+            if (screenName == "NewReport")
+            {
+                containerLeftRight.Panel2.Controls.Clear();
+                containerLeftRight.Panel2.Controls.Add(new Screens.NewReportScreen());
+            }
+            if (screenName == "LoadReport")
+            {
+                containerLeftRight.Panel2.Controls.Clear();
+                containerLeftRight.Panel2.Controls.Add(new Screens.LoadReportScreen());
+            }
+            if (screenName == "EditReport")
+            {
+                containerLeftRight.Panel2.Controls.Clear();
+                containerLeftRight.Panel2.Controls.Add(new Screens.EditReportScreen());
+            }
+            if (screenName == "AddQuestion")
+            {
+                containerLeftRight.Panel2.Controls.Clear();
+                containerLeftRight.Panel2.Controls.Add(new Screens.AddQuestionScreen());
+            }
+            if (screenName == "LoadQuestion")
+            {
+                containerLeftRight.Panel2.Controls.Clear();
+                containerLeftRight.Panel2.Controls.Add(new Screens.LoadQuestionScreen());
+            }
+            if (screenName == "EditQuestion")
+            {
+                containerLeftRight.Panel2.Controls.Clear();
+                containerLeftRight.Panel2.Controls.Add(new Screens.EditQuestionScreen());
+            }
+
+
+            if (screenName == "AddRoom")
+            {
+                containerLeftRight.Panel2.Controls.Clear();
+                containerLeftRight.Panel2.Controls.Add(new Screens.AddRoomScreen());
+            }
+            if (screenName == "DeleteRoom")
+            {
+                containerLeftRight.Panel2.Controls.Clear();
+                containerLeftRight.Panel2.Controls.Add(new Screens.DeleteRoomScreen());
+            }
+            if (screenName == "RequestTech")
+            {
+                containerLeftRight.Panel2.Controls.Clear();
+                containerLeftRight.Panel2.Controls.Add(new Screens.RequestTechScreen());
             }
         }
 
@@ -150,6 +249,7 @@ namespace ElectronicRoomScheduler
             ClearScreen(true);
 
             containerLeftRight.Panel1.Controls.Add(new SidePanels.EventsSidePanel());
+            containerLeftRight.Panel2.Controls.Add(new Screens.DefaultEventScreen());
         }
 
         private void buttonNotifications_Click(object sender, EventArgs e)
@@ -157,6 +257,7 @@ namespace ElectronicRoomScheduler
             ClearScreen(true);
 
             containerLeftRight.Panel1.Controls.Add(new SidePanels.NotificationsSidePanel());
+            containerLeftRight.Panel2.Controls.Add(new Screens.DefaultNotificationScreen());
         }
 
         private void buttonOrganizations_Click(object sender, EventArgs e)
@@ -164,14 +265,15 @@ namespace ElectronicRoomScheduler
             ClearScreen(true);
 
             containerLeftRight.Panel1.Controls.Add(new SidePanels.OrganizationsSidePanel());
+            containerLeftRight.Panel2.Controls.Add(new Screens.DefaultOrganizationScreen());
         }
 
         private void buttonReports_Click(object sender, EventArgs e)
         {
             ClearScreen(true);
 
-            
             containerLeftRight.Panel1.Controls.Add(new SidePanels.ReportsSidePanel());
+            containerLeftRight.Panel2.Controls.Add(new Screens.DefaultReportScreen());
         }
 
         private void buttonBuildings_Click(object sender, EventArgs e)
@@ -187,7 +289,7 @@ namespace ElectronicRoomScheduler
             ClearScreen(true);
 
             containerLeftRight.Panel1.Controls.Add(new SidePanels.RoomsSidePanel());
-            //containerLeftRight.Panel2.Controls.Add(new Screens.DefaultRoomsScreen());
+            containerLeftRight.Panel2.Controls.Add(new Screens.DefaultRoomScreen());
         }
 
     }

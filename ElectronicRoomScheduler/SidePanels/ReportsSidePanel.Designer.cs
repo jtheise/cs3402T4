@@ -56,6 +56,7 @@
             this.linkLabel2.TabIndex = 17;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Load Report";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // linkLabel1
             // 
@@ -66,6 +67,7 @@
             this.linkLabel1.TabIndex = 16;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "New Report";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // linkLabel3
             // 
@@ -76,6 +78,7 @@
             this.linkLabel3.TabIndex = 18;
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "Edit Report";
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
             // linkLabel4
             // 
@@ -86,6 +89,7 @@
             this.linkLabel4.TabIndex = 19;
             this.linkLabel4.TabStop = true;
             this.linkLabel4.Text = "Add Question";
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
             // 
             // linkLabel5
             // 
@@ -96,6 +100,7 @@
             this.linkLabel5.TabIndex = 20;
             this.linkLabel5.TabStop = true;
             this.linkLabel5.Text = "Load Question";
+            this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel5_LinkClicked);
             // 
             // linkLabel6
             // 
@@ -106,6 +111,7 @@
             this.linkLabel6.TabIndex = 21;
             this.linkLabel6.TabStop = true;
             this.linkLabel6.Text = "Edit Question";
+            this.linkLabel6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel6_LinkClicked);
             // 
             // ReportsSidePanel
             // 
@@ -120,6 +126,7 @@
             this.Controls.Add(this.labelHeader);
             this.Name = "ReportsSidePanel";
             this.Size = new System.Drawing.Size(150, 600);
+            this.Load += new System.EventHandler(this.ReportsSidePanel_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

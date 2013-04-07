@@ -53,6 +53,7 @@
             this.linkLabel2.TabIndex = 21;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Edit Organization";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // linkLabel1
             // 
@@ -63,6 +64,7 @@
             this.linkLabel1.TabIndex = 20;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Add Organization";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // linkLabel3
             // 
@@ -73,6 +75,7 @@
             this.linkLabel3.TabIndex = 22;
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "Delete Organization";
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
             // OrganizationsSidePanel
             // 
@@ -84,6 +87,7 @@
             this.Controls.Add(this.labelHeader);
             this.Name = "OrganizationsSidePanel";
             this.Size = new System.Drawing.Size(150, 600);
+            this.Load += new System.EventHandler(this.OrganizationsSidePanel_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

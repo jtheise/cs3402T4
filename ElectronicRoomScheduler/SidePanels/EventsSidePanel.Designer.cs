@@ -53,6 +53,7 @@
             this.linkLabel3.TabIndex = 21;
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "Delete Event";
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
             // linkLabel2
             // 
@@ -63,6 +64,7 @@
             this.linkLabel2.TabIndex = 20;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Edit Event";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // linkLabel1
             // 
@@ -73,6 +75,7 @@
             this.linkLabel1.TabIndex = 19;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Add Event";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // EventsSidePanel
             // 
@@ -84,6 +87,7 @@
             this.Controls.Add(this.labelHeader);
             this.Name = "EventsSidePanel";
             this.Size = new System.Drawing.Size(150, 600);
+            this.Load += new System.EventHandler(this.EventsSidePanel_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

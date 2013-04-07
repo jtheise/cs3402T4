@@ -88,6 +88,36 @@
     <Compile Include="Screens\AddClassScreen.Designer.cs">
       <DependentUpon>AddClassScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\AddEventScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\AddEventScreen.Designer.cs">
+      <DependentUpon>AddEventScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\AddNotificationScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\AddNotificationScreen.Designer.cs">
+      <DependentUpon>AddNotificationScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\AddOrganizationScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\AddOrganizationScreen.Designer.cs">
+      <DependentUpon>AddOrganizationScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\AddQuestionScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\AddQuestionScreen.Designer.cs">
+      <DependentUpon>AddQuestionScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\AddRoomScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\AddRoomScreen.Designer.cs">
+      <DependentUpon>AddRoomScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\AssignRoomsScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -106,6 +136,36 @@
     <Compile Include="Screens\DefaultClassScreen.Designer.cs">
       <DependentUpon>DefaultClassScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\DefaultEventScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\DefaultEventScreen.Designer.cs">
+      <DependentUpon>DefaultEventScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\DefaultNotificationScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\DefaultNotificationScreen.Designer.cs">
+      <DependentUpon>DefaultNotificationScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\DefaultOrganizationScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\DefaultOrganizationScreen.Designer.cs">
+      <DependentUpon>DefaultOrganizationScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\DefaultReportScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\DefaultReportScreen.Designer.cs">
+      <DependentUpon>DefaultReportScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\DefaultRoomScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\DefaultRoomScreen.Designer.cs">
+      <DependentUpon>DefaultRoomScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\DeleteBuildingScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -117,6 +177,24 @@
     </Compile>
     <Compile Include="Screens\DeleteClassScreen.Designer.cs">
       <DependentUpon>DeleteClassScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\DeleteEventScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\DeleteEventScreen.Designer.cs">
+      <DependentUpon>DeleteEventScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\DeleteOrganizationScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\DeleteOrganizationScreen.Designer.cs">
+      <DependentUpon>DeleteOrganizationScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\DeleteRoomScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\DeleteRoomScreen.Designer.cs">
+      <DependentUpon>DeleteRoomScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\EditBuildingScreen.cs">
       <SubType>UserControl</SubType>
@@ -130,6 +208,36 @@
     <Compile Include="Screens\EditClassScreen.Designer.cs">
       <DependentUpon>EditClassScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\EditEventScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\EditEventScreen.Designer.cs">
+      <DependentUpon>EditEventScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\EditNotificationScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\EditNotificationScreen.Designer.cs">
+      <DependentUpon>EditNotificationScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\EditOrganizationScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\EditOrganizationScreen.Designer.cs">
+      <DependentUpon>EditOrganizationScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\EditQuestionScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\EditQuestionScreen.Designer.cs">
+      <DependentUpon>EditQuestionScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\EditReportScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\EditReportScreen.Designer.cs">
+      <DependentUpon>EditReportScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\EditRoomScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -141,6 +249,36 @@
     </Compile>
     <Compile Include="Screens\HomeScreen.Designer.cs">
       <DependentUpon>HomeScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\LoadQuestionScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\LoadQuestionScreen.Designer.cs">
+      <DependentUpon>LoadQuestionScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\LoadReportScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\LoadReportScreen.Designer.cs">
+      <DependentUpon>LoadReportScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\NewReportScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\NewReportScreen.Designer.cs">
+      <DependentUpon>NewReportScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\RequestTechScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\RequestTechScreen.Designer.cs">
+      <DependentUpon>RequestTechScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\SetNotificationPreferencesScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\SetNotificationPreferencesScreen.Designer.cs">
+      <DependentUpon>SetNotificationPreferencesScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="SidePanels\BuildingsSidePanel.cs">
       <SubType>UserControl</SubType>
@@ -205,6 +343,21 @@
     <EmbeddedResource Include="Screens\AddClassScreen.resx">
       <DependentUpon>AddClassScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\AddEventScreen.resx">
+      <DependentUpon>AddEventScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\AddNotificationScreen.resx">
+      <DependentUpon>AddNotificationScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\AddOrganizationScreen.resx">
+      <DependentUpon>AddOrganizationScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\AddQuestionScreen.resx">
+      <DependentUpon>AddQuestionScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\AddRoomScreen.resx">
+      <DependentUpon>AddRoomScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\AssignRoomsScreen.resx">
       <DependentUpon>AssignRoomsScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,11 +367,35 @@
     <EmbeddedResource Include="Screens\DefaultClassScreen.resx">
       <DependentUpon>DefaultClassScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\DefaultEventScreen.resx">
+      <DependentUpon>DefaultEventScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\DefaultNotificationScreen.resx">
+      <DependentUpon>DefaultNotificationScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\DefaultOrganizationScreen.resx">
+      <DependentUpon>DefaultOrganizationScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\DefaultReportScreen.resx">
+      <DependentUpon>DefaultReportScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\DefaultRoomScreen.resx">
+      <DependentUpon>DefaultRoomScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\DeleteBuildingScreen.resx">
       <DependentUpon>DeleteBuildingScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\DeleteClassScreen.resx">
       <DependentUpon>DeleteClassScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\DeleteEventScreen.resx">
+      <DependentUpon>DeleteEventScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\DeleteOrganizationScreen.resx">
+      <DependentUpon>DeleteOrganizationScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\DeleteRoomScreen.resx">
+      <DependentUpon>DeleteRoomScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\EditBuildingScreen.resx">
       <DependentUpon>EditBuildingScreen.cs</DependentUpon>
@@ -226,11 +403,41 @@
     <EmbeddedResource Include="Screens\EditClassScreen.resx">
       <DependentUpon>EditClassScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\EditEventScreen.resx">
+      <DependentUpon>EditEventScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\EditNotificationScreen.resx">
+      <DependentUpon>EditNotificationScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\EditOrganizationScreen.resx">
+      <DependentUpon>EditOrganizationScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\EditQuestionScreen.resx">
+      <DependentUpon>EditQuestionScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\EditReportScreen.resx">
+      <DependentUpon>EditReportScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\EditRoomScreen.resx">
       <DependentUpon>EditRoomScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\HomeScreen.resx">
       <DependentUpon>HomeScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\LoadQuestionScreen.resx">
+      <DependentUpon>LoadQuestionScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\LoadReportScreen.resx">
+      <DependentUpon>LoadReportScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\NewReportScreen.resx">
+      <DependentUpon>NewReportScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\RequestTechScreen.resx">
+      <DependentUpon>RequestTechScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\SetNotificationPreferencesScreen.resx">
+      <DependentUpon>SetNotificationPreferencesScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SidePanels\BuildingsSidePanel.resx">
       <DependentUpon>BuildingsSidePanel.cs</DependentUpon>

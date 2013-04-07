@@ -54,6 +54,7 @@
             this.linkLabelRequestTech.TabIndex = 17;
             this.linkLabelRequestTech.TabStop = true;
             this.linkLabelRequestTech.Text = "Request Technology";
+            this.linkLabelRequestTech.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRequestTech_LinkClicked);
             // 
             // linkLabel3
             // 
@@ -64,6 +65,7 @@
             this.linkLabel3.TabIndex = 16;
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "Delete Room";
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
             // linkLabel2
             // 
@@ -74,6 +76,7 @@
             this.linkLabel2.TabIndex = 15;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Edit Room";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // linkLabel1
             // 
@@ -84,6 +87,7 @@
             this.linkLabel1.TabIndex = 14;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Add Room";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // RoomsSidePanel
             // 
@@ -96,6 +100,7 @@
             this.Controls.Add(this.labelHeader);
             this.Name = "RoomsSidePanel";
             this.Size = new System.Drawing.Size(150, 600);
+            this.Load += new System.EventHandler(this.RoomsSidePanel_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
