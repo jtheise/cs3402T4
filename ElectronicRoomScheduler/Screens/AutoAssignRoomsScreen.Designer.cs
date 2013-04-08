@@ -1,6 +1,6 @@
 ﻿namespace ElectronicRoomScheduler.Screens
 {
-    partial class AssignRoomsScreen
+    partial class AutoAssignRoomsScreen
     {
         /// <summary> 
         /// Required designer variable.

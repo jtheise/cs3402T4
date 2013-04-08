@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace ElectronicRoomScheduler.Screens
 {
-    public partial class AssignRoomsScreen : UserControl
+    public partial class AutoAssignRoomsScreen : UserControl
     {
-        public AssignRoomsScreen()
+        public AutoAssignRoomsScreen()
         {
             InitializeComponent();
         }

@@ -1,0 +1,5 @@
+﻿Google Maps API Stuffs
+
+http://www.ehow.com/how_7940178_use-google-maps-c.html
+
+https://developers.google.com/maps/documentation/business/clientside#Accessing
