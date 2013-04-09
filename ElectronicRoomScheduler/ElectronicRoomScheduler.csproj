@@ -118,11 +118,11 @@
     <Compile Include="Screens\AddRoomScreen.Designer.cs">
       <DependentUpon>AddRoomScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\AssignRoomsScreen.cs">
+    <Compile Include="Screens\AutoAssignRoomsScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Screens\AssignRoomsScreen.Designer.cs">
-      <DependentUpon>AssignRoomsScreen.cs</DependentUpon>
+    <Compile Include="Screens\AutoAssignRoomsScreen.Designer.cs">
+      <DependentUpon>AutoAssignRoomsScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\DefaultBuildingsScreen.cs">
       <SubType>UserControl</SubType>
@@ -358,8 +358,8 @@
     <EmbeddedResource Include="Screens\AddRoomScreen.resx">
       <DependentUpon>AddRoomScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\AssignRoomsScreen.resx">
-      <DependentUpon>AssignRoomsScreen.cs</DependentUpon>
+    <EmbeddedResource Include="Screens\AutoAssignRoomsScreen.resx">
+      <DependentUpon>AutoAssignRoomsScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\DefaultBuildingsScreen.resx">
       <DependentUpon>DefaultBuildingsScreen.cs</DependentUpon>
@@ -460,6 +460,7 @@
     <EmbeddedResource Include="SidePanels\RoomsSidePanel.resx">
       <DependentUpon>RoomsSidePanel.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

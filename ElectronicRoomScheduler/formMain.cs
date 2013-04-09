@@ -112,7 +112,7 @@ namespace ElectronicRoomScheduler
             if (screenName == "AssignRoom")
             {
                 containerLeftRight.Panel2.Controls.Clear();
-                containerLeftRight.Panel2.Controls.Add(new Screens.AssignRoomsScreen());
+                containerLeftRight.Panel2.Controls.Add(new Screens.AutoAssignRoomsScreen());
             }
 
             if (screenName == "EditRoom")

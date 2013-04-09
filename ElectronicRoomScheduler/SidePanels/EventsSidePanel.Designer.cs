@@ -37,11 +37,10 @@
             // labelHeader
             // 
             this.labelHeader.AutoSize = true;
-            this.labelHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.labelHeader.ForeColor = System.Drawing.Color.Blue;
-            this.labelHeader.Location = new System.Drawing.Point(28, 10);
+            this.labelHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.labelHeader.Location = new System.Drawing.Point(23, 10);
             this.labelHeader.Name = "labelHeader";
-            this.labelHeader.Size = new System.Drawing.Size(95, 13);
+            this.labelHeader.Size = new System.Drawing.Size(105, 15);
             this.labelHeader.TabIndex = 18;
             this.labelHeader.Text = "Manage Events";
             this.labelHeader.Click += new System.EventHandler(this.labelHeader_Click);

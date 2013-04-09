@@ -1,6 +1,6 @@
 ﻿namespace ElectronicRoomScheduler.Screens
 {
-    partial class AssignRoomsScreen
+    partial class AutoAssignRoomsScreen
     {
         /// <summary> 
         /// Required designer variable.
@@ -34,7 +34,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(178, 73);
+            this.button1.Location = new System.Drawing.Point(15, 67);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(186, 62);
             this.button1.TabIndex = 2;
@@ -51,13 +51,13 @@
             this.labelTitle.TabIndex = 3;
             this.labelTitle.Text = "Assign Rooms";
             // 
-            // AssignRoomsScreen
+            // AutoAssignRoomsScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.button1);
-            this.Name = "AssignRoomsScreen";
+            this.Name = "AutoAssignRoomsScreen";
             this.Size = new System.Drawing.Size(820, 480);
             this.Load += new System.EventHandler(this.AssignRoomsScreen_Load);
             this.ResumeLayout(false);

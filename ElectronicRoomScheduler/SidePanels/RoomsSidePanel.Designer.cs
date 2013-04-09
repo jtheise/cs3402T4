@@ -38,11 +38,10 @@
             // labelHeader
             // 
             this.labelHeader.AutoSize = true;
-            this.labelHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.labelHeader.ForeColor = System.Drawing.Color.Blue;
-            this.labelHeader.Location = new System.Drawing.Point(22, 10);
+            this.labelHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHeader.Location = new System.Drawing.Point(21, 10);
             this.labelHeader.Name = "labelHeader";
-            this.labelHeader.Size = new System.Drawing.Size(94, 13);
+            this.labelHeader.Size = new System.Drawing.Size(108, 15);
             this.labelHeader.TabIndex = 13;
             this.labelHeader.Text = "Manage Rooms";
             this.labelHeader.Click += new System.EventHandler(this.labelHeader_Click);

@@ -37,11 +37,10 @@
             // labelHeader
             // 
             this.labelHeader.AutoSize = true;
-            this.labelHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.labelHeader.ForeColor = System.Drawing.Color.Blue;
-            this.labelHeader.Location = new System.Drawing.Point(9, 10);
+            this.labelHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHeader.Location = new System.Drawing.Point(7, 10);
             this.labelHeader.Name = "labelHeader";
-            this.labelHeader.Size = new System.Drawing.Size(133, 13);
+            this.labelHeader.Size = new System.Drawing.Size(152, 15);
             this.labelHeader.TabIndex = 19;
             this.labelHeader.Text = "Manage Organizations";
             this.labelHeader.Click += new System.EventHandler(this.labelHeader_Click);
@@ -88,7 +87,7 @@
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.labelHeader);
             this.Name = "OrganizationsSidePanel";
-            this.Size = new System.Drawing.Size(150, 600);
+            this.Size = new System.Drawing.Size(160, 600);
             this.Load += new System.EventHandler(this.OrganizationsSidePanel_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
