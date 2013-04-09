@@ -117,4 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="webBrowser1.Url" xml:space="preserve">
+    <value>http://maps.google.com/maps/api/staticmap?center=41.376551,-83.639131&amp;zoom=17&amp;size=572x420&amp;maptype=roadmap&amp;markers=color:blue|label:1|41.374977,-83.640214&amp;markers=color:green|label:2|41.376485,-83.638463&amp;markers=color:red|color:red|label:3|41.377938,-83.639640&amp;sensor=false</value>
+  </data>
 </root>
