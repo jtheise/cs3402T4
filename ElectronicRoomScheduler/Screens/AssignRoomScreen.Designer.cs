@@ -1,6 +1,6 @@
 ﻿namespace ElectronicRoomScheduler.Screens
 {
-    partial class HomeScreen
+    partial class AssignRoomScreen
     {
         /// <summary> 
         /// Required designer variable.
@@ -37,18 +37,17 @@
             this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.Location = new System.Drawing.Point(8, 7);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(159, 37);
-            this.labelTitle.TabIndex = 3;
-            this.labelTitle.Text = "Welcome!";
+            this.labelTitle.Size = new System.Drawing.Size(208, 37);
+            this.labelTitle.TabIndex = 2;
+            this.labelTitle.Text = "Assign Room";
             // 
-            // HomeScreen
+            // AssignRoomScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.labelTitle);
-            this.Name = "HomeScreen";
+            this.Name = "AssignRoomScreen";
             this.Size = new System.Drawing.Size(820, 480);
-            this.Load += new System.EventHandler(this.HomeScreen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

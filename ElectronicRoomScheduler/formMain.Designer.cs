@@ -33,12 +33,12 @@
             this.buttonHome = new System.Windows.Forms.Button();
             this.buttonClasses = new System.Windows.Forms.Button();
             this.buttonBuildings = new System.Windows.Forms.Button();
+            this.buttonRooms = new System.Windows.Forms.Button();
             this.buttonEvents = new System.Windows.Forms.Button();
             this.buttonNotifications = new System.Windows.Forms.Button();
             this.buttonOrganizations = new System.Windows.Forms.Button();
             this.buttonReports = new System.Windows.Forms.Button();
             this.containerLeftRight = new System.Windows.Forms.SplitContainer();
-            this.buttonRooms = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.containerTopBottom)).BeginInit();
             this.containerTopBottom.Panel1.SuspendLayout();
             this.containerTopBottom.Panel2.SuspendLayout();
@@ -123,6 +123,18 @@
             this.buttonBuildings.UseVisualStyleBackColor = true;
             this.buttonBuildings.Click += new System.EventHandler(this.buttonBuildings_Click);
             // 
+            // buttonRooms
+            // 
+            this.buttonRooms.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRooms.Location = new System.Drawing.Point(336, 13);
+            this.buttonRooms.Margin = new System.Windows.Forms.Padding(6, 13, 4, 4);
+            this.buttonRooms.Name = "buttonRooms";
+            this.buttonRooms.Size = new System.Drawing.Size(100, 50);
+            this.buttonRooms.TabIndex = 15;
+            this.buttonRooms.Text = "Rooms";
+            this.buttonRooms.UseVisualStyleBackColor = true;
+            this.buttonRooms.Click += new System.EventHandler(this.buttonRooms_Click);
+            // 
             // buttonEvents
             // 
             this.buttonEvents.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -188,19 +200,7 @@
             this.containerLeftRight.SplitterWidth = 5;
             this.containerLeftRight.TabIndex = 0;
             // 
-            // buttonRooms
-            // 
-            this.buttonRooms.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRooms.Location = new System.Drawing.Point(336, 13);
-            this.buttonRooms.Margin = new System.Windows.Forms.Padding(6, 13, 4, 4);
-            this.buttonRooms.Name = "buttonRooms";
-            this.buttonRooms.Size = new System.Drawing.Size(100, 50);
-            this.buttonRooms.TabIndex = 15;
-            this.buttonRooms.Text = "Rooms";
-            this.buttonRooms.UseVisualStyleBackColor = true;
-            this.buttonRooms.Click += new System.EventHandler(this.buttonRooms_Click);
-            // 
-            // formMain
+            // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -212,6 +212,7 @@
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Electronic Room Scheduler";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
             this.Load += new System.EventHandler(this.formMain_Load);
             this.containerTopBottom.Panel1.ResumeLayout(false);
             this.containerTopBottom.Panel2.ResumeLayout(false);

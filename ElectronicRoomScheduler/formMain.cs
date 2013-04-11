@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Windows.Forms;
 
@@ -13,12 +15,14 @@ namespace ElectronicRoomScheduler
     {
         private Stack<string> History = new Stack<string>();
         public string LoggedInUser { get; set; }
+        public List<Class> ClassList;
+        public int ClassToLoad { get; set; }
+
 
         public void GoBack()
         {
             LoadScreen(History.Pop());
         }
-
 
         public void ClearScreen()
         {
@@ -35,7 +39,6 @@ namespace ElectronicRoomScheduler
 
             if (clearBoth)
                 containerLeftRight.Panel1.Controls.Clear();
-
         }
 
         public void Login(string name)
@@ -49,6 +52,7 @@ namespace ElectronicRoomScheduler
             }
         }
 
+        #region LoadScreen(string screenName)
         public void LoadScreen(string screenName)
         {
             History.Push(screenName);
@@ -89,8 +93,6 @@ namespace ElectronicRoomScheduler
                 containerLeftRight.Panel2.Controls.Clear();
                 containerLeftRight.Panel2.Controls.Add(new Screens.DefaultRoomScreen());
             }
-
-
             if (screenName == "AddClass")
             {
                 containerLeftRight.Panel2.Controls.Clear();
@@ -100,7 +102,7 @@ namespace ElectronicRoomScheduler
             if (screenName == "EditClass")
             {
                 containerLeftRight.Panel2.Controls.Clear();
-                containerLeftRight.Panel2.Controls.Add(new Screens.EditClassScreen());
+                containerLeftRight.Panel2.Controls.Add(new Screens.EditClassScreen(ClassToLoad));
             }
 
             if (screenName == "DeleteClass")
@@ -110,6 +112,11 @@ namespace ElectronicRoomScheduler
             }
 
             if (screenName == "AssignRoom")
+            {
+                containerLeftRight.Panel2.Controls.Clear();
+                containerLeftRight.Panel2.Controls.Add(new Screens.AssignRoomScreen());
+            }
+            if (screenName == "AutoAssignRooms")
             {
                 containerLeftRight.Panel2.Controls.Clear();
                 containerLeftRight.Panel2.Controls.Add(new Screens.AutoAssignRoomsScreen());
@@ -154,8 +161,6 @@ namespace ElectronicRoomScheduler
                 containerLeftRight.Panel2.Controls.Clear();
                 containerLeftRight.Panel2.Controls.Add(new Screens.DeleteEventScreen());
             }
-
-
             if (screenName == "AddNotification")
             {
                 containerLeftRight.Panel2.Controls.Clear();
@@ -236,8 +241,7 @@ namespace ElectronicRoomScheduler
                 containerLeftRight.Panel2.Controls.Add(new Screens.RequestTechScreen());
             }
         }
-
-
+        #endregion
 
         public FormMain()
         {
@@ -254,12 +258,47 @@ namespace ElectronicRoomScheduler
             login.ShowDialog();
             this.Visible = true;
 
-
             containerLeftRight.Panel1.Hide();
             containerLeftRight.SplitterDistance = 0;
 
             containerLeftRight.Panel2.Controls.Add(new Screens.HomeScreen());
+
+
+            // load the serialized list from the disk
+            try
+            {
+                using (Stream stream = File.Open("class.data", FileMode.Open))
+                {
+                    BinaryFormatter bin = new BinaryFormatter();
+
+                    ClassList = (List<Class>)bin.Deserialize(stream);
+                }
+            }
+            catch (Exception) // does not exist (most likely)
+            {
+                ClassList = new List<Class>();
+                return;
+            }
         }
+
+        private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                using (Stream stream = File.Open("class.data", FileMode.OpenOrCreate))
+                {
+                    BinaryFormatter bin = new BinaryFormatter();
+                    bin.Serialize(stream, ClassList);
+                }
+            }
+            catch (Exception)
+            {
+                return;
+            }
+            
+        }
+
+        #region Button Clicks
 
         private void buttonHome_Click(object sender, EventArgs e)
         {
@@ -327,6 +366,6 @@ namespace ElectronicRoomScheduler
             containerLeftRight.Panel1.Controls.Add(new SidePanels.RoomsSidePanel());
             containerLeftRight.Panel2.Controls.Add(new Screens.DefaultRoomScreen());
         }
-
+        #endregion
     }
 }

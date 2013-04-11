@@ -47,9 +47,9 @@
             this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.Location = new System.Drawing.Point(8, 7);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(224, 37);
+            this.labelTitle.Size = new System.Drawing.Size(424, 37);
             this.labelTitle.TabIndex = 3;
-            this.labelTitle.Text = "Assign Rooms";
+            this.labelTitle.Text = "Automatically Assign Rooms";
             // 
             // AutoAssignRoomsScreen
             // 

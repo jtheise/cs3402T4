@@ -30,10 +30,13 @@
         {
             this.labelTitle = new System.Windows.Forms.Label();
             this.listView = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // labelTitle
@@ -53,8 +56,11 @@
             this.listView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader2,
             this.columnHeader1,
+            this.columnHeader5,
             this.columnHeader3,
-            this.columnHeader4});
+            this.columnHeader4,
+            this.columnHeader6,
+            this.columnHeader7});
             this.listView.FullRowSelect = true;
             this.listView.Location = new System.Drawing.Point(15, 47);
             this.listView.Name = "listView";
@@ -62,16 +68,18 @@
             this.listView.TabIndex = 3;
             this.listView.UseCompatibleStateImageBehavior = false;
             this.listView.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Course Name";
-            this.columnHeader1.Width = 250;
+            this.listView.DoubleClick += new System.EventHandler(this.listView_DoubleClick);
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Course ID";
             this.columnHeader2.Width = 75;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.DisplayIndex = 1;
+            this.columnHeader1.Text = "Course Name";
+            this.columnHeader1.Width = 250;
             // 
             // columnHeader3
             // 
@@ -82,6 +90,19 @@
             // 
             this.columnHeader4.Text = "Instructor";
             this.columnHeader4.Width = 150;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.DisplayIndex = 2;
+            this.columnHeader5.Text = "Section #";
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Start";
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "End";
             // 
             // DefaultClassScreen
             // 
@@ -105,6 +126,9 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
 
     }
 }

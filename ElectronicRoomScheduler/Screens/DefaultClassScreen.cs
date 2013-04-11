@@ -22,8 +22,25 @@ namespace ElectronicRoomScheduler.Screens
 
 
             // add something to listview
+            listView.Items.Clear();
 
-            listView.Items.Add(new ListViewItem(new string[] { "1", "HIST 2011: Introduction to Art History", "Art Department", "Paul Picasso" }));
+            foreach (Class item in Program.GetParent().ClassList)
+            {
+
+
+                listView.Items.Add(new ListViewItem(new string[] { item.CourseId, item.CourseName, item.SectionNumber, item.Department, item.Instructor, item.StartTime.ToString("t"), item.EndTime.ToString("t") }));
+            }
+
+        }
+
+        private void listView_DoubleClick(object sender, EventArgs e)
+        {
+            if (listView.SelectedItems.Count != 1)
+                return;
+
+            Program.GetParent().ClassToLoad = listView.SelectedItems[0].Index;
+            Program.GetParent().LoadScreen("EditClass");
+
         }
     }
 }

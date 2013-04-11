@@ -34,6 +34,7 @@
             this.labelHeader = new System.Windows.Forms.Label();
             this.linkLabelAssignRooms = new System.Windows.Forms.LinkLabel();
             this.linkLabelEditRooms = new System.Windows.Forms.LinkLabel();
+            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // linkLabel1
@@ -85,10 +86,10 @@
             this.linkLabelAssignRooms.AutoSize = true;
             this.linkLabelAssignRooms.Location = new System.Drawing.Point(26, 116);
             this.linkLabelAssignRooms.Name = "linkLabelAssignRooms";
-            this.linkLabelAssignRooms.Size = new System.Drawing.Size(74, 13);
+            this.linkLabelAssignRooms.Size = new System.Drawing.Size(69, 13);
             this.linkLabelAssignRooms.TabIndex = 4;
             this.linkLabelAssignRooms.TabStop = true;
-            this.linkLabelAssignRooms.Text = "Assign Rooms";
+            this.linkLabelAssignRooms.Text = "Assign Room";
             this.linkLabelAssignRooms.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelAssignRooms_LinkClicked);
             // 
             // linkLabelEditRooms
@@ -102,10 +103,22 @@
             this.linkLabelEditRooms.Text = "Edit Room";
             this.linkLabelEditRooms.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelEditRooms_LinkClicked);
             // 
+            // linkLabel4
+            // 
+            this.linkLabel4.AutoSize = true;
+            this.linkLabel4.Location = new System.Drawing.Point(26, 312);
+            this.linkLabel4.Name = "linkLabel4";
+            this.linkLabel4.Size = new System.Drawing.Size(74, 26);
+            this.linkLabel4.TabIndex = 6;
+            this.linkLabel4.TabStop = true;
+            this.linkLabel4.Text = "Automatically\r\nAssign Rooms";
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
+            // 
             // ClassSidePanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.linkLabel4);
             this.Controls.Add(this.linkLabelEditRooms);
             this.Controls.Add(this.linkLabelAssignRooms);
             this.Controls.Add(this.labelHeader);
@@ -128,5 +141,6 @@
         private System.Windows.Forms.Label labelHeader;
         private System.Windows.Forms.LinkLabel linkLabelAssignRooms;
         private System.Windows.Forms.LinkLabel linkLabelEditRooms;
+        private System.Windows.Forms.LinkLabel linkLabel4;
     }
 }

@@ -23,8 +23,8 @@ namespace ElectronicRoomScheduler.SidePanels
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            Program.GetParent().ClassToLoad = -1;
             Program.GetParent().LoadScreen("EditClass");
-
         }
 
         private void ClassSidePanel_Load(object sender, EventArgs e)
@@ -58,6 +58,11 @@ namespace ElectronicRoomScheduler.SidePanels
         private void labelHeader_Click(object sender, EventArgs e)
         {
             Program.GetParent().LoadScreen("DefaultClass");
+        }
+
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Program.GetParent().LoadScreen("AutoAssignRooms");
         }
     }
 }
