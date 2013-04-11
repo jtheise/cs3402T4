@@ -20,5 +20,18 @@ namespace ElectronicRoomScheduler.Screens
         {
             this.Dock = DockStyle.Fill;
         }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+
+            Program.GetParent().ClassList.RemoveAt(Program.GetParent().ClassList.Count - 1); // removes the last class
+
+
+
+
+
+
+            Program.GetParent().LoadScreen("DefaultClass");
+        }
     }
 }

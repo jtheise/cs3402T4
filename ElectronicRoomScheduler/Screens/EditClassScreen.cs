@@ -51,6 +51,27 @@ namespace ElectronicRoomScheduler.Screens
                 textBoxSection.Text = Program.GetParent().ClassList[IndexLoaded].SectionNumber;
                 dateTimePickerStartTime.Value = Program.GetParent().ClassList[IndexLoaded].StartTime;
                 dateTimePickerEndTime.Value = Program.GetParent().ClassList[IndexLoaded].EndTime;
+
+                if (Program.GetParent().ClassList[IndexLoaded].Days != null)
+                {
+                    foreach (var item in Program.GetParent().ClassList[IndexLoaded].Days)
+                    {
+                        if (item == "Mon")
+                            checkedListBoxClassDays.SetItemChecked(0, true);
+                        if (item == "Tue")
+                            checkedListBoxClassDays.SetItemChecked(1, true);
+                        if (item == "Wed")
+                            checkedListBoxClassDays.SetItemChecked(2, true);
+                        if (item == "Thu")
+                            checkedListBoxClassDays.SetItemChecked(3, true);
+                        if (item == "Fri")
+                            checkedListBoxClassDays.SetItemChecked(4, true);
+                        if (item == "Sat")
+                            checkedListBoxClassDays.SetItemChecked(5, true);
+                        if (item == "Sun")
+                            checkedListBoxClassDays.SetItemChecked(6, true);
+                    }
+                }
             }
         }
 
@@ -78,7 +99,8 @@ namespace ElectronicRoomScheduler.Screens
             LoadClass();
         }
 
-        private void buttonUpdate_Click(object sender, EventArgs e)
+
+        private void buttonAdd_Click(object sender, EventArgs e)
         {
             errorProvider1.Clear();
             bool hasErrors = false;
@@ -119,6 +141,21 @@ namespace ElectronicRoomScheduler.Screens
                 hasErrors = true;
             }
 
+            List<string> days = new List<string>();
+            foreach (var item in checkedListBoxClassDays.CheckedItems)
+            {
+                days.Add(item.ToString());
+            }
+
+
+            if (days.Count == 0)
+            {
+                errorProvider1.SetError(checkedListBoxClassDays, "Must select at least one day for the class.");
+                hasErrors = true;
+            }
+
+
+
             if (hasErrors)
                 return;
 
@@ -132,6 +169,10 @@ namespace ElectronicRoomScheduler.Screens
             Program.GetParent().ClassList[IndexLoaded].StartTime = dateTimePickerStartTime.Value;
             Program.GetParent().ClassList[IndexLoaded].SectionNumber = textBoxSection.Text;
             Program.GetParent().ClassList[IndexLoaded].Instructor = textBoxInstructor.Text;
+            Program.GetParent().ClassList[IndexLoaded].Days = days;
+
+
+
 
             Program.GetParent().LoadScreen("DefaultClass");
         }

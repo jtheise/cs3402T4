@@ -29,13 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.buttonUpdate = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.buttonLookup = new System.Windows.Forms.Button();
             this.textBoxClassLookup = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.labelTitle = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.checkedListBoxClassDays = new System.Windows.Forms.CheckedListBox();
+            this.buttonAdd = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.textBoxSection = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -49,23 +52,11 @@
             this.textBoxCourseName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label9 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // buttonUpdate
-            // 
-            this.buttonUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonUpdate.Location = new System.Drawing.Point(408, 195);
-            this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(75, 23);
-            this.buttonUpdate.TabIndex = 3;
-            this.buttonUpdate.Text = "Update";
-            this.buttonUpdate.UseVisualStyleBackColor = true;
-            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // groupBox1
             // 
@@ -115,12 +106,18 @@
             this.labelTitle.TabIndex = 5;
             this.labelTitle.Text = "Edit Class";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.checkedListBoxClassDays);
+            this.groupBox2.Controls.Add(this.buttonAdd);
+            this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.textBoxSection);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.buttonUpdate);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.dateTimePickerEndTime);
             this.groupBox2.Controls.Add(this.dateTimePickerStartTime);
@@ -131,14 +128,52 @@
             this.groupBox2.Controls.Add(this.textBoxCourseName);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Location = new System.Drawing.Point(29, 126);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(489, 229);
+            this.groupBox2.Size = new System.Drawing.Size(437, 267);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Course Information";
-            this.groupBox2.Visible = false;
+            // 
+            // checkedListBoxClassDays
+            // 
+            this.checkedListBoxClassDays.CheckOnClick = true;
+            this.checkedListBoxClassDays.ColumnWidth = 45;
+            this.checkedListBoxClassDays.FormattingEnabled = true;
+            this.checkedListBoxClassDays.Items.AddRange(new object[] {
+            "Mon",
+            "Tue",
+            "Wed",
+            "Thu",
+            "Fri",
+            "Sat",
+            "Sun"});
+            this.checkedListBoxClassDays.Location = new System.Drawing.Point(104, 173);
+            this.checkedListBoxClassDays.MultiColumn = true;
+            this.checkedListBoxClassDays.Name = "checkedListBoxClassDays";
+            this.checkedListBoxClassDays.Size = new System.Drawing.Size(324, 19);
+            this.checkedListBoxClassDays.TabIndex = 17;
+            // 
+            // buttonAdd
+            // 
+            this.buttonAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAdd.Location = new System.Drawing.Point(356, 238);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdd.TabIndex = 7;
+            this.buttonAdd.Text = "Save";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(66, 176);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(31, 13);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Days";
             // 
             // textBoxSection
             // 
@@ -159,7 +194,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(45, 205);
+            this.label6.Location = new System.Drawing.Point(45, 231);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 13);
             this.label6.TabIndex = 13;
@@ -168,7 +203,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(45, 179);
+            this.label1.Location = new System.Drawing.Point(45, 205);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 12;
@@ -177,7 +212,7 @@
             // dateTimePickerEndTime
             // 
             this.dateTimePickerEndTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePickerEndTime.Location = new System.Drawing.Point(106, 198);
+            this.dateTimePickerEndTime.Location = new System.Drawing.Point(106, 224);
             this.dateTimePickerEndTime.Name = "dateTimePickerEndTime";
             this.dateTimePickerEndTime.ShowUpDown = true;
             this.dateTimePickerEndTime.Size = new System.Drawing.Size(89, 20);
@@ -187,7 +222,7 @@
             // dateTimePickerStartTime
             // 
             this.dateTimePickerStartTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePickerStartTime.Location = new System.Drawing.Point(106, 172);
+            this.dateTimePickerStartTime.Location = new System.Drawing.Point(106, 198);
             this.dateTimePickerStartTime.Name = "dateTimePickerStartTime";
             this.dateTimePickerStartTime.ShowUpDown = true;
             this.dateTimePickerStartTime.Size = new System.Drawing.Size(89, 20);
@@ -249,18 +284,14 @@
             this.label4.TabIndex = 2;
             this.label4.Text = "Department";
             // 
-            // label8
+            // label9
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(28, 59);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(71, 13);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Course Name";
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(28, 59);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(71, 13);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Course Name";
             // 
             // EditClassScreen
             // 
@@ -275,9 +306,9 @@
             this.Load += new System.EventHandler(this.EditClassScreen_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,13 +316,16 @@
 
         #endregion
 
-        private System.Windows.Forms.Button buttonUpdate;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBoxClassLookup;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonLookup;
         private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.CheckedListBox checkedListBoxClassDays;
+        private System.Windows.Forms.Button buttonAdd;
+        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBoxSection;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -305,7 +339,6 @@
         private System.Windows.Forms.TextBox textBoxCourseName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label label9;
     }
 }

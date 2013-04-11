@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkedListBoxClassDays = new System.Windows.Forms.CheckedListBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.textBoxSection = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -54,7 +56,7 @@
             // buttonAdd
             // 
             this.buttonAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAdd.Location = new System.Drawing.Point(353, 286);
+            this.buttonAdd.Location = new System.Drawing.Point(356, 238);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(75, 23);
             this.buttonAdd.TabIndex = 7;
@@ -64,6 +66,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.checkedListBoxClassDays);
+            this.groupBox1.Controls.Add(this.buttonAdd);
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.textBoxSection);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
@@ -80,10 +85,38 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(21, 51);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(407, 229);
+            this.groupBox1.Size = new System.Drawing.Size(437, 267);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Course Information";
+            // 
+            // checkedListBoxClassDays
+            // 
+            this.checkedListBoxClassDays.CheckOnClick = true;
+            this.checkedListBoxClassDays.ColumnWidth = 45;
+            this.checkedListBoxClassDays.FormattingEnabled = true;
+            this.checkedListBoxClassDays.Items.AddRange(new object[] {
+            "Mon",
+            "Tue",
+            "Wed",
+            "Thu",
+            "Fri",
+            "Sat",
+            "Sun"});
+            this.checkedListBoxClassDays.Location = new System.Drawing.Point(104, 173);
+            this.checkedListBoxClassDays.MultiColumn = true;
+            this.checkedListBoxClassDays.Name = "checkedListBoxClassDays";
+            this.checkedListBoxClassDays.Size = new System.Drawing.Size(324, 19);
+            this.checkedListBoxClassDays.TabIndex = 17;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(66, 176);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(31, 13);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Days";
             // 
             // textBoxSection
             // 
@@ -104,7 +137,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(45, 205);
+            this.label6.Location = new System.Drawing.Point(45, 231);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 13);
             this.label6.TabIndex = 13;
@@ -113,7 +146,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(45, 179);
+            this.label1.Location = new System.Drawing.Point(45, 205);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 12;
@@ -122,7 +155,7 @@
             // dateTimePickerEndTime
             // 
             this.dateTimePickerEndTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePickerEndTime.Location = new System.Drawing.Point(106, 198);
+            this.dateTimePickerEndTime.Location = new System.Drawing.Point(106, 224);
             this.dateTimePickerEndTime.Name = "dateTimePickerEndTime";
             this.dateTimePickerEndTime.ShowUpDown = true;
             this.dateTimePickerEndTime.Size = new System.Drawing.Size(89, 20);
@@ -132,7 +165,7 @@
             // dateTimePickerStartTime
             // 
             this.dateTimePickerStartTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePickerStartTime.Location = new System.Drawing.Point(106, 172);
+            this.dateTimePickerStartTime.Location = new System.Drawing.Point(106, 198);
             this.dateTimePickerStartTime.Name = "dateTimePickerStartTime";
             this.dateTimePickerStartTime.ShowUpDown = true;
             this.dateTimePickerStartTime.Size = new System.Drawing.Size(89, 20);
@@ -222,7 +255,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.labelTitle);
             this.Name = "AddClassScreen";
             this.Size = new System.Drawing.Size(820, 480);
@@ -255,5 +287,7 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.TextBox textBoxSection;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.CheckedListBox checkedListBoxClassDays;
+        private System.Windows.Forms.Label label8;
     }
 }

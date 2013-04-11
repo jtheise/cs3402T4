@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.labelTitle = new System.Windows.Forms.Label();
+            this.buttonDelete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelTitle
@@ -41,10 +42,21 @@
             this.labelTitle.TabIndex = 2;
             this.labelTitle.Text = "Delete Class";
             // 
+            // buttonDelete
+            // 
+            this.buttonDelete.Location = new System.Drawing.Point(47, 106);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(157, 31);
+            this.buttonDelete.TabIndex = 3;
+            this.buttonDelete.Text = "delete a class example";
+            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
+            // 
             // DeleteClassScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.labelTitle);
             this.Name = "DeleteClassScreen";
             this.Size = new System.Drawing.Size(820, 480);
@@ -57,6 +69,7 @@
         #endregion
 
         private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.Button buttonDelete;
 
 
     }

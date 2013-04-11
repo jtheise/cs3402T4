@@ -57,6 +57,19 @@ namespace ElectronicRoomScheduler.Screens
                 hasErrors = true;
             }
 
+            List<string> days = new List<string>();
+            foreach (var item in checkedListBoxClassDays.CheckedItems)
+            {
+                days.Add(item.ToString());
+            }
+
+
+            if (days.Count == 0)
+            {
+                errorProvider1.SetError(checkedListBoxClassDays, "Must select at least one day for the class.");
+                hasErrors = true;
+            }
+
             if (hasErrors)
                 return;
 
@@ -73,6 +86,7 @@ namespace ElectronicRoomScheduler.Screens
             c.SectionNumber = textBoxSection.Text;
             c.Instructor = textBoxInstructor.Text;
 
+            c.Days = days;
             Program.GetParent().ClassList.Add(c);
 
             DialogResult dr = MessageBox.Show("The class was successfully added.\r\n\r\nDo you want to add another class?", "Success", MessageBoxButtons.YesNo, MessageBoxIcon.Information);

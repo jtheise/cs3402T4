@@ -14,6 +14,7 @@ namespace ElectronicRoomScheduler
 
         public string CourseName { get; set; }
         public string SectionNumber { get; set; }
+        public List<string> Days { get; set; }
 
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
