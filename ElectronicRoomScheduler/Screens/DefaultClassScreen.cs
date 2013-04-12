@@ -19,7 +19,6 @@ namespace ElectronicRoomScheduler.Screens
         private void DefaultClassScreen_Load(object sender, EventArgs e)
         {
             this.Dock = DockStyle.Fill;
-            
 
             // add something to listview
             listView.Items.Clear();
@@ -46,9 +45,14 @@ namespace ElectronicRoomScheduler.Screens
             }
 
             if (listView.Items.Count > 0)
+            {
                 listView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
-            else
                 listView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+            }
+            else
+            {
+                listView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+            }
         }
 
         private void listView_DoubleClick(object sender, EventArgs e)

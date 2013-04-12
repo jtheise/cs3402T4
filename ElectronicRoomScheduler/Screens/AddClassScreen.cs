@@ -62,7 +62,16 @@ namespace ElectronicRoomScheduler.Screens
             {
                 days.Add(item.ToString());
             }
+            bool dupID = false;
+            foreach (var item in Program.GetParent().ClassList)
+                if (item.CourseId.Trim().ToLower() == textBoxCourseId.Text.Trim().ToLower())
+                    dupID = true;
 
+            if (dupID)
+            {
+                errorProvider1.SetError(textBoxCourseId, "Course ID already exists.");
+                hasErrors = true;
+            }
 
             if (days.Count == 0)
             {
@@ -91,7 +100,6 @@ namespace ElectronicRoomScheduler.Screens
 
             DialogResult dr = MessageBox.Show("The class was successfully added.\r\n\r\nDo you want to add another class?", "Success", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
-
             if (dr == DialogResult.Yes)
                 Program.GetParent().LoadScreen("AddClass");
             else
@@ -101,6 +109,8 @@ namespace ElectronicRoomScheduler.Screens
 
         private void AddClassScreen_Load(object sender, EventArgs e)
         {
+            Program.GetParent().AcceptButton = buttonAdd;
+
             dateTimePickerStartTime.Format = DateTimePickerFormat.Custom;
             dateTimePickerStartTime.CustomFormat = "hh:mm tt";
 

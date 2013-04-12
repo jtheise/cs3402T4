@@ -38,11 +38,12 @@ namespace ElectronicRoomScheduler.Screens
         {
             if (IndexLoaded != -1)
             {
+                Program.GetParent().AcceptButton = buttonAdd;
+
                 groupBox1.Visible = false;
                 groupBox2.Visible = true;
 
                 groupBox2.Location = groupBox1.Location;
-
 
                 textBoxCourseId.Text = Program.GetParent().ClassList[IndexLoaded].CourseId;
                 textBoxCourseName.Text = Program.GetParent().ClassList[IndexLoaded].CourseName;
@@ -76,6 +77,8 @@ namespace ElectronicRoomScheduler.Screens
             else
             {
                 groupBox2.Visible = false;
+
+                Program.GetParent().AcceptButton = buttonLookup;
             }
         }
 
@@ -83,12 +86,37 @@ namespace ElectronicRoomScheduler.Screens
 
         private void buttonLookup_Click(object sender, EventArgs e)
         {
-            if (Program.GetParent().ClassList.Count == 0)
-                return;
-
             // to do: search through list and find the section / course name / number / etc.
 
-            IndexLoaded = 0;
+            bool found = false;
+            int counter = 0;
+
+            // first look for course id
+            foreach (var item in Program.GetParent().ClassList)
+            {
+                if (item.CourseId.Trim().ToLower() == textBoxClassLookup.Text.Trim().ToLower())
+                {
+                    found = true;
+                    break;
+                }
+
+                if (item.CourseName.Trim().ToLower() == textBoxClassLookup.Text.Trim().ToLower())
+                {
+                    found = true;
+                    break;
+                }
+
+                counter++;
+            }
+
+            if (!found)
+            {
+                MessageBox.Show("No classes found using: '" + textBoxClassLookup.Text.ToLower().Trim() + "'", "No results", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                IndexLoaded = -1;
+                return;
+            }
+
+            IndexLoaded = counter;
 
 
 
@@ -96,9 +124,6 @@ namespace ElectronicRoomScheduler.Screens
             groupBox2.Visible = true;
 
             groupBox2.Location = groupBox1.Location;
-
-
-
 
             LoadClass();
         }

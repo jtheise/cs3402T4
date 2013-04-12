@@ -70,6 +70,7 @@
             this.containerTopBottom.SplitterDistance = 75;
             this.containerTopBottom.SplitterWidth = 5;
             this.containerTopBottom.TabIndex = 0;
+            this.containerTopBottom.TabStop = false;
             // 
             // flowLayoutPanel1
             // 
@@ -95,6 +96,7 @@
             this.buttonHome.Name = "buttonHome";
             this.buttonHome.Size = new System.Drawing.Size(100, 50);
             this.buttonHome.TabIndex = 6;
+            this.buttonHome.TabStop = false;
             this.buttonHome.Text = "Home";
             this.buttonHome.UseVisualStyleBackColor = true;
             this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
@@ -107,6 +109,7 @@
             this.buttonClasses.Name = "buttonClasses";
             this.buttonClasses.Size = new System.Drawing.Size(100, 50);
             this.buttonClasses.TabIndex = 9;
+            this.buttonClasses.TabStop = false;
             this.buttonClasses.Text = "Classes";
             this.buttonClasses.UseVisualStyleBackColor = true;
             this.buttonClasses.Click += new System.EventHandler(this.buttonClasses_Click);
@@ -119,6 +122,7 @@
             this.buttonBuildings.Name = "buttonBuildings";
             this.buttonBuildings.Size = new System.Drawing.Size(100, 50);
             this.buttonBuildings.TabIndex = 14;
+            this.buttonBuildings.TabStop = false;
             this.buttonBuildings.Text = "Buildings";
             this.buttonBuildings.UseVisualStyleBackColor = true;
             this.buttonBuildings.Click += new System.EventHandler(this.buttonBuildings_Click);
@@ -131,6 +135,7 @@
             this.buttonRooms.Name = "buttonRooms";
             this.buttonRooms.Size = new System.Drawing.Size(100, 50);
             this.buttonRooms.TabIndex = 15;
+            this.buttonRooms.TabStop = false;
             this.buttonRooms.Text = "Rooms";
             this.buttonRooms.UseVisualStyleBackColor = true;
             this.buttonRooms.Click += new System.EventHandler(this.buttonRooms_Click);
@@ -143,6 +148,7 @@
             this.buttonEvents.Name = "buttonEvents";
             this.buttonEvents.Size = new System.Drawing.Size(100, 50);
             this.buttonEvents.TabIndex = 8;
+            this.buttonEvents.TabStop = false;
             this.buttonEvents.Text = "Events";
             this.buttonEvents.UseVisualStyleBackColor = true;
             this.buttonEvents.Click += new System.EventHandler(this.buttonEvents_Click);
@@ -155,6 +161,7 @@
             this.buttonNotifications.Name = "buttonNotifications";
             this.buttonNotifications.Size = new System.Drawing.Size(100, 50);
             this.buttonNotifications.TabIndex = 11;
+            this.buttonNotifications.TabStop = false;
             this.buttonNotifications.Text = "Notifications";
             this.buttonNotifications.UseVisualStyleBackColor = true;
             this.buttonNotifications.Click += new System.EventHandler(this.buttonNotifications_Click);
@@ -167,6 +174,7 @@
             this.buttonOrganizations.Name = "buttonOrganizations";
             this.buttonOrganizations.Size = new System.Drawing.Size(100, 50);
             this.buttonOrganizations.TabIndex = 12;
+            this.buttonOrganizations.TabStop = false;
             this.buttonOrganizations.Text = "Organizations";
             this.buttonOrganizations.UseVisualStyleBackColor = true;
             this.buttonOrganizations.Click += new System.EventHandler(this.buttonOrganizations_Click);
@@ -179,6 +187,7 @@
             this.buttonReports.Name = "buttonReports";
             this.buttonReports.Size = new System.Drawing.Size(100, 50);
             this.buttonReports.TabIndex = 13;
+            this.buttonReports.TabStop = false;
             this.buttonReports.Text = "Reports";
             this.buttonReports.UseVisualStyleBackColor = true;
             this.buttonReports.Click += new System.EventHandler(this.buttonReports_Click);
@@ -199,6 +208,7 @@
             this.containerLeftRight.SplitterDistance = 172;
             this.containerLeftRight.SplitterWidth = 5;
             this.containerLeftRight.TabIndex = 0;
+            this.containerLeftRight.TabStop = false;
             // 
             // FormMain
             // 

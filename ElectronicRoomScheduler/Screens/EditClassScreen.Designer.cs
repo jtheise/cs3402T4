@@ -82,9 +82,9 @@
             // 
             // textBoxClassLookup
             // 
-            this.textBoxClassLookup.Location = new System.Drawing.Point(203, 29);
+            this.textBoxClassLookup.Location = new System.Drawing.Point(177, 29);
             this.textBoxClassLookup.Name = "textBoxClassLookup";
-            this.textBoxClassLookup.Size = new System.Drawing.Size(186, 20);
+            this.textBoxClassLookup.Size = new System.Drawing.Size(212, 20);
             this.textBoxClassLookup.TabIndex = 1;
             // 
             // label2
@@ -92,9 +92,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(42, 32);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(155, 13);
+            this.label2.Size = new System.Drawing.Size(129, 13);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Course ID / Course # / Section";
+            this.label2.Text = "Course ID / Course Name";
             // 
             // labelTitle
             // 

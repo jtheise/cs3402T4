@@ -19,19 +19,43 @@ namespace ElectronicRoomScheduler.Screens
         private void DeleteClassScreen_Load(object sender, EventArgs e)
         {
             this.Dock = DockStyle.Fill;
+            this.textBoxClassLookup.Select();
+            Program.GetParent().AcceptButton = buttonLookup;
         }
 
-        private void buttonDelete_Click(object sender, EventArgs e)
+        private void buttonLookup_Click(object sender, EventArgs e)
         {
+            bool found = false;
+            int counter = 0;
 
-            Program.GetParent().ClassList.RemoveAt(Program.GetParent().ClassList.Count - 1); // removes the last class
+            foreach (var item in Program.GetParent().ClassList)
+            {
+                if (item.CourseId.Trim().ToLower() == textBoxClassLookup.Text.Trim().ToLower())
+                {
+                    found = true;
+                    break;
+                }
+                counter++;
+            }
+            if (!found)
+            {
+                MessageBox.Show("No classes were found with course id '" + textBoxClassLookup.Text.Trim().ToLower() + "'", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
+            DialogResult dr = MessageBox.Show("Are you sure you want to delete this class?", "Really?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+            if (dr == DialogResult.No)
+            {
+                Program.GetParent().LoadScreen("DeleteClass");
+                return;
+            }
 
-
-
+            Program.GetParent().ClassList.RemoveAt(counter); // removes the last class
 
             Program.GetParent().LoadScreen("DefaultClass");
         }
+
+     
     }
 }

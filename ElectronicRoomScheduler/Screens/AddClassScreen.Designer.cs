@@ -59,7 +59,7 @@
             this.buttonAdd.Location = new System.Drawing.Point(356, 238);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(75, 23);
-            this.buttonAdd.TabIndex = 7;
+            this.buttonAdd.TabIndex = 8;
             this.buttonAdd.Text = "Save";
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.button1_Click);
@@ -107,7 +107,7 @@
             this.checkedListBoxClassDays.MultiColumn = true;
             this.checkedListBoxClassDays.Name = "checkedListBoxClassDays";
             this.checkedListBoxClassDays.Size = new System.Drawing.Size(324, 19);
-            this.checkedListBoxClassDays.TabIndex = 17;
+            this.checkedListBoxClassDays.TabIndex = 5;
             // 
             // label8
             // 
@@ -159,7 +159,7 @@
             this.dateTimePickerEndTime.Name = "dateTimePickerEndTime";
             this.dateTimePickerEndTime.ShowUpDown = true;
             this.dateTimePickerEndTime.Size = new System.Drawing.Size(89, 20);
-            this.dateTimePickerEndTime.TabIndex = 6;
+            this.dateTimePickerEndTime.TabIndex = 7;
             this.dateTimePickerEndTime.Value = new System.DateTime(2013, 4, 11, 10, 50, 0, 0);
             // 
             // dateTimePickerStartTime
@@ -169,7 +169,7 @@
             this.dateTimePickerStartTime.Name = "dateTimePickerStartTime";
             this.dateTimePickerStartTime.ShowUpDown = true;
             this.dateTimePickerStartTime.Size = new System.Drawing.Size(89, 20);
-            this.dateTimePickerStartTime.TabIndex = 5;
+            this.dateTimePickerStartTime.TabIndex = 6;
             this.dateTimePickerStartTime.Value = new System.DateTime(2013, 4, 11, 10, 0, 0, 0);
             // 
             // textBoxCourseId

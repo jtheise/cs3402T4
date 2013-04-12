@@ -50,6 +50,11 @@ namespace ElectronicRoomScheduler
                 buttonReports.Visible = false;
                 buttonBuildings.Visible = false;
             }
+
+            if (name == "admin")
+            {
+                buttonHome.Visible = false;
+            }
         }
 
         #region LoadScreen(string screenName)
@@ -260,8 +265,10 @@ namespace ElectronicRoomScheduler
 
             containerLeftRight.Panel1.Hide();
             containerLeftRight.SplitterDistance = 0;
-
-            containerLeftRight.Panel2.Controls.Add(new Screens.HomeScreen());
+            containerLeftRight.Panel2.Select();
+            
+            if (LoggedInUser != "admin")
+                containerLeftRight.Panel2.Controls.Add(new Screens.HomeScreen());
 
 
             // load the serialized list from the disk

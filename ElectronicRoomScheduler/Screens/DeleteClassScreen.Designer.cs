@@ -29,7 +29,11 @@
         private void InitializeComponent()
         {
             this.labelTitle = new System.Windows.Forms.Label();
-            this.buttonDelete = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonLookup = new System.Windows.Forms.Button();
+            this.textBoxClassLookup = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelTitle
@@ -42,25 +46,55 @@
             this.labelTitle.TabIndex = 2;
             this.labelTitle.Text = "Delete Class";
             // 
-            // buttonDelete
+            // groupBox1
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(47, 106);
-            this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(157, 31);
-            this.buttonDelete.TabIndex = 3;
-            this.buttonDelete.Text = "delete a class example";
-            this.buttonDelete.UseVisualStyleBackColor = true;
-            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
+            this.groupBox1.Controls.Add(this.buttonLookup);
+            this.groupBox1.Controls.Add(this.textBoxClassLookup);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Location = new System.Drawing.Point(15, 47);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(401, 65);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Class Information";
+            // 
+            // buttonLookup
+            // 
+            this.buttonLookup.Location = new System.Drawing.Point(316, 25);
+            this.buttonLookup.Name = "buttonLookup";
+            this.buttonLookup.Size = new System.Drawing.Size(79, 26);
+            this.buttonLookup.TabIndex = 2;
+            this.buttonLookup.Text = "Delete Class";
+            this.buttonLookup.UseVisualStyleBackColor = true;
+            this.buttonLookup.Click += new System.EventHandler(this.buttonLookup_Click);
+            // 
+            // textBoxClassLookup
+            // 
+            this.textBoxClassLookup.Location = new System.Drawing.Point(102, 29);
+            this.textBoxClassLookup.Name = "textBoxClassLookup";
+            this.textBoxClassLookup.Size = new System.Drawing.Size(208, 20);
+            this.textBoxClassLookup.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(42, 32);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Course ID";
             // 
             // DeleteClassScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.buttonDelete);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.labelTitle);
             this.Name = "DeleteClassScreen";
             this.Size = new System.Drawing.Size(820, 480);
             this.Load += new System.EventHandler(this.DeleteClassScreen_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -69,7 +103,10 @@
         #endregion
 
         private System.Windows.Forms.Label labelTitle;
-        private System.Windows.Forms.Button buttonDelete;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button buttonLookup;
+        private System.Windows.Forms.TextBox textBoxClassLookup;
+        private System.Windows.Forms.Label label2;
 
 
     }
