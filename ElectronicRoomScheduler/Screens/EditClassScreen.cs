@@ -73,6 +73,10 @@ namespace ElectronicRoomScheduler.Screens
                     }
                 }
             }
+            else
+            {
+                groupBox2.Visible = false;
+            }
         }
 
 
