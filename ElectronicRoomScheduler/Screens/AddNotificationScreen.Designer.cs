@@ -43,6 +43,7 @@
             this.checkBoxRecurring = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.buttonClearEventsClasses = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelTitle
@@ -159,10 +160,10 @@
             "1 Hour",
             "3 Hours",
             "1 Day"});
-            this.checkedListBoxFrequency.Location = new System.Drawing.Point(48, 449);
+            this.checkedListBoxFrequency.Location = new System.Drawing.Point(28, 449);
             this.checkedListBoxFrequency.MultiColumn = true;
             this.checkedListBoxFrequency.Name = "checkedListBoxFrequency";
-            this.checkedListBoxFrequency.Size = new System.Drawing.Size(443, 19);
+            this.checkedListBoxFrequency.Size = new System.Drawing.Size(463, 19);
             this.checkedListBoxFrequency.TabIndex = 16;
             // 
             // checkBoxRecurring
@@ -194,10 +195,20 @@
             this.buttonClearEventsClasses.UseVisualStyleBackColor = true;
             this.buttonClearEventsClasses.Click += new System.EventHandler(this.buttonClearEventsClasses_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(25, 433);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(188, 13);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Time before class begins to send alert:";
+            // 
             // AddNotificationScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.buttonClearEventsClasses);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.checkBoxRecurring);
@@ -238,5 +249,6 @@
         private System.Windows.Forms.CheckBox checkBoxRecurring;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button buttonClearEventsClasses;
+        private System.Windows.Forms.Label label5;
     }
 }

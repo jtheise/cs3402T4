@@ -59,6 +59,10 @@ namespace ElectronicRoomScheduler
             {
                 buttonReports.Visible = false;
                 buttonBuildings.Visible = false;
+                buttonClasses.Visible = false;
+                buttonEvents.Visible = false;
+                buttonBuildings.Visible = false;
+                buttonRooms.Visible = false;
             }
 
             if (name == "admin")
