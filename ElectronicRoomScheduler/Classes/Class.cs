@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ElectronicRoomScheduler
+namespace ElectronicRoomScheduler.Classes
 {
     [Serializable()]
     public class Class

@@ -19,6 +19,10 @@ namespace ElectronicRoomScheduler.SidePanels
         private void EventsSidePanel_Load(object sender, EventArgs e)
         {
             this.Dock = DockStyle.Fill;
+            linkLabel2.Visible = false;
+            linkLabel3.Visible = false;
+            
+
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -28,12 +32,24 @@ namespace ElectronicRoomScheduler.SidePanels
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Program.GetParent().LoadScreen("EditEvent");
+            // find the panel with the item selected....
+
+
+            List<Control> controls = Program.GetParent().Controls.Find("DefaultEventScreen", true).ToList();
+
+            if (controls.Count == 1)
+                Program.GetParent().LoadScreen("EditEvent|" + ((Screens.DefaultEventScreen)controls[0]).SelectedIndex.ToString());
+
+
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Program.GetParent().LoadScreen("DeleteEvent");
+            List<Control> controls = Program.GetParent().Controls.Find("DefaultEventScreen", true).ToList();
+
+            if (controls.Count == 1)
+                Program.GetParent().LoadScreen("DeleteEvent|" + ((Screens.DefaultEventScreen)controls[0]).SelectedIndex.ToString());
+
         }
 
         private void labelHeader_Click(object sender, EventArgs e)

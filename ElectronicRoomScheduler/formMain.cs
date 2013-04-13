@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ElectronicRoomScheduler.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,8 +16,17 @@ namespace ElectronicRoomScheduler
     {
         private Stack<string> History = new Stack<string>();
         public string LoggedInUser { get; set; }
+
+
         public List<Class> ClassList;
         public int ClassToLoad { get; set; }
+
+
+        public List<Event> EventList;
+        public int EventToLoad { get; set; }
+
+        public List<Notification> NotificationList;
+        public int NotificationToLoad { get; set; }
 
 
         public void GoBack()
@@ -156,15 +166,15 @@ namespace ElectronicRoomScheduler
                 containerLeftRight.Panel2.Controls.Clear();
                 containerLeftRight.Panel2.Controls.Add(new Screens.AddEventScreen());
             }
-            if (screenName == "EditEvent")
+            if (screenName.StartsWith("EditEvent"))
             {
                 containerLeftRight.Panel2.Controls.Clear();
-                containerLeftRight.Panel2.Controls.Add(new Screens.EditEventScreen());
+                containerLeftRight.Panel2.Controls.Add(new Screens.EditEventScreen(int.Parse(screenName.Split('|')[1])));
             }
-            if (screenName == "DeleteEvent")
+            if (screenName.StartsWith("DeleteEvent"))
             {
                 containerLeftRight.Panel2.Controls.Clear();
-                containerLeftRight.Panel2.Controls.Add(new Screens.DeleteEventScreen());
+                containerLeftRight.Panel2.Controls.Add(new Screens.DeleteEventScreen(int.Parse(screenName.Split('|')[1])));
             }
             if (screenName == "AddNotification")
             {
@@ -271,7 +281,7 @@ namespace ElectronicRoomScheduler
                 containerLeftRight.Panel2.Controls.Add(new Screens.HomeScreen());
 
 
-            // load the serialized list from the disk
+            // load class data
             try
             {
                 using (Stream stream = File.Open("class.data", FileMode.Open))
@@ -284,15 +294,83 @@ namespace ElectronicRoomScheduler
             catch (Exception) // does not exist (most likely)
             {
                 ClassList = new List<Class>();
-                return;
             }
+
+
+            try
+            {
+                using (Stream stream = File.Open("notification.data", FileMode.Open))
+                {
+                    BinaryFormatter bin = new BinaryFormatter();
+
+                    NotificationList = (List<Notification>)bin.Deserialize(stream);
+                }
+            }
+            catch (Exception) // does not exist (most likely)
+            {
+                NotificationList = new List<Notification>();
+            }
+
+
+            try
+            {
+                using (Stream stream = File.Open("event.data", FileMode.Open))
+                {
+                    BinaryFormatter bin = new BinaryFormatter();
+
+                    EventList = (List<Event>)bin.Deserialize(stream);
+                }
+            }
+            catch (Exception) // does not exist (most likely)
+            {
+                EventList = new List<Event>();
+            }
+
+
+
+
+            // populate with canned data if it has zero items...
+            if (EventList.Count == 0)
+            {
+                Event evt = new Event();
+
+                evt.Date = DateTime.Now.AddDays(1);
+                evt.Host = "AEΩ";
+                evt.Name = "Meeting";
+                evt.PeopleAttending.Add("Student A");
+                evt.Room = "104 South Hall";
+                EventList.Add(evt);
+            }
+
+
+            if (ClassList.Count == 0)
+            {
+                Class cls = new Class();
+
+                cls.CourseId = "11785";
+                cls.CourseName = "Usability Engineering";
+                cls.Days = new List<string>();
+                cls.Days.Add("Mon");
+                cls.Days.Add("Wed");
+                cls.SectionNumber = "1001";
+                cls.Department = "Computer Science";
+
+                cls.StartTime = new DateTime(2013, 4, 12, 16, 30, 0);
+                cls.EndTime = new DateTime(2013, 4, 12, 17, 45, 0);
+                cls.Instructor = "Michael Findler";
+
+                ClassList.Add(cls);
+            }
+
+
         }
 
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
         {
+            // save class data....
             try
             {
-                using (Stream stream = File.Open("class.data", FileMode.OpenOrCreate))
+                using (Stream stream = File.Open("class.data", FileMode.Create))
                 {
                     BinaryFormatter bin = new BinaryFormatter();
                     bin.Serialize(stream, ClassList);
@@ -300,9 +378,42 @@ namespace ElectronicRoomScheduler
             }
             catch (Exception)
             {
-                return;
+                
             }
-            
+
+
+
+            // save event data
+            try
+            {
+                using (Stream stream = File.Open("event.data", FileMode.Create))
+                {
+                    BinaryFormatter bin = new BinaryFormatter();
+                    bin.Serialize(stream, EventList);
+                }
+            }
+            catch (Exception)
+            {
+                
+            }
+
+
+
+
+
+            try
+            {
+                using (Stream stream = File.Open("notification.data", FileMode.Create))
+                {
+                    BinaryFormatter bin = new BinaryFormatter();
+                    bin.Serialize(stream, NotificationList);
+                }
+            }
+            catch (Exception)
+            {
+                
+            }
+
         }
 
         #region Button Clicks

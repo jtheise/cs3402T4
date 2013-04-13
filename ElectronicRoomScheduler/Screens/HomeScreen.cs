@@ -20,6 +20,11 @@ namespace ElectronicRoomScheduler.Screens
         {
             this.Dock = DockStyle.Fill;
 
+
+            // pick 6 random classes and add it to the person's schedule
+
+
+
         }
     }
 }
