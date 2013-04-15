@@ -23,21 +23,25 @@ namespace ElectronicRoomScheduler.SidePanels
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((LinkLabel)sender).Text, "Click" });
             Program.GetParent().LoadScreen("AddOrganization");
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((LinkLabel)sender).Text, "Click" });
             Program.GetParent().LoadScreen("EditOrganization");
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((LinkLabel)sender).Text, "Click" });
             Program.GetParent().LoadScreen("DeleteOrganization");
         }
 
         private void labelHeader_Click(object sender, EventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((LinkLabel)sender).Text, "Click" });
             Program.GetParent().LoadScreen("DefaultOrganization");
         }
     }

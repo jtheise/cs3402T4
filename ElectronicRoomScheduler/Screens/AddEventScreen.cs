@@ -40,6 +40,7 @@ namespace ElectronicRoomScheduler.Screens
 
         private void buttonAddPerson_Click_1(object sender, EventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" }); 
             listBoxAttending.Items.Add(textBoxPerson.Text);
             textBoxPerson.Text = "";
         }
@@ -64,12 +65,16 @@ namespace ElectronicRoomScheduler.Screens
 
         private void buttonRemovePerson_Click(object sender, EventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" }); 
+            
             if (listBoxAttending.SelectedItems.Count == 1)
                 listBoxAttending.Items.RemoveAt(listBoxAttending.SelectedIndex);
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" });
+
 
             Event newEvent = new Event();
 

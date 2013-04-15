@@ -38,7 +38,7 @@ namespace ElectronicRoomScheduler.Screens
         {
             if (IndexLoaded != -1)
             {
-                Program.GetParent().AcceptButton = buttonAdd;
+                Program.GetParent().AcceptButton = buttonSaveEditedClass;
 
                 groupBox1.Visible = false;
                 groupBox2.Visible = true;
@@ -78,7 +78,7 @@ namespace ElectronicRoomScheduler.Screens
             {
                 groupBox2.Visible = false;
 
-                Program.GetParent().AcceptButton = buttonLookup;
+                Program.GetParent().AcceptButton = buttonLookupClassToEdit;
             }
         }
 
@@ -86,6 +86,7 @@ namespace ElectronicRoomScheduler.Screens
 
         private void buttonLookup_Click(object sender, EventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" });
             // to do: search through list and find the section / course name / number / etc.
 
             bool found = false;
@@ -131,6 +132,8 @@ namespace ElectronicRoomScheduler.Screens
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" }); 
+            
             errorProvider1.Clear();
             bool hasErrors = false;
 

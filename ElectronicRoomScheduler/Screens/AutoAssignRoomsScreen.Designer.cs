@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonRunAutomaticRoomScheduler = new System.Windows.Forms.Button();
             this.labelTitle = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // buttonRunAutomaticRoomScheduler
             // 
-            this.button1.Location = new System.Drawing.Point(15, 67);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(186, 62);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Run Automatic Room Scheduler";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonRunAutomaticRoomScheduler.Location = new System.Drawing.Point(15, 67);
+            this.buttonRunAutomaticRoomScheduler.Name = "buttonRunAutomaticRoomScheduler";
+            this.buttonRunAutomaticRoomScheduler.Size = new System.Drawing.Size(186, 62);
+            this.buttonRunAutomaticRoomScheduler.TabIndex = 2;
+            this.buttonRunAutomaticRoomScheduler.Text = "Run Automatic Room Scheduler";
+            this.buttonRunAutomaticRoomScheduler.UseVisualStyleBackColor = true;
+            this.buttonRunAutomaticRoomScheduler.Click += new System.EventHandler(this.button1_Click);
             // 
             // labelTitle
             // 
@@ -56,7 +57,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.labelTitle);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonRunAutomaticRoomScheduler);
             this.Name = "AutoAssignRoomsScreen";
             this.Size = new System.Drawing.Size(820, 480);
             this.Load += new System.EventHandler(this.AssignRoomsScreen_Load);
@@ -67,7 +68,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonRunAutomaticRoomScheduler;
         private System.Windows.Forms.Label labelTitle;
     }
 }

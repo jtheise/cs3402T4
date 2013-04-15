@@ -33,12 +33,12 @@
             this.comboBoxRoom = new System.Windows.Forms.ComboBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.buttonAddPerson = new System.Windows.Forms.Button();
-            this.buttonRemovePerson = new System.Windows.Forms.Button();
+            this.buttonAddEventPerson = new System.Windows.Forms.Button();
+            this.buttonRemoveEventPerson = new System.Windows.Forms.Button();
             this.textBoxPerson = new System.Windows.Forms.TextBox();
             this.listBoxAttending = new System.Windows.Forms.ListBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.buttonSave = new System.Windows.Forms.Button();
+            this.buttonSaveEditedEvent = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePickerDateTime = new System.Windows.Forms.DateTimePicker();
             this.textBoxEventName = new System.Windows.Forms.TextBox();
@@ -64,12 +64,12 @@
             this.groupBox1.Controls.Add(this.comboBoxRoom);
             this.groupBox1.Controls.Add(this.checkBox1);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.buttonAddPerson);
-            this.groupBox1.Controls.Add(this.buttonRemovePerson);
+            this.groupBox1.Controls.Add(this.buttonAddEventPerson);
+            this.groupBox1.Controls.Add(this.buttonRemoveEventPerson);
             this.groupBox1.Controls.Add(this.textBoxPerson);
             this.groupBox1.Controls.Add(this.listBoxAttending);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.buttonSave);
+            this.groupBox1.Controls.Add(this.buttonSaveEditedEvent);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.dateTimePickerDateTime);
             this.groupBox1.Controls.Add(this.textBoxEventName);
@@ -111,26 +111,26 @@
             this.label6.TabIndex = 22;
             this.label6.Text = "Add Person";
             // 
-            // buttonAddPerson
+            // buttonAddEventPerson
             // 
-            this.buttonAddPerson.Location = new System.Drawing.Point(278, 141);
-            this.buttonAddPerson.Name = "buttonAddPerson";
-            this.buttonAddPerson.Size = new System.Drawing.Size(53, 23);
-            this.buttonAddPerson.TabIndex = 21;
-            this.buttonAddPerson.Text = "Add";
-            this.buttonAddPerson.UseVisualStyleBackColor = true;
-            this.buttonAddPerson.Click += new System.EventHandler(this.buttonAddPerson_Click);
+            this.buttonAddEventPerson.Location = new System.Drawing.Point(278, 141);
+            this.buttonAddEventPerson.Name = "buttonAddEventPerson";
+            this.buttonAddEventPerson.Size = new System.Drawing.Size(53, 23);
+            this.buttonAddEventPerson.TabIndex = 21;
+            this.buttonAddEventPerson.Text = "Add";
+            this.buttonAddEventPerson.UseVisualStyleBackColor = true;
+            this.buttonAddEventPerson.Click += new System.EventHandler(this.buttonAddPerson_Click);
             // 
-            // buttonRemovePerson
+            // buttonRemoveEventPerson
             // 
-            this.buttonRemovePerson.Enabled = false;
-            this.buttonRemovePerson.Location = new System.Drawing.Point(332, 190);
-            this.buttonRemovePerson.Name = "buttonRemovePerson";
-            this.buttonRemovePerson.Size = new System.Drawing.Size(57, 23);
-            this.buttonRemovePerson.TabIndex = 20;
-            this.buttonRemovePerson.Text = "Remove";
-            this.buttonRemovePerson.UseVisualStyleBackColor = true;
-            this.buttonRemovePerson.Click += new System.EventHandler(this.buttonRemovePerson_Click);
+            this.buttonRemoveEventPerson.Enabled = false;
+            this.buttonRemoveEventPerson.Location = new System.Drawing.Point(332, 190);
+            this.buttonRemoveEventPerson.Name = "buttonRemoveEventPerson";
+            this.buttonRemoveEventPerson.Size = new System.Drawing.Size(57, 23);
+            this.buttonRemoveEventPerson.TabIndex = 20;
+            this.buttonRemoveEventPerson.Text = "Remove";
+            this.buttonRemoveEventPerson.UseVisualStyleBackColor = true;
+            this.buttonRemoveEventPerson.Click += new System.EventHandler(this.buttonRemovePerson_Click);
             // 
             // textBoxPerson
             // 
@@ -159,16 +159,16 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "People Attending";
             // 
-            // buttonSave
+            // buttonSaveEditedEvent
             // 
-            this.buttonSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSave.Location = new System.Drawing.Point(356, 370);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(75, 23);
-            this.buttonSave.TabIndex = 8;
-            this.buttonSave.Text = "Save";
-            this.buttonSave.UseVisualStyleBackColor = true;
-            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            this.buttonSaveEditedEvent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSaveEditedEvent.Location = new System.Drawing.Point(356, 370);
+            this.buttonSaveEditedEvent.Name = "buttonSaveEditedEvent";
+            this.buttonSaveEditedEvent.Size = new System.Drawing.Size(75, 23);
+            this.buttonSaveEditedEvent.TabIndex = 8;
+            this.buttonSaveEditedEvent.Text = "Save";
+            this.buttonSaveEditedEvent.UseVisualStyleBackColor = true;
+            this.buttonSaveEditedEvent.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // label1
             // 
@@ -254,12 +254,12 @@
         private System.Windows.Forms.ComboBox comboBoxRoom;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button buttonAddPerson;
-        private System.Windows.Forms.Button buttonRemovePerson;
+        private System.Windows.Forms.Button buttonAddEventPerson;
+        private System.Windows.Forms.Button buttonRemoveEventPerson;
         private System.Windows.Forms.TextBox textBoxPerson;
         private System.Windows.Forms.ListBox listBoxAttending;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.Button buttonSaveEditedEvent;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimePickerDateTime;
         private System.Windows.Forms.TextBox textBoxEventName;

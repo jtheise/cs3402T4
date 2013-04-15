@@ -59,36 +59,41 @@ namespace ElectronicRoomScheduler.Screens
 
         private void textBoxPerson_Enter(object sender, EventArgs e)
         {
-            Program.GetParent().AcceptButton = buttonAddPerson;
+            Program.GetParent().AcceptButton = buttonAddEventPerson;
         }
 
         private void textBoxPerson_Leave(object sender, EventArgs e)
         {
-            Program.GetParent().AcceptButton = buttonSave;
+            Program.GetParent().AcceptButton = buttonSaveEditedEvent;
         }
 
         private void listBoxAttending_SelectedValueChanged(object sender, EventArgs e)
         {
             if (listBoxAttending.SelectedItems.Count == 1)
-                buttonRemovePerson.Enabled = true;
+                buttonRemoveEventPerson.Enabled = true;
             else
-                buttonRemovePerson.Enabled = false;
+                buttonRemoveEventPerson.Enabled = false;
         }
 
         private void buttonRemovePerson_Click(object sender, EventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" }); 
+            
             if (listBoxAttending.SelectedItems.Count == 1)
                 listBoxAttending.Items.RemoveAt(listBoxAttending.SelectedIndex);
         }
 
         private void buttonAddPerson_Click(object sender, EventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" }); 
             listBoxAttending.Items.Add(textBoxPerson.Text);
             textBoxPerson.Text = "";
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" }); 
+            
             bool found = false;
 
             for (int i = 0; i < Program.GetParent().EventList.Count; i++)

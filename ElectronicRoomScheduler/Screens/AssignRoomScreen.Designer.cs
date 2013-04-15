@@ -111,6 +111,7 @@
             this.buttonAssign.TabIndex = 9;
             this.buttonAssign.Text = "Assign";
             this.buttonAssign.UseVisualStyleBackColor = true;
+            this.buttonAssign.Click += new System.EventHandler(this.buttonAssign_Click);
             // 
             // AssignRoomScreen
             // 

@@ -43,5 +43,10 @@ namespace ElectronicRoomScheduler.Screens
             else
                 comboBoxBuilding.Enabled = false;
         }
+
+        private void buttonAssign_Click(object sender, EventArgs e)
+        {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" });
+        }
     }
 }

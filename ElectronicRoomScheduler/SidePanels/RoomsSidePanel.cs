@@ -18,6 +18,7 @@ namespace ElectronicRoomScheduler.SidePanels
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((LinkLabel)sender).Text, "Click" });
             Program.GetParent().LoadScreen("AddRoom");
         }
 
@@ -28,21 +29,25 @@ namespace ElectronicRoomScheduler.SidePanels
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((LinkLabel)sender).Text, "Click" });
             Program.GetParent().LoadScreen("EditRoom");
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((LinkLabel)sender).Text, "Click" });
             Program.GetParent().LoadScreen("DeleteRoom");
         }
 
         private void linkLabelRequestTech_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((LinkLabel)sender).Text, "Click" });
             Program.GetParent().LoadScreen("RequestTech");
         }
 
         private void labelHeader_Click(object sender, EventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((LinkLabel)sender).Text, "Click" });
             Program.GetParent().LoadScreen("DefaultRoom");
         }
     }

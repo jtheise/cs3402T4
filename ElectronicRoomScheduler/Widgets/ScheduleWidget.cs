@@ -39,6 +39,7 @@ namespace ElectronicRoomScheduler.Widgets
 
         private void ScheduleWidget_Click(object sender, EventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), "ClassWidget", "Click" });
             MessageBox.Show(classInfo + labelLocation.Text);
         }
     }

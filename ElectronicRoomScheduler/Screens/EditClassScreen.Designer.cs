@@ -30,14 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.buttonLookup = new System.Windows.Forms.Button();
+            this.buttonLookupClassToEdit = new System.Windows.Forms.Button();
             this.textBoxClassLookup = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.labelTitle = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.checkedListBoxClassDays = new System.Windows.Forms.CheckedListBox();
-            this.buttonAdd = new System.Windows.Forms.Button();
+            this.buttonSaveEditedClass = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxSection = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -60,7 +60,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.buttonLookup);
+            this.groupBox1.Controls.Add(this.buttonLookupClassToEdit);
             this.groupBox1.Controls.Add(this.textBoxClassLookup);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(29, 55);
@@ -70,15 +70,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Class Information";
             // 
-            // buttonLookup
+            // buttonLookupClassToEdit
             // 
-            this.buttonLookup.Location = new System.Drawing.Point(395, 27);
-            this.buttonLookup.Name = "buttonLookup";
-            this.buttonLookup.Size = new System.Drawing.Size(75, 23);
-            this.buttonLookup.TabIndex = 2;
-            this.buttonLookup.Text = "Lookup";
-            this.buttonLookup.UseVisualStyleBackColor = true;
-            this.buttonLookup.Click += new System.EventHandler(this.buttonLookup_Click);
+            this.buttonLookupClassToEdit.Location = new System.Drawing.Point(395, 27);
+            this.buttonLookupClassToEdit.Name = "buttonLookupClassToEdit";
+            this.buttonLookupClassToEdit.Size = new System.Drawing.Size(75, 23);
+            this.buttonLookupClassToEdit.TabIndex = 2;
+            this.buttonLookupClassToEdit.Text = "Lookup";
+            this.buttonLookupClassToEdit.UseVisualStyleBackColor = true;
+            this.buttonLookupClassToEdit.Click += new System.EventHandler(this.buttonLookup_Click);
             // 
             // textBoxClassLookup
             // 
@@ -113,7 +113,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.checkedListBoxClassDays);
-            this.groupBox2.Controls.Add(this.buttonAdd);
+            this.groupBox2.Controls.Add(this.buttonSaveEditedClass);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.textBoxSection);
             this.groupBox2.Controls.Add(this.label7);
@@ -155,16 +155,16 @@
             this.checkedListBoxClassDays.Size = new System.Drawing.Size(324, 19);
             this.checkedListBoxClassDays.TabIndex = 17;
             // 
-            // buttonAdd
+            // buttonSaveEditedClass
             // 
-            this.buttonAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAdd.Location = new System.Drawing.Point(356, 238);
-            this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
-            this.buttonAdd.TabIndex = 7;
-            this.buttonAdd.Text = "Save";
-            this.buttonAdd.UseVisualStyleBackColor = true;
-            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            this.buttonSaveEditedClass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSaveEditedClass.Location = new System.Drawing.Point(356, 238);
+            this.buttonSaveEditedClass.Name = "buttonSaveEditedClass";
+            this.buttonSaveEditedClass.Size = new System.Drawing.Size(75, 23);
+            this.buttonSaveEditedClass.TabIndex = 7;
+            this.buttonSaveEditedClass.Text = "Save";
+            this.buttonSaveEditedClass.UseVisualStyleBackColor = true;
+            this.buttonSaveEditedClass.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // label8
             // 
@@ -319,12 +319,12 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBoxClassLookup;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button buttonLookup;
+        private System.Windows.Forms.Button buttonLookupClassToEdit;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.CheckedListBox checkedListBoxClassDays;
-        private System.Windows.Forms.Button buttonAdd;
+        private System.Windows.Forms.Button buttonSaveEditedClass;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBoxSection;
         private System.Windows.Forms.Label label7;

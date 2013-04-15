@@ -465,6 +465,7 @@ namespace ElectronicRoomScheduler
 
         private void buttonHome_Click(object sender, EventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" });
             ClearScreen(true);
 
             containerLeftRight.Panel1.Hide();
@@ -475,6 +476,7 @@ namespace ElectronicRoomScheduler
 
         private void buttonClasses_Click(object sender, EventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" }); 
             ClearScreen(true);
 
             containerLeftRight.Panel1.Controls.Add(new SidePanels.ClassSidePanel());
@@ -484,6 +486,7 @@ namespace ElectronicRoomScheduler
 
         private void buttonEvents_Click(object sender, EventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" }); 
             ClearScreen(true);
 
             containerLeftRight.Panel1.Controls.Add(new SidePanels.EventsSidePanel());
@@ -492,6 +495,7 @@ namespace ElectronicRoomScheduler
 
         private void buttonNotifications_Click(object sender, EventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" }); 
             ClearScreen(true);
 
             containerLeftRight.Panel1.Controls.Add(new SidePanels.NotificationsSidePanel());
@@ -500,6 +504,7 @@ namespace ElectronicRoomScheduler
 
         private void buttonOrganizations_Click(object sender, EventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" }); 
             ClearScreen(true);
 
             containerLeftRight.Panel1.Controls.Add(new SidePanels.OrganizationsSidePanel());
@@ -508,6 +513,7 @@ namespace ElectronicRoomScheduler
 
         private void buttonReports_Click(object sender, EventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" }); 
             ClearScreen(true);
 
             containerLeftRight.Panel1.Controls.Add(new SidePanels.ReportsSidePanel());
@@ -516,6 +522,7 @@ namespace ElectronicRoomScheduler
 
         private void buttonBuildings_Click(object sender, EventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" });
             ClearScreen(true);
 
             containerLeftRight.Panel1.Controls.Add(new SidePanels.BuildingsSidePanel());
@@ -524,6 +531,7 @@ namespace ElectronicRoomScheduler
 
         private void buttonRooms_Click(object sender, EventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" }); 
             ClearScreen(true);
 
             containerLeftRight.Panel1.Controls.Add(new SidePanels.RoomsSidePanel());

@@ -7,6 +7,24 @@ namespace ElectronicRoomScheduler
 {
     static class Program
     {
+        public static void LogButtonClick(string[] Data)
+        {
+            string line = "";
+
+            foreach (var item in Data)
+                line += item + ",";
+
+            line = line.Trim().TrimEnd(new char[] {','});
+
+            System.IO.StreamWriter file = new System.IO.StreamWriter("recording.csv", true);
+
+            file.WriteLine(line);
+            file.AutoFlush = true;
+            file.Close();            
+
+        }
+
+
         public static FormMain GetParent()
         {
             foreach (Form item in Application.OpenForms)

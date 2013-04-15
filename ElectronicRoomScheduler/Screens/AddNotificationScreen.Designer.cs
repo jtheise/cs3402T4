@@ -38,7 +38,7 @@
             this.buttonAddNewPhoneEmail = new System.Windows.Forms.Button();
             this.textBoxPhoneEmail = new System.Windows.Forms.TextBox();
             this.flowLayoutPanelClassesAndEvents = new System.Windows.Forms.FlowLayoutPanel();
-            this.buttonSave = new System.Windows.Forms.Button();
+            this.buttonSaveNotification = new System.Windows.Forms.Button();
             this.checkedListBoxFrequency = new System.Windows.Forms.CheckedListBox();
             this.checkBoxRecurring = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -139,15 +139,15 @@
             this.flowLayoutPanelClassesAndEvents.Size = new System.Drawing.Size(389, 177);
             this.flowLayoutPanelClassesAndEvents.TabIndex = 12;
             // 
-            // buttonSave
+            // buttonSaveNotification
             // 
-            this.buttonSave.Location = new System.Drawing.Point(738, 449);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(75, 23);
-            this.buttonSave.TabIndex = 15;
-            this.buttonSave.Text = "Save";
-            this.buttonSave.UseVisualStyleBackColor = true;
-            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            this.buttonSaveNotification.Location = new System.Drawing.Point(738, 449);
+            this.buttonSaveNotification.Name = "buttonSaveNotification";
+            this.buttonSaveNotification.Size = new System.Drawing.Size(75, 23);
+            this.buttonSaveNotification.TabIndex = 15;
+            this.buttonSaveNotification.Text = "Save";
+            this.buttonSaveNotification.UseVisualStyleBackColor = true;
+            this.buttonSaveNotification.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // checkedListBoxFrequency
             // 
@@ -213,7 +213,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.checkBoxRecurring);
             this.Controls.Add(this.checkedListBoxFrequency);
-            this.Controls.Add(this.buttonSave);
+            this.Controls.Add(this.buttonSaveNotification);
             this.Controls.Add(this.flowLayoutPanelClassesAndEvents);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonAddNewPhoneEmail);
@@ -244,7 +244,7 @@
         private System.Windows.Forms.Button buttonAddNewPhoneEmail;
         private System.Windows.Forms.TextBox textBoxPhoneEmail;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelClassesAndEvents;
-        private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.Button buttonSaveNotification;
         private System.Windows.Forms.CheckedListBox checkedListBoxFrequency;
         private System.Windows.Forms.CheckBox checkBoxRecurring;
         private System.Windows.Forms.Label label4;

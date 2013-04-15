@@ -18,11 +18,13 @@ namespace ElectronicRoomScheduler.SidePanels
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((LinkLabel)sender).Text, "Click" }); 
             Program.GetParent().LoadScreen("AddClass");
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((LinkLabel)sender).Text, "Click" });
             Program.GetParent().ClassToLoad = -1;
             Program.GetParent().LoadScreen("EditClass");
         }
@@ -42,26 +44,31 @@ namespace ElectronicRoomScheduler.SidePanels
 
         private void linkLabelAssignRooms_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((LinkLabel)sender).Text, "Click" });
             Program.GetParent().LoadScreen("AssignRoom");
         }
 
         private void linkLabelEditRooms_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((LinkLabel)sender).Text, "Click" });
             Program.GetParent().LoadScreen("EditRoom");
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((LinkLabel)sender).Text, "Click" });
             Program.GetParent().LoadScreen("DeleteClass");
         }
 
         private void labelHeader_Click(object sender, EventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((LinkLabel)sender).Text, "Click" });
             Program.GetParent().LoadScreen("DefaultClass");
         }
 
         private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((LinkLabel)sender).Text, "Click" });
             Program.GetParent().LoadScreen("AutoAssignRooms");
         }
     }

@@ -23,6 +23,7 @@ namespace ElectronicRoomScheduler.Screens
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" });
             Program.GetParent().LoadScreen("DefaultNotification");
         }
     }

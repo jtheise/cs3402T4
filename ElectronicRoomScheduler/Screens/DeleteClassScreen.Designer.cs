@@ -30,7 +30,7 @@
         {
             this.labelTitle = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.buttonLookup = new System.Windows.Forms.Button();
+            this.buttonLookupClassToDelete = new System.Windows.Forms.Button();
             this.textBoxClassLookup = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
@@ -48,7 +48,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.buttonLookup);
+            this.groupBox1.Controls.Add(this.buttonLookupClassToDelete);
             this.groupBox1.Controls.Add(this.textBoxClassLookup);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(15, 47);
@@ -58,15 +58,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Class Information";
             // 
-            // buttonLookup
+            // buttonLookupClassToDelete
             // 
-            this.buttonLookup.Location = new System.Drawing.Point(316, 25);
-            this.buttonLookup.Name = "buttonLookup";
-            this.buttonLookup.Size = new System.Drawing.Size(79, 26);
-            this.buttonLookup.TabIndex = 2;
-            this.buttonLookup.Text = "Delete Class";
-            this.buttonLookup.UseVisualStyleBackColor = true;
-            this.buttonLookup.Click += new System.EventHandler(this.buttonLookup_Click);
+            this.buttonLookupClassToDelete.Location = new System.Drawing.Point(316, 25);
+            this.buttonLookupClassToDelete.Name = "buttonLookupClassToDelete";
+            this.buttonLookupClassToDelete.Size = new System.Drawing.Size(79, 26);
+            this.buttonLookupClassToDelete.TabIndex = 2;
+            this.buttonLookupClassToDelete.Text = "Delete Class";
+            this.buttonLookupClassToDelete.UseVisualStyleBackColor = true;
+            this.buttonLookupClassToDelete.Click += new System.EventHandler(this.buttonLookup_Click);
             // 
             // textBoxClassLookup
             // 
@@ -104,7 +104,7 @@
 
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button buttonLookup;
+        private System.Windows.Forms.Button buttonLookupClassToDelete;
         private System.Windows.Forms.TextBox textBoxClassLookup;
         private System.Windows.Forms.Label label2;
 

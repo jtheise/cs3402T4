@@ -20,7 +20,7 @@ namespace ElectronicRoomScheduler.Screens
         private void AddNotificationScreen_Load(object sender, EventArgs e)
         {
             this.Dock = DockStyle.Fill;
-            Program.GetParent().AcceptButton = buttonSave;
+            Program.GetParent().AcceptButton = buttonSaveNotification;
 
             EmailsAndPhoneNumbers.Add("(419) 867 - 5309");
             EmailsAndPhoneNumbers.Add("Blah@bgsu.edu");
@@ -162,6 +162,8 @@ namespace ElectronicRoomScheduler.Screens
 
         private void buttonAddNewPhoneEmail_Click(object sender, EventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" }); 
+            
             EmailsAndPhoneNumbers.Add(textBoxPhoneEmail.Text);
             RunPopulateList();
             textBoxPhoneEmail.Text = "";
@@ -236,7 +238,7 @@ namespace ElectronicRoomScheduler.Screens
 
         private void textBoxPhoneEmail_Leave(object sender, EventArgs e)
         {
-            Program.GetParent().AcceptButton = buttonSave;
+            Program.GetParent().AcceptButton = buttonSaveNotification;
         }
 
         private void flowLayoutPanelFor_DragDrop(object sender, DragEventArgs e)
@@ -286,11 +288,13 @@ namespace ElectronicRoomScheduler.Screens
 
         private void buttonClearEventsClasses_Click(object sender, EventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" }); 
             PopulateClassEventList();
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" });
 
             // save it out
 

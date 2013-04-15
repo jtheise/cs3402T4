@@ -14,6 +14,7 @@ namespace ElectronicRoomScheduler
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" });
             if (textBoxName.Text == "student")
             {
                 Program.GetParent().Login("student");
@@ -42,6 +43,7 @@ namespace ElectronicRoomScheduler
 
         private void buttonCancel_Click(object sender, EventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" });
             Application.Exit();
         }
 

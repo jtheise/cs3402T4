@@ -20,11 +20,12 @@ namespace ElectronicRoomScheduler.Screens
         {
             this.Dock = DockStyle.Fill;
             this.textBoxClassLookup.Select();
-            Program.GetParent().AcceptButton = buttonLookup;
+            Program.GetParent().AcceptButton = buttonLookupClassToDelete;
         }
 
         private void buttonLookup_Click(object sender, EventArgs e)
         {
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" }); 
             bool found = false;
             int counter = 0;
 
