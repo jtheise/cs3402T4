@@ -23,10 +23,6 @@ namespace ElectronicRoomScheduler.Screens
 
 
 
-
-
-
-
             listView.Items.Clear();
 
             foreach (Notification item in Program.GetParent().NotificationList)

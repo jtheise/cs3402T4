@@ -20,5 +20,10 @@ namespace ElectronicRoomScheduler.Screens
         {
             this.Dock = DockStyle.Fill;
         }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            Program.GetParent().LoadScreen("DefaultNotification");
+        }
     }
 }

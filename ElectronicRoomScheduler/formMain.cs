@@ -281,8 +281,9 @@ namespace ElectronicRoomScheduler
             containerLeftRight.SplitterDistance = 0;
             containerLeftRight.Panel2.Select();
             
-            if (LoggedInUser != "admin")
-                containerLeftRight.Panel2.Controls.Add(new Screens.HomeScreen());
+            ClassList = new List<Class>();
+            NotificationList = new List<Notification>();
+            EventList = new List<Event>();
 
 
             // load class data
@@ -364,9 +365,49 @@ namespace ElectronicRoomScheduler
                 cls.Instructor = "Michael Findler";
 
                 ClassList.Add(cls);
+
+
+                cls = new Class();
+
+                cls.CourseId = "11783";
+                cls.CourseName = "Information Management Technologies";
+                cls.Days = new List<string>();
+                cls.Days.Add("Mon");
+                cls.Days.Add("Wed");
+                cls.Days.Add("Fri");
+                cls.SectionNumber = "1001";
+                cls.Department = "Computer Science";
+
+                cls.StartTime = new DateTime(2013, 4, 12, 13, 30, 0);
+                cls.EndTime = new DateTime(2013, 4, 12, 14, 20, 0);
+                cls.Instructor = "Jong Kwan Lee";
+
+                ClassList.Add(cls);
+
+
+                cls = new Class();
+
+                cls.CourseId = "72401";
+                cls.CourseName = "Numerical Analysis";
+                cls.Days = new List<string>();
+                cls.Days.Add("Mon");
+                cls.Days.Add("Wed");
+                cls.Days.Add("Fri");
+                cls.SectionNumber = "1001";
+                cls.Department = "Computer Science";
+
+                cls.StartTime = new DateTime(2013, 4, 12, 14, 30, 0);
+                cls.EndTime = new DateTime(2013, 4, 12, 15, 20, 0);
+                cls.Instructor = "Tong Sun";
+
+                ClassList.Add(cls);
             }
 
 
+
+
+            if (LoggedInUser != "admin")
+                containerLeftRight.Panel2.Controls.Add(new Screens.HomeScreen());
         }
 
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)

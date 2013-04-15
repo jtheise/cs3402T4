@@ -331,6 +331,12 @@
     <Compile Include="SidePanels\RoomsSidePanel.Designer.cs">
       <DependentUpon>RoomsSidePanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Widgets\ScheduleWidget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widgets\ScheduleWidget.Designer.cs">
+      <DependentUpon>ScheduleWidget.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -471,6 +477,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SidePanels\RoomsSidePanel.resx">
       <DependentUpon>RoomsSidePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widgets\ScheduleWidget.resx">
+      <DependentUpon>ScheduleWidget.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
