@@ -14,23 +14,28 @@ namespace ElectronicRoomScheduler
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" });
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click", textBoxName.Text });
+
             if (textBoxName.Text == "student")
             {
                 Program.GetParent().Login("student");
                 _authenticated = true;
+
+                Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click", textBoxPassword.Text });
                 Close();
             }
             else if (textBoxName.Text == "professor")
             {
                 Program.GetParent().Login("professor");
                 _authenticated = true;
+                Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click", textBoxPassword.Text });
                 Close();
             }
             else if (textBoxName.Text == "admin")
             {
                 Program.GetParent().Login("admin");
                 _authenticated = true;
+                Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click", textBoxPassword.Text });
                 Close();
             }
             else
