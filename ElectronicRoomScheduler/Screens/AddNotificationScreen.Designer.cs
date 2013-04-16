@@ -81,9 +81,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(425, 194);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(251, 13);
+            this.label3.Size = new System.Drawing.Size(277, 13);
             this.label3.TabIndex = 9;
-            this.label3.Text = "Drag Classes and Events Here       (click to remove)";
+            this.label3.Text = "Drag Classes and Events Here       (click clear to remove)";
             // 
             // flowLayoutPanelFor
             // 

@@ -7,6 +7,8 @@ namespace ElectronicRoomScheduler
 {
     static class Program
     {
+        public static string logName = "recordings/" + DateTime.Now.Hour.ToString() + "-" + DateTime.Now.Minute.ToString() + "-" + DateTime.Now.Millisecond + ".csv";
+
         public static void LogButtonClick(string[] Data)
         {
             string line = "";
@@ -16,7 +18,12 @@ namespace ElectronicRoomScheduler
 
             line = line.Trim().TrimEnd(new char[] {','});
 
-            System.IO.StreamWriter file = new System.IO.StreamWriter("recording.csv", true);
+            if (!System.IO.Directory.Exists("recordings"))
+                System.IO.Directory.CreateDirectory("recordings/");
+
+
+            System.IO.StreamWriter file = new System.IO.StreamWriter(logName, true);
+
 
             file.WriteLine(line);
             file.AutoFlush = true;

@@ -275,7 +275,7 @@ namespace ElectronicRoomScheduler.Screens
             newLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             newLabel.Padding = new System.Windows.Forms.Padding(5);
             newLabel.BackColor = Color.Yellow;
-            newLabel.Click += newLabel_Click;
+            //newLabel.Click += newLabel_Click;
             flowLayoutPanelFor.Controls.Add(newLabel);
 
 
