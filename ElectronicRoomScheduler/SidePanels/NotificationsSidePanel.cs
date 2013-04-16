@@ -41,7 +41,7 @@ namespace ElectronicRoomScheduler.SidePanels
 
         private void labelHeader_Click(object sender, EventArgs e)
         {
-            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((LinkLabel)sender).Text, "Click" });
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Label)sender).Text, "Click" });
             Program.GetParent().LoadScreen("DefaultNotification");
         }
     }
