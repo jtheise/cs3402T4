@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -34,6 +34,48 @@ namespace ElectronicRoomScheduler.Screens
 
             sidePanel.linkLabel2.Visible = false;
             sidePanel.linkLabel3.Visible = false;
+
+
+            List<string> rooms = new List<string>();
+
+            Random r = new Random((int)DateTime.Now.Ticks);
+
+            List<string> locations = new List<string>();
+
+            locations.Add("University Hall");
+            locations.Add("South Hall");
+            locations.Add("Hayes Hall");
+            locations.Add("Education Building");
+            locations.Add("Math/Science Building");
+
+            rooms.Add("Hayes Hall 217");
+
+            for (int i = 0; i < 100; i++)
+            {
+                string building = locations[r.Next(0, 4)];
+
+
+                string tempLocation = building + " " + ((r.Next(1, 3) * 100) + (r.Next(0, 4) * 10) + (r.Next(1, 9))).ToString();
+
+                while (rooms.Contains(tempLocation))
+                {
+                    building = locations[r.Next(0, 4)];
+                    tempLocation = building + " " + ((r.Next(1, 3) * 100) + (r.Next(0, 4) * 10) + (r.Next(1, 9))).ToString();
+                }
+
+                rooms.Add(tempLocation);
+            }
+
+            var sorted = from s in rooms
+                   orderby s
+                   select s;
+
+
+
+            foreach (var item in sorted)
+            {
+                comboBoxRoom.Items.Add(item);
+            }
 
         }
 
