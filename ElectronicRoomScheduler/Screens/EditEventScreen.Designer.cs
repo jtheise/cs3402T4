@@ -87,10 +87,10 @@
             // comboBoxRoom
             // 
             this.comboBoxRoom.FormattingEnabled = true;
-            this.comboBoxRoom.Location = new System.Drawing.Point(120, 58);
+            this.comboBoxRoom.Location = new System.Drawing.Point(117, 59);
             this.comboBoxRoom.Name = "comboBoxRoom";
             this.comboBoxRoom.Size = new System.Drawing.Size(203, 21);
-            this.comboBoxRoom.TabIndex = 24;
+            this.comboBoxRoom.TabIndex = 1;
             // 
             // checkBox1
             // 
@@ -98,7 +98,7 @@
             this.checkBox1.Location = new System.Drawing.Point(120, 347);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(104, 17);
-            this.checkBox1.TabIndex = 23;
+            this.checkBox1.TabIndex = 8;
             this.checkBox1.Text = "Notify Attendees";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
@@ -116,7 +116,7 @@
             this.buttonAddEventPerson.Location = new System.Drawing.Point(278, 141);
             this.buttonAddEventPerson.Name = "buttonAddEventPerson";
             this.buttonAddEventPerson.Size = new System.Drawing.Size(53, 23);
-            this.buttonAddEventPerson.TabIndex = 21;
+            this.buttonAddEventPerson.TabIndex = 5;
             this.buttonAddEventPerson.Text = "Add";
             this.buttonAddEventPerson.UseVisualStyleBackColor = true;
             this.buttonAddEventPerson.Click += new System.EventHandler(this.buttonAddPerson_Click);
@@ -127,7 +127,7 @@
             this.buttonRemoveEventPerson.Location = new System.Drawing.Point(332, 190);
             this.buttonRemoveEventPerson.Name = "buttonRemoveEventPerson";
             this.buttonRemoveEventPerson.Size = new System.Drawing.Size(57, 23);
-            this.buttonRemoveEventPerson.TabIndex = 20;
+            this.buttonRemoveEventPerson.TabIndex = 7;
             this.buttonRemoveEventPerson.Text = "Remove";
             this.buttonRemoveEventPerson.UseVisualStyleBackColor = true;
             this.buttonRemoveEventPerson.Click += new System.EventHandler(this.buttonRemovePerson_Click);
@@ -137,7 +137,7 @@
             this.textBoxPerson.Location = new System.Drawing.Point(185, 141);
             this.textBoxPerson.Name = "textBoxPerson";
             this.textBoxPerson.Size = new System.Drawing.Size(87, 20);
-            this.textBoxPerson.TabIndex = 19;
+            this.textBoxPerson.TabIndex = 4;
             this.textBoxPerson.Enter += new System.EventHandler(this.textBoxPerson_Enter);
             this.textBoxPerson.Leave += new System.EventHandler(this.textBoxPerson_Leave);
             // 
@@ -147,7 +147,7 @@
             this.listBoxAttending.Location = new System.Drawing.Point(120, 170);
             this.listBoxAttending.Name = "listBoxAttending";
             this.listBoxAttending.Size = new System.Drawing.Size(206, 160);
-            this.listBoxAttending.TabIndex = 14;
+            this.listBoxAttending.TabIndex = 6;
             this.listBoxAttending.SelectedValueChanged += new System.EventHandler(this.listBoxAttending_SelectedValueChanged);
             // 
             // label5
@@ -164,8 +164,8 @@
             this.buttonSaveEditedEvent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSaveEditedEvent.Location = new System.Drawing.Point(356, 370);
             this.buttonSaveEditedEvent.Name = "buttonSaveEditedEvent";
-            this.buttonSaveEditedEvent.Size = new System.Drawing.Size(75, 23);
-            this.buttonSaveEditedEvent.TabIndex = 8;
+            this.buttonSaveEditedEvent.Size = new System.Drawing.Size(75, 25);
+            this.buttonSaveEditedEvent.TabIndex = 9;
             this.buttonSaveEditedEvent.Text = "Save";
             this.buttonSaveEditedEvent.UseVisualStyleBackColor = true;
             this.buttonSaveEditedEvent.Click += new System.EventHandler(this.buttonSave_Click);
@@ -187,7 +187,7 @@
             this.dateTimePickerDateTime.Name = "dateTimePickerDateTime";
             this.dateTimePickerDateTime.ShowUpDown = true;
             this.dateTimePickerDateTime.Size = new System.Drawing.Size(283, 20);
-            this.dateTimePickerDateTime.TabIndex = 6;
+            this.dateTimePickerDateTime.TabIndex = 3;
             this.dateTimePickerDateTime.Value = new System.DateTime(2013, 4, 11, 10, 0, 0, 0);
             // 
             // textBoxEventName

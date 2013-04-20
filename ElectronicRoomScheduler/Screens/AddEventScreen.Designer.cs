@@ -30,6 +30,14 @@
         {
             this.labelTitle = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBoxRoom = new System.Windows.Forms.ComboBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.buttonAddPerson = new System.Windows.Forms.Button();
+            this.buttonRemovePerson = new System.Windows.Forms.Button();
+            this.textBoxPerson = new System.Windows.Forms.TextBox();
+            this.listBoxAttending = new System.Windows.Forms.ListBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.buttonSave = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePickerDateTime = new System.Windows.Forms.DateTimePicker();
@@ -38,14 +46,6 @@
             this.textBoxHostingOrg = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.listBoxAttending = new System.Windows.Forms.ListBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.buttonAddPerson = new System.Windows.Forms.Button();
-            this.buttonRemovePerson = new System.Windows.Forms.Button();
-            this.textBoxPerson = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.comboBoxRoom = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,13 +84,88 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Event Information";
             // 
+            // comboBoxRoom
+            // 
+            this.comboBoxRoom.FormattingEnabled = true;
+            this.comboBoxRoom.Location = new System.Drawing.Point(117, 59);
+            this.comboBoxRoom.Name = "comboBoxRoom";
+            this.comboBoxRoom.Size = new System.Drawing.Size(203, 21);
+            this.comboBoxRoom.TabIndex = 1;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(120, 347);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(104, 17);
+            this.checkBox1.TabIndex = 8;
+            this.checkBox1.Text = "Notify Attendees";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(117, 146);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(62, 13);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "Add Person";
+            // 
+            // buttonAddPerson
+            // 
+            this.buttonAddPerson.Location = new System.Drawing.Point(278, 141);
+            this.buttonAddPerson.Name = "buttonAddPerson";
+            this.buttonAddPerson.Size = new System.Drawing.Size(53, 23);
+            this.buttonAddPerson.TabIndex = 5;
+            this.buttonAddPerson.Text = "Add";
+            this.buttonAddPerson.UseVisualStyleBackColor = true;
+            this.buttonAddPerson.Click += new System.EventHandler(this.buttonAddPerson_Click_1);
+            // 
+            // buttonRemovePerson
+            // 
+            this.buttonRemovePerson.Enabled = false;
+            this.buttonRemovePerson.Location = new System.Drawing.Point(332, 190);
+            this.buttonRemovePerson.Name = "buttonRemovePerson";
+            this.buttonRemovePerson.Size = new System.Drawing.Size(57, 23);
+            this.buttonRemovePerson.TabIndex = 7;
+            this.buttonRemovePerson.Text = "Remove";
+            this.buttonRemovePerson.UseVisualStyleBackColor = true;
+            this.buttonRemovePerson.Click += new System.EventHandler(this.buttonRemovePerson_Click);
+            // 
+            // textBoxPerson
+            // 
+            this.textBoxPerson.Location = new System.Drawing.Point(185, 141);
+            this.textBoxPerson.Name = "textBoxPerson";
+            this.textBoxPerson.Size = new System.Drawing.Size(87, 20);
+            this.textBoxPerson.TabIndex = 4;
+            this.textBoxPerson.Enter += new System.EventHandler(this.textBoxPerson_Enter_1);
+            this.textBoxPerson.Leave += new System.EventHandler(this.textBoxPerson_Leave_1);
+            // 
+            // listBoxAttending
+            // 
+            this.listBoxAttending.FormattingEnabled = true;
+            this.listBoxAttending.Location = new System.Drawing.Point(120, 170);
+            this.listBoxAttending.Name = "listBoxAttending";
+            this.listBoxAttending.Size = new System.Drawing.Size(206, 160);
+            this.listBoxAttending.TabIndex = 6;
+            this.listBoxAttending.SelectedValueChanged += new System.EventHandler(this.listBoxAttending_SelectedValueChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(23, 146);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(88, 13);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "People Attending";
+            // 
             // buttonSave
             // 
             this.buttonSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSave.Location = new System.Drawing.Point(356, 370);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(75, 23);
-            this.buttonSave.TabIndex = 8;
+            this.buttonSave.Size = new System.Drawing.Size(75, 25);
+            this.buttonSave.TabIndex = 9;
             this.buttonSave.Text = "Save";
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
@@ -112,7 +187,7 @@
             this.dateTimePickerDateTime.Name = "dateTimePickerDateTime";
             this.dateTimePickerDateTime.ShowUpDown = true;
             this.dateTimePickerDateTime.Size = new System.Drawing.Size(283, 20);
-            this.dateTimePickerDateTime.TabIndex = 6;
+            this.dateTimePickerDateTime.TabIndex = 3;
             this.dateTimePickerDateTime.Value = new System.DateTime(2013, 4, 11, 10, 0, 0, 0);
             // 
             // textBoxEventName
@@ -155,81 +230,6 @@
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Room";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(23, 146);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 13);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "People Attending";
-            // 
-            // listBoxAttending
-            // 
-            this.listBoxAttending.FormattingEnabled = true;
-            this.listBoxAttending.Location = new System.Drawing.Point(120, 170);
-            this.listBoxAttending.Name = "listBoxAttending";
-            this.listBoxAttending.Size = new System.Drawing.Size(206, 160);
-            this.listBoxAttending.TabIndex = 14;
-            this.listBoxAttending.SelectedValueChanged += new System.EventHandler(this.listBoxAttending_SelectedValueChanged);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(117, 146);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 13);
-            this.label6.TabIndex = 22;
-            this.label6.Text = "Add Person";
-            // 
-            // buttonAddPerson
-            // 
-            this.buttonAddPerson.Location = new System.Drawing.Point(278, 141);
-            this.buttonAddPerson.Name = "buttonAddPerson";
-            this.buttonAddPerson.Size = new System.Drawing.Size(53, 23);
-            this.buttonAddPerson.TabIndex = 21;
-            this.buttonAddPerson.Text = "Add";
-            this.buttonAddPerson.UseVisualStyleBackColor = true;
-            this.buttonAddPerson.Click += new System.EventHandler(this.buttonAddPerson_Click_1);
-            // 
-            // buttonRemovePerson
-            // 
-            this.buttonRemovePerson.Enabled = false;
-            this.buttonRemovePerson.Location = new System.Drawing.Point(332, 190);
-            this.buttonRemovePerson.Name = "buttonRemovePerson";
-            this.buttonRemovePerson.Size = new System.Drawing.Size(57, 23);
-            this.buttonRemovePerson.TabIndex = 20;
-            this.buttonRemovePerson.Text = "Remove";
-            this.buttonRemovePerson.UseVisualStyleBackColor = true;
-            this.buttonRemovePerson.Click += new System.EventHandler(this.buttonRemovePerson_Click);
-            // 
-            // textBoxPerson
-            // 
-            this.textBoxPerson.Location = new System.Drawing.Point(185, 141);
-            this.textBoxPerson.Name = "textBoxPerson";
-            this.textBoxPerson.Size = new System.Drawing.Size(87, 20);
-            this.textBoxPerson.TabIndex = 19;
-            this.textBoxPerson.Enter += new System.EventHandler(this.textBoxPerson_Enter_1);
-            this.textBoxPerson.Leave += new System.EventHandler(this.textBoxPerson_Leave_1);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(120, 347);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(104, 17);
-            this.checkBox1.TabIndex = 23;
-            this.checkBox1.Text = "Notify Attendees";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // comboBoxRoom
-            // 
-            this.comboBoxRoom.FormattingEnabled = true;
-            this.comboBoxRoom.Location = new System.Drawing.Point(120, 58);
-            this.comboBoxRoom.Name = "comboBoxRoom";
-            this.comboBoxRoom.Size = new System.Drawing.Size(203, 21);
-            this.comboBoxRoom.TabIndex = 24;
             // 
             // AddEventScreen
             // 

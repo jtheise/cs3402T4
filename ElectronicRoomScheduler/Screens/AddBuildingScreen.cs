@@ -20,5 +20,6 @@ namespace ElectronicRoomScheduler.Screens
         {
             this.Dock = DockStyle.Fill;
         }
+
     }
 }
