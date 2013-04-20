@@ -130,16 +130,16 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(76, 39);
+            this.textBox4.Location = new System.Drawing.Point(68, 39);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(104, 20);
+            this.textBox4.Size = new System.Drawing.Size(112, 20);
             this.textBox4.TabIndex = 9;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(76, 13);
+            this.textBox3.Location = new System.Drawing.Point(68, 13);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(104, 20);
+            this.textBox3.Size = new System.Drawing.Size(112, 20);
             this.textBox3.TabIndex = 8;
             // 
             // label4
@@ -162,9 +162,9 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(76, 45);
+            this.textBox2.Location = new System.Drawing.Point(74, 45);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(110, 20);
+            this.textBox2.Size = new System.Drawing.Size(112, 20);
             this.textBox2.TabIndex = 5;
             // 
             // textBox1

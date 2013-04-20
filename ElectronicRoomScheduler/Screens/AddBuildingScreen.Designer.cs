@@ -69,9 +69,9 @@
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(74, 19);
+            this.textBox1.Location = new System.Drawing.Point(76, 19);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(115, 20);
+            this.textBox1.Size = new System.Drawing.Size(113, 20);
             this.textBox1.TabIndex = 3;
             // 
             // label2
@@ -123,16 +123,16 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(76, 39);
+            this.textBox4.Location = new System.Drawing.Point(70, 39);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(107, 20);
+            this.textBox4.Size = new System.Drawing.Size(113, 20);
             this.textBox4.TabIndex = 9;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(76, 13);
+            this.textBox3.Location = new System.Drawing.Point(70, 13);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(107, 20);
+            this.textBox3.Size = new System.Drawing.Size(113, 20);
             this.textBox3.TabIndex = 8;
             // 
             // pictureBox1
