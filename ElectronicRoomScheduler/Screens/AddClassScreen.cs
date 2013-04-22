@@ -1,4 +1,13 @@
-﻿using System;
+﻿/***************************************************
+ * CS3240 Electronic Room Seceduler
+ * Coded: Rob Risner
+ * Commented: Justin Theisen
+ *
+ * 
+ * Add class screen
+ * *************************************************/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -14,18 +23,19 @@ namespace ElectronicRoomScheduler.Screens
     {
         public AddClassScreen()
         {
-            InitializeComponent();
+            InitializeComponent(); //load screen
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) //save click
         {
-            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" }); 
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" }); //log data
 
-            errorProvider1.Clear();
-            bool hasErrors = false;
+            errorProvider1.Clear(); //clear eroor messages
+            bool hasErrors = false; //check for errors
 
 
-            if (string.IsNullOrWhiteSpace(textBoxCourseId.Text) || textBoxCourseId.Text.Length < 2 || textBoxCourseId.Text.Length > 20)
+            //error handling logic
+            if (string.IsNullOrWhiteSpace(textBoxCourseId.Text) || textBoxCourseId.Text.Length < 2 || textBoxCourseId.Text.Length > 20) 
             {
                 errorProvider1.SetError(textBoxCourseId, "Course ID must be between 2 and 20 characters.");
                 hasErrors = true;
@@ -85,6 +95,8 @@ namespace ElectronicRoomScheduler.Screens
             if (hasErrors)
                 return;
 
+            //end error handling
+
 
             // insert the class into the list....
 
@@ -101,6 +113,8 @@ namespace ElectronicRoomScheduler.Screens
             c.Days = days;
             Program.GetParent().ClassList.Add(c);
 
+
+            //pop up if they want to add multiple classes
             DialogResult dr = MessageBox.Show("The class was successfully added.\r\n\r\nDo you want to add another class?", "Success", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
             if (dr == DialogResult.Yes)
@@ -112,12 +126,12 @@ namespace ElectronicRoomScheduler.Screens
 
         private void AddClassScreen_Load(object sender, EventArgs e)
         {
-            Program.GetParent().AcceptButton = buttonAdd;
+            Program.GetParent().AcceptButton = buttonAdd; //add buttons on load
 
-            dateTimePickerStartTime.Format = DateTimePickerFormat.Custom;
+            dateTimePickerStartTime.Format = DateTimePickerFormat.Custom; //set date time format
             dateTimePickerStartTime.CustomFormat = "hh:mm tt";
 
-            dateTimePickerEndTime.Format = DateTimePickerFormat.Custom;
+            dateTimePickerEndTime.Format = DateTimePickerFormat.Custom; //set date time format
             dateTimePickerEndTime.CustomFormat = "hh:mm tt";
 
             textBoxCourseId.Select();

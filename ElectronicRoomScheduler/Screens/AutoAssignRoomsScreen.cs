@@ -1,4 +1,13 @@
-﻿using System;
+﻿/***************************************************
+ * CS3240 Electronic Room Seceduler
+ * Coded: Rob Risner
+ * Commented: Justin Theisen
+ *
+ * 
+ * NOT YET IMPLIMENTED
+ * *************************************************/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -18,12 +27,12 @@ namespace ElectronicRoomScheduler.Screens
 
         private void AssignRoomsScreen_Load(object sender, EventArgs e)
         {
-            this.Dock = DockStyle.Fill;
+            this.Dock = DockStyle.Fill;  //dock in the panels
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" });
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" }); //log data
         }
     }
 }

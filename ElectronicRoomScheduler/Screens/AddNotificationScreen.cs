@@ -1,4 +1,13 @@
-﻿using System;
+﻿/***************************************************
+ * CS3240 Electronic Room Seceduler
+ * Coded: Rob Risner
+ * Commented: Justin Theisen
+ *
+ * 
+ * Add notifications with drag and drop
+ * *************************************************/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -22,18 +31,21 @@ namespace ElectronicRoomScheduler.Screens
             this.Dock = DockStyle.Fill;
             Program.GetParent().AcceptButton = buttonSaveNotification;
 
+            //add canned data
+
             EmailsAndPhoneNumbers.Add("(419) 867 - 5309");
             EmailsAndPhoneNumbers.Add("Blah@bgsu.edu");
 
 
-            RunPopulateList();
-            PopulateClassEventList();
+            RunPopulateList(); //add canned data if no data found
+            PopulateClassEventList(); //add data from saved data
         }
         private void RunPopulateList()
         {
             flowLayoutPanelEmailsAndPhones.Controls.Clear();
-            flowLayoutPanelTo.Controls.Clear();
+            flowLayoutPanelTo.Controls.Clear(); 
 
+            //add data to the drag and drop panels
             foreach (var item in EmailsAndPhoneNumbers)
             {
 
@@ -57,6 +69,7 @@ namespace ElectronicRoomScheduler.Screens
 
             int counter = 0;
 
+            //add labels to the drag and drop
             foreach (var item in Program.GetParent().EventList)
             {
                 Label newLabel2 = new Label();
@@ -79,7 +92,7 @@ namespace ElectronicRoomScheduler.Screens
             counter = 0;
 
             foreach (var item in Program.GetParent().ClassList)
-            {
+            {  //add classes to the drag and drop
 
                 Label newLabel = new Label();
                 newLabel.AutoSize = true;
@@ -105,13 +118,13 @@ namespace ElectronicRoomScheduler.Screens
 
         }
 
-        void newLabel2_MouseUp(object sender, MouseEventArgs e)
+        void newLabel2_MouseUp(object sender, MouseEventArgs e) //drag and drop code
         {
             flowLayoutPanelTo.AllowDrop = true;
             flowLayoutPanelFor.AllowDrop = false;
         }
 
-        void newLabel2_MouseDown(object sender, MouseEventArgs e)
+        void newLabel2_MouseDown(object sender, MouseEventArgs e) //drag and drop code
         {
             flowLayoutPanelTo.AllowDrop = false;
             flowLayoutPanelFor.AllowDrop = true;
@@ -124,7 +137,7 @@ namespace ElectronicRoomScheduler.Screens
         private List<string> EmailsAndPhoneNumbers = new List<string>();
 
         
-        void newLabel_MouseUp(object sender, MouseEventArgs e)
+        void newLabel_MouseUp(object sender, MouseEventArgs e) //drag and drop code
         {
             flowLayoutPanelTo.AllowDrop = false;
             flowLayoutPanelFor.AllowDrop = true;
@@ -133,12 +146,12 @@ namespace ElectronicRoomScheduler.Screens
 
 
 
-        void newLabel_MouseDown(object sender, MouseEventArgs e)
+        void newLabel_MouseDown(object sender, MouseEventArgs e) //drag and drop code
         {
             flowLayoutPanelTo.AllowDrop = true;
             flowLayoutPanelFor.AllowDrop = false;
 
-            if (e.Button == System.Windows.Forms.MouseButtons.Right)
+            if (e.Button == System.Windows.Forms.MouseButtons.Right) //right click deletion of data
             {
 
                 DialogResult dr = MessageBox.Show("Delete this email address or phone number?", "Sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -160,10 +173,11 @@ namespace ElectronicRoomScheduler.Screens
             }
         }
 
-        private void buttonAddNewPhoneEmail_Click(object sender, EventArgs e)
+        private void buttonAddNewPhoneEmail_Click(object sender, EventArgs e) //add new contact info
         {
-            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" }); 
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" }); //log data
             
+            //empty input boxes
             EmailsAndPhoneNumbers.Add(textBoxPhoneEmail.Text);
             RunPopulateList();
             textBoxPhoneEmail.Text = "";
@@ -193,6 +207,8 @@ namespace ElectronicRoomScheduler.Screens
                     }
                 }
             }
+
+            //add a new label with the new info to the drag and drop list
 
             Label newLabel = new Label();
             newLabel.AutoSize = true;
@@ -228,17 +244,17 @@ namespace ElectronicRoomScheduler.Screens
 
         private void flowLayoutPanelTo_DragEnter(object sender, DragEventArgs e)
         {
-            if (e.Data.GetDataPresent(DataFormats.Text)) e.Effect = DragDropEffects.Copy;
+            if (e.Data.GetDataPresent(DataFormats.Text)) e.Effect = DragDropEffects.Copy; //drag and drop code
         }
 
         private void textBoxPhoneEmail_Enter(object sender, EventArgs e)
         {
-            Program.GetParent().AcceptButton = buttonAddNewPhoneEmail;
+            Program.GetParent().AcceptButton = buttonAddNewPhoneEmail; //add new emails
         }
 
         private void textBoxPhoneEmail_Leave(object sender, EventArgs e)
         {
-            Program.GetParent().AcceptButton = buttonSaveNotification;
+            Program.GetParent().AcceptButton = buttonSaveNotification; //save notification
         }
 
         private void flowLayoutPanelFor_DragDrop(object sender, DragEventArgs e)
@@ -268,6 +284,9 @@ namespace ElectronicRoomScheduler.Screens
                 }
             }
 
+
+            //add new labels with the data entered
+
             Label newLabel = new Label();
             newLabel.AutoSize = true;
             newLabel.Text = val;
@@ -283,18 +302,18 @@ namespace ElectronicRoomScheduler.Screens
 
         private void flowLayoutPanelFor_DragEnter(object sender, DragEventArgs e)
         {
-            if (e.Data.GetDataPresent(DataFormats.Text)) e.Effect = DragDropEffects.Copy;
+            if (e.Data.GetDataPresent(DataFormats.Text)) e.Effect = DragDropEffects.Copy; //drag and drop code
         }
 
         private void buttonClearEventsClasses_Click(object sender, EventArgs e)
         {
-            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" }); 
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" }); //log data
             PopulateClassEventList();
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" });
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" }); //log data
 
             // save it out
 

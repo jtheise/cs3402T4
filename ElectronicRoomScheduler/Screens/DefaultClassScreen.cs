@@ -1,4 +1,13 @@
-﻿using System;
+﻿/***************************************************
+ * CS3240 Electronic Room Seceduler
+ * Coded: Rob Risner
+ * Commented: Justin Theisen
+ *
+ * 
+ * Default classes screen
+ * *************************************************/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -47,6 +56,7 @@ namespace ElectronicRoomScheduler.Screens
 
             if (listView.Items.Count > 0)
             {
+                //size the list view properly
                 listView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
                 listView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
             }

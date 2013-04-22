@@ -1,3 +1,13 @@
+/***************************************************
+ * CS3240 Electronic Room Seceduler
+ * Coded: Rob Risner
+ * Commented: Justin Theisen
+ *
+ * 
+ * Add event Screen
+ * *************************************************/
+
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,6 +37,8 @@ namespace ElectronicRoomScheduler.Screens
 
             List<Control> controls = Program.GetParent().Controls.Find("EventsSidePanel", true).ToList();
 
+
+            //if a control wasn't picked don't load this panel
             if (controls.Count != 1)
                 return;
 
@@ -42,6 +54,8 @@ namespace ElectronicRoomScheduler.Screens
 
             List<string> locations = new List<string>();
 
+            //canned data
+
             locations.Add("University Hall");
             locations.Add("South Hall");
             locations.Add("Hayes Hall");
@@ -50,7 +64,7 @@ namespace ElectronicRoomScheduler.Screens
 
             rooms.Add("Hayes Hall 217");
 
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 100; i++) //populate lists
             {
                 string building = locations[r.Next(0, 4)];
 
@@ -80,7 +94,7 @@ namespace ElectronicRoomScheduler.Screens
         }
 
 
-        private void buttonAddPerson_Click_1(object sender, EventArgs e)
+        private void buttonAddPerson_Click_1(object sender, EventArgs e) //add a person attending an event
         {
             Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" }); 
             listBoxAttending.Items.Add(textBoxPerson.Text);
@@ -89,17 +103,17 @@ namespace ElectronicRoomScheduler.Screens
 
         private void textBoxPerson_Enter_1(object sender, EventArgs e)
         {
-            Program.GetParent().AcceptButton = buttonAddPerson;
+            Program.GetParent().AcceptButton = buttonAddPerson; //add person
         }
 
         private void textBoxPerson_Leave_1(object sender, EventArgs e)
         {
-            Program.GetParent().AcceptButton = buttonSave;
+            Program.GetParent().AcceptButton = buttonSave; //save
         }
 
         private void listBoxAttending_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (listBoxAttending.SelectedItems.Count == 1)
+            if (listBoxAttending.SelectedItems.Count == 1) //remove a person avalible after adding a person
                 buttonRemovePerson.Enabled = true;
             else
                 buttonRemovePerson.Enabled = false;
@@ -107,18 +121,20 @@ namespace ElectronicRoomScheduler.Screens
 
         private void buttonRemovePerson_Click(object sender, EventArgs e)
         {
-            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" }); 
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" }); //log data
+            
+            //remove selected person
             
             if (listBoxAttending.SelectedItems.Count == 1)
                 listBoxAttending.Items.RemoveAt(listBoxAttending.SelectedIndex);
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
-        {
-            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" });
+        {   
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" }); //log data
 
 
-            Event newEvent = new Event();
+            Event newEvent = new Event(); //new event class to handle event added
 
             newEvent.Date = dateTimePickerDateTime.Value;
             newEvent.Host = textBoxHostingOrg.Text;
@@ -130,6 +146,8 @@ namespace ElectronicRoomScheduler.Screens
             {
                 newEvent.PeopleAttending.Add(item);
             }
+
+            //add data to the list then exit this panel unless the user wants to enter more
 
             Program.GetParent().EventList.Add(newEvent);
 
