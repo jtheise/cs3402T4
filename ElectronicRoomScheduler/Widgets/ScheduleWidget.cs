@@ -1,11 +1,4 @@
-﻿/* CS 3240 Electronic Room Scheduler
- * Coded: Rob Risner
- * Commented: KJ Jablonowski
- * Due: 4/22/2013
- * Class Schedule Widget
- */
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
