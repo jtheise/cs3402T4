@@ -1,4 +1,13 @@
-﻿using System;
+﻿/***************************************************
+ * CS3240 Electronic Room Seceduler
+ * Coded: Rob Risner
+ * Commented: Justin Theisen
+ * 
+ * 
+ * NOT YET IMPLIMENTED
+ * *************************************************/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
