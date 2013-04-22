@@ -55,9 +55,9 @@
             this.cap,
             this.islab,
             this.tech});
-            this.listviewRooms.Location = new System.Drawing.Point(23, 56);
+            this.listviewRooms.Location = new System.Drawing.Point(15, 47);
             this.listviewRooms.Name = "listviewRooms";
-            this.listviewRooms.Size = new System.Drawing.Size(705, 256);
+            this.listviewRooms.Size = new System.Drawing.Size(790, 154);
             this.listviewRooms.TabIndex = 3;
             this.listviewRooms.UseCompatibleStateImageBehavior = false;
             this.listviewRooms.View = System.Windows.Forms.View.Details;
