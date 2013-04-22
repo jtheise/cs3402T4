@@ -2,7 +2,6 @@
  * CS3240 Electronic Room Seceduler
  * Coded: Rob Risner
  * Commented: Justin Theisen
- * Add buildings Screen
  * 
  * 
  * NOT YET IMPLIMENTED
