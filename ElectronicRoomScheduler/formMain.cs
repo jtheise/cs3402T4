@@ -1,4 +1,12 @@
-﻿using ElectronicRoomScheduler.Classes;
+﻿/***************************************************
+ * CS3240 Electronic Room Seceduler
+ * Coded: Rob Risner
+ * Comments: Justin Theisen
+ * This section sets up the main form and starts the program
+ * *************************************************/
+
+
+using ElectronicRoomScheduler.Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,17 +39,17 @@ namespace ElectronicRoomScheduler
 
         public void GoBack()
         {
-            LoadScreen(History.Pop());
+            LoadScreen(History.Pop()); //goes back a screen
         }
 
         public void ClearScreen()
         {
-            ClearScreen(false);
+            ClearScreen(false);  //clears the current screens
         }
 
         public void ClearScreen(bool clearBoth)
         {
-            containerLeftRight.Panel2.Controls.Clear();
+            containerLeftRight.Panel2.Controls.Clear(); //clears sidepanels
 
             
             containerLeftRight.SplitterDistance = 170;
@@ -53,7 +61,7 @@ namespace ElectronicRoomScheduler
 
         public void Login(string name)
         {
-            LoggedInUser = name;
+            LoggedInUser = name; //get the logged in name and deisplay the right panels for them
 
             if (name == "student")
             {
@@ -72,6 +80,9 @@ namespace ElectronicRoomScheduler
         }
 
         #region LoadScreen(string screenName)
+
+        //This region handels the swaping and loading of screens logically
+
         public void LoadScreen(string screenName)
         {
             History.Push(screenName);
@@ -264,13 +275,13 @@ namespace ElectronicRoomScheduler
 
         public FormMain()
         {
-            InitializeComponent();
+            InitializeComponent(); //load main form
         }
 
 
         private void formMain_Load(object sender, EventArgs e)
         {
-            FormLogin login = new FormLogin();
+            FormLogin login = new FormLogin(); //start the login form
             LoggedInUser = "";
 
             this.Visible = false;
@@ -291,7 +302,7 @@ namespace ElectronicRoomScheduler
             {
                 using (Stream stream = File.Open("class.data", FileMode.Open))
                 {
-                    BinaryFormatter bin = new BinaryFormatter();
+                    BinaryFormatter bin = new BinaryFormatter(); //saving data
 
                     ClassList = (List<Class>)bin.Deserialize(stream);
                 }
@@ -306,7 +317,7 @@ namespace ElectronicRoomScheduler
             {
                 using (Stream stream = File.Open("notification.data", FileMode.Open))
                 {
-                    BinaryFormatter bin = new BinaryFormatter();
+                    BinaryFormatter bin = new BinaryFormatter(); //writing output data
 
                     NotificationList = (List<Notification>)bin.Deserialize(stream);
                 }
@@ -321,7 +332,7 @@ namespace ElectronicRoomScheduler
             {
                 using (Stream stream = File.Open("event.data", FileMode.Open))
                 {
-                    BinaryFormatter bin = new BinaryFormatter();
+                    BinaryFormatter bin = new BinaryFormatter(); //saving data
 
                     EventList = (List<Event>)bin.Deserialize(stream);
                 }
@@ -463,9 +474,11 @@ namespace ElectronicRoomScheduler
 
         #region Button Clicks
 
+        //this region handels the loading of the screens and menus related to side screens
+
         private void buttonHome_Click(object sender, EventArgs e)
         {
-            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" });
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" }); //load the home screen
             ClearScreen(true);
 
             containerLeftRight.Panel1.Hide();
@@ -474,7 +487,7 @@ namespace ElectronicRoomScheduler
             containerLeftRight.Panel2.Controls.Add(new Screens.HomeScreen());
         }
 
-        private void buttonClasses_Click(object sender, EventArgs e)
+        private void buttonClasses_Click(object sender, EventArgs e) //load classes menus
         {
             Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" }); 
             ClearScreen(true);
@@ -484,7 +497,7 @@ namespace ElectronicRoomScheduler
 
         }
 
-        private void buttonEvents_Click(object sender, EventArgs e)
+        private void buttonEvents_Click(object sender, EventArgs e) //load event menus
         {
             Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" }); 
             ClearScreen(true);
@@ -493,7 +506,7 @@ namespace ElectronicRoomScheduler
             containerLeftRight.Panel2.Controls.Add(new Screens.DefaultEventScreen());
         }
 
-        private void buttonNotifications_Click(object sender, EventArgs e)
+        private void buttonNotifications_Click(object sender, EventArgs e) //load notitifcation menus
         {
             Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" }); 
             ClearScreen(true);
@@ -502,7 +515,7 @@ namespace ElectronicRoomScheduler
             containerLeftRight.Panel2.Controls.Add(new Screens.DefaultNotificationScreen());
         }
 
-        private void buttonOrganizations_Click(object sender, EventArgs e)
+        private void buttonOrganizations_Click(object sender, EventArgs e) //load organization menus
         {
             Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" }); 
             ClearScreen(true);
@@ -511,7 +524,7 @@ namespace ElectronicRoomScheduler
             containerLeftRight.Panel2.Controls.Add(new Screens.DefaultOrganizationScreen());
         }
 
-        private void buttonReports_Click(object sender, EventArgs e)
+        private void buttonReports_Click(object sender, EventArgs e) //load reports menus
         {
             Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" }); 
             ClearScreen(true);
@@ -520,7 +533,7 @@ namespace ElectronicRoomScheduler
             containerLeftRight.Panel2.Controls.Add(new Screens.DefaultReportScreen());
         }
 
-        private void buttonBuildings_Click(object sender, EventArgs e)
+        private void buttonBuildings_Click(object sender, EventArgs e)  //load buildings menus
         {
             Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" });
             ClearScreen(true);
@@ -529,7 +542,7 @@ namespace ElectronicRoomScheduler
             containerLeftRight.Panel2.Controls.Add(new Screens.DefaultBuildingsScreen());
         }
 
-        private void buttonRooms_Click(object sender, EventArgs e)
+        private void buttonRooms_Click(object sender, EventArgs e) //load room menus
         {
             Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" }); 
             ClearScreen(true);
