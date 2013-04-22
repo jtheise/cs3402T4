@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.labelTitle = new System.Windows.Forms.Label();
+            this.listviewRooms = new System.Windows.Forms.ListView();
+            this.bid = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.roomnum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cap = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.islab = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tech = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // labelTitle
@@ -41,10 +47,47 @@
             this.labelTitle.TabIndex = 2;
             this.labelTitle.Text = "Manage Rooms";
             // 
+            // listviewRooms
+            // 
+            this.listviewRooms.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.bid,
+            this.roomnum,
+            this.cap,
+            this.islab,
+            this.tech});
+            this.listviewRooms.Location = new System.Drawing.Point(23, 56);
+            this.listviewRooms.Name = "listviewRooms";
+            this.listviewRooms.Size = new System.Drawing.Size(705, 256);
+            this.listviewRooms.TabIndex = 3;
+            this.listviewRooms.UseCompatibleStateImageBehavior = false;
+            this.listviewRooms.View = System.Windows.Forms.View.Details;
+            // 
+            // bid
+            // 
+            this.bid.Text = "Building ID";
+            // 
+            // roomnum
+            // 
+            this.roomnum.Text = "Room Number";
+            // 
+            // cap
+            // 
+            this.cap.Text = "Capacity";
+            // 
+            // islab
+            // 
+            this.islab.Text = "Lab";
+            // 
+            // tech
+            // 
+            this.tech.Text = "Technology Available";
+            this.tech.Width = 114;
+            // 
             // DefaultRoomScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.listviewRooms);
             this.Controls.Add(this.labelTitle);
             this.Name = "DefaultRoomScreen";
             this.Size = new System.Drawing.Size(820, 480);
@@ -57,5 +100,11 @@
         #endregion
 
         private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.ListView listviewRooms;
+        private System.Windows.Forms.ColumnHeader bid;
+        private System.Windows.Forms.ColumnHeader roomnum;
+        private System.Windows.Forms.ColumnHeader cap;
+        private System.Windows.Forms.ColumnHeader islab;
+        private System.Windows.Forms.ColumnHeader tech;
     }
 }
