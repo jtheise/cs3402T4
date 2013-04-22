@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.labelHeader = new System.Windows.Forms.Label();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkLabelDeleteBuilding = new System.Windows.Forms.LinkLabel();
+            this.linkLabelEditBuilding = new System.Windows.Forms.LinkLabel();
+            this.linkLabelAddBuilding = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // labelHeader
@@ -45,47 +45,47 @@
             this.labelHeader.Text = "Manage Buildings";
             this.labelHeader.Click += new System.EventHandler(this.labelHeader_Click);
             // 
-            // linkLabel3
+            // linkLabelDeleteBuilding
             // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Location = new System.Drawing.Point(22, 75);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(78, 13);
-            this.linkLabel3.TabIndex = 8;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "Delete Building";
-            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
+            this.linkLabelDeleteBuilding.AutoSize = true;
+            this.linkLabelDeleteBuilding.Location = new System.Drawing.Point(22, 75);
+            this.linkLabelDeleteBuilding.Name = "linkLabelDeleteBuilding";
+            this.linkLabelDeleteBuilding.Size = new System.Drawing.Size(78, 13);
+            this.linkLabelDeleteBuilding.TabIndex = 8;
+            this.linkLabelDeleteBuilding.TabStop = true;
+            this.linkLabelDeleteBuilding.Text = "Delete Building";
+            this.linkLabelDeleteBuilding.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
-            // linkLabel2
+            // linkLabelEditBuilding
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(22, 54);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(65, 13);
-            this.linkLabel2.TabIndex = 7;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Edit Building";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            this.linkLabelEditBuilding.AutoSize = true;
+            this.linkLabelEditBuilding.Location = new System.Drawing.Point(22, 54);
+            this.linkLabelEditBuilding.Name = "linkLabelEditBuilding";
+            this.linkLabelEditBuilding.Size = new System.Drawing.Size(65, 13);
+            this.linkLabelEditBuilding.TabIndex = 7;
+            this.linkLabelEditBuilding.TabStop = true;
+            this.linkLabelEditBuilding.Text = "Edit Building";
+            this.linkLabelEditBuilding.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
-            // linkLabel1
+            // linkLabelAddBuilding
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(22, 33);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(66, 13);
-            this.linkLabel1.TabIndex = 6;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Add Building";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.linkLabelAddBuilding.AutoSize = true;
+            this.linkLabelAddBuilding.Location = new System.Drawing.Point(22, 33);
+            this.linkLabelAddBuilding.Name = "linkLabelAddBuilding";
+            this.linkLabelAddBuilding.Size = new System.Drawing.Size(66, 13);
+            this.linkLabelAddBuilding.TabIndex = 6;
+            this.linkLabelAddBuilding.TabStop = true;
+            this.linkLabelAddBuilding.Text = "Add Building";
+            this.linkLabelAddBuilding.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // BuildingsSidePanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.labelHeader);
-            this.Controls.Add(this.linkLabel3);
-            this.Controls.Add(this.linkLabel2);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.linkLabelDeleteBuilding);
+            this.Controls.Add(this.linkLabelEditBuilding);
+            this.Controls.Add(this.linkLabelAddBuilding);
             this.Name = "BuildingsSidePanel";
             this.Size = new System.Drawing.Size(160, 600);
             this.Load += new System.EventHandler(this.BuildingsSidePanel_Load);
@@ -97,8 +97,8 @@
         #endregion
 
         private System.Windows.Forms.Label labelHeader;
-        private System.Windows.Forms.LinkLabel linkLabel3;
-        private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkLabelDeleteBuilding;
+        private System.Windows.Forms.LinkLabel linkLabelEditBuilding;
+        private System.Windows.Forms.LinkLabel linkLabelAddBuilding;
     }
 }

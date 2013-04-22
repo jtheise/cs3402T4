@@ -29,6 +29,26 @@ namespace ElectronicRoomScheduler.Screens
             RunPopulateList();
             PopulateClassEventList();
         }
+        private void RunPopulateList()
+        {
+            flowLayoutPanelEmailsAndPhones.Controls.Clear();
+            flowLayoutPanelTo.Controls.Clear();
+
+            foreach (var item in EmailsAndPhoneNumbers)
+            {
+
+                Label newLabel = new Label();
+                newLabel.AutoSize = true;
+                newLabel.Text = item;
+                newLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+                newLabel.Margin = new System.Windows.Forms.Padding(5);
+                newLabel.Padding = new System.Windows.Forms.Padding(5);
+                newLabel.BackColor = Color.Yellow;
+                newLabel.MouseDown += newLabel_MouseDown;
+                newLabel.MouseUp += newLabel_MouseUp;
+                flowLayoutPanelEmailsAndPhones.Controls.Add(newLabel);
+            }
+        }
 
         private void PopulateClassEventList()
         {
@@ -103,27 +123,7 @@ namespace ElectronicRoomScheduler.Screens
 
         private List<string> EmailsAndPhoneNumbers = new List<string>();
 
-        private void RunPopulateList()
-        {
-            flowLayoutPanelEmailsAndPhones.Controls.Clear();
-            flowLayoutPanelTo.Controls.Clear();
-
-            foreach (var item in EmailsAndPhoneNumbers)
-            {
-
-                Label newLabel = new Label();
-                newLabel.AutoSize = true;
-                newLabel.Text = item;
-                newLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-                newLabel.Margin = new System.Windows.Forms.Padding(5);
-                newLabel.Padding = new System.Windows.Forms.Padding(5);
-                newLabel.BackColor = Color.Yellow;
-                newLabel.MouseDown += newLabel_MouseDown;
-                newLabel.MouseUp += newLabel_MouseUp;
-                flowLayoutPanelEmailsAndPhones.Controls.Add(newLabel);
-            }
-        }
-
+        
         void newLabel_MouseUp(object sender, MouseEventArgs e)
         {
             flowLayoutPanelTo.AllowDrop = false;

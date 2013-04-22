@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.labelTitle = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listView = new System.Windows.Forms.ListView();
             this.building_id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.building_name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.location_lat = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.location_long = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.labelWarning = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelTitle
@@ -46,20 +47,20 @@
             this.labelTitle.TabIndex = 2;
             this.labelTitle.Text = "Manage Buildings";
             // 
-            // listView1
+            // listView
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.building_id,
             this.building_name,
             this.location_lat,
             this.location_long});
-            this.listView1.FullRowSelect = true;
-            this.listView1.Location = new System.Drawing.Point(15, 47);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(790, 154);
-            this.listView1.TabIndex = 3;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView.FullRowSelect = true;
+            this.listView.Location = new System.Drawing.Point(15, 47);
+            this.listView.Name = "listView";
+            this.listView.Size = new System.Drawing.Size(790, 154);
+            this.listView.TabIndex = 3;
+            this.listView.UseCompatibleStateImageBehavior = false;
+            this.listView.View = System.Windows.Forms.View.Details;
             // 
             // building_id
             // 
@@ -81,11 +82,23 @@
             this.location_long.Text = "Longitude";
             this.location_long.Width = 102;
             // 
+            // labelWarning
+            // 
+            this.labelWarning.AutoSize = true;
+            this.labelWarning.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWarning.ForeColor = System.Drawing.Color.Yellow;
+            this.labelWarning.Location = new System.Drawing.Point(285, 20);
+            this.labelWarning.Name = "labelWarning";
+            this.labelWarning.Size = new System.Drawing.Size(212, 20);
+            this.labelWarning.TabIndex = 4;
+            this.labelWarning.Text = "Section Not Implemented";
+            // 
             // DefaultBuildingsScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.labelWarning);
+            this.Controls.Add(this.listView);
             this.Controls.Add(this.labelTitle);
             this.Name = "DefaultBuildingsScreen";
             this.Size = new System.Drawing.Size(820, 480);
@@ -98,11 +111,12 @@
         #endregion
 
         private System.Windows.Forms.Label labelTitle;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listView;
         private System.Windows.Forms.ColumnHeader building_id;
         private System.Windows.Forms.ColumnHeader building_name;
         private System.Windows.Forms.ColumnHeader location_lat;
         private System.Windows.Forms.ColumnHeader location_long;
+        private System.Windows.Forms.Label labelWarning;
 
     }
 }

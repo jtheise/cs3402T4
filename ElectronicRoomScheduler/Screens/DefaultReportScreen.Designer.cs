@@ -39,6 +39,7 @@
             this.QuesName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.QuesAsked = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label2 = new System.Windows.Forms.Label();
+            this.labelWarning = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelTitle
@@ -119,10 +120,22 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Questions";
             // 
+            // labelWarning
+            // 
+            this.labelWarning.AutoSize = true;
+            this.labelWarning.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWarning.ForeColor = System.Drawing.Color.Yellow;
+            this.labelWarning.Location = new System.Drawing.Point(266, 24);
+            this.labelWarning.Name = "labelWarning";
+            this.labelWarning.Size = new System.Drawing.Size(212, 20);
+            this.labelWarning.TabIndex = 6;
+            this.labelWarning.Text = "Section Not Implemented";
+            // 
             // DefaultReportScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.labelWarning);
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.listView1);
@@ -149,5 +162,6 @@
         private System.Windows.Forms.ColumnHeader QuesName;
         private System.Windows.Forms.ColumnHeader QuesAsked;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelWarning;
     }
 }

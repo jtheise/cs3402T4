@@ -30,16 +30,17 @@
         {
             this.labelTitle = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonLoadId = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.listBoxMembers = new System.Windows.Forms.ListBox();
+            this.buttonAddMember = new System.Windows.Forms.Button();
+            this.textBoxMembers = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxFacNumber = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxOrgId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -56,16 +57,17 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.buttonLoadId);
             this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.listBox1);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.listBoxMembers);
+            this.groupBox1.Controls.Add(this.buttonAddMember);
+            this.groupBox1.Controls.Add(this.textBoxMembers);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.textBoxFacNumber);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.textBoxName);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.textBoxOrgId);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(15, 47);
             this.groupBox1.Name = "groupBox1";
@@ -73,6 +75,15 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Organization Information";
+            // 
+            // buttonLoadId
+            // 
+            this.buttonLoadId.Location = new System.Drawing.Point(194, 22);
+            this.buttonLoadId.Name = "buttonLoadId";
+            this.buttonLoadId.Size = new System.Drawing.Size(75, 23);
+            this.buttonLoadId.TabIndex = 11;
+            this.buttonLoadId.Text = "Load";
+            this.buttonLoadId.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -83,29 +94,29 @@
             this.button2.Text = "Save";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // listBoxMembers
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(93, 142);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(166, 108);
-            this.listBox1.TabIndex = 9;
+            this.listBoxMembers.FormattingEnabled = true;
+            this.listBoxMembers.Location = new System.Drawing.Point(93, 142);
+            this.listBoxMembers.Name = "listBoxMembers";
+            this.listBoxMembers.Size = new System.Drawing.Size(166, 108);
+            this.listBoxMembers.TabIndex = 9;
             // 
-            // button1
+            // buttonAddMember
             // 
-            this.button1.Location = new System.Drawing.Point(266, 108);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 25);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonAddMember.Location = new System.Drawing.Point(266, 108);
+            this.buttonAddMember.Name = "buttonAddMember";
+            this.buttonAddMember.Size = new System.Drawing.Size(75, 25);
+            this.buttonAddMember.TabIndex = 8;
+            this.buttonAddMember.Text = "Add";
+            this.buttonAddMember.UseVisualStyleBackColor = true;
             // 
-            // textBox4
+            // textBoxMembers
             // 
-            this.textBox4.Location = new System.Drawing.Point(93, 111);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(167, 20);
-            this.textBox4.TabIndex = 7;
+            this.textBoxMembers.Location = new System.Drawing.Point(93, 111);
+            this.textBoxMembers.Name = "textBoxMembers";
+            this.textBoxMembers.Size = new System.Drawing.Size(167, 20);
+            this.textBoxMembers.TabIndex = 7;
             // 
             // label4
             // 
@@ -116,12 +127,12 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Members";
             // 
-            // textBox3
+            // textBoxFacNumber
             // 
-            this.textBox3.Location = new System.Drawing.Point(93, 82);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(167, 20);
-            this.textBox3.TabIndex = 5;
+            this.textBoxFacNumber.Location = new System.Drawing.Point(93, 82);
+            this.textBoxFacNumber.Name = "textBoxFacNumber";
+            this.textBoxFacNumber.Size = new System.Drawing.Size(167, 20);
+            this.textBoxFacNumber.TabIndex = 5;
             // 
             // label3
             // 
@@ -132,12 +143,12 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Facility Contact";
             // 
-            // textBox2
+            // textBoxName
             // 
-            this.textBox2.Location = new System.Drawing.Point(93, 54);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(167, 20);
-            this.textBox2.TabIndex = 3;
+            this.textBoxName.Location = new System.Drawing.Point(93, 54);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(167, 20);
+            this.textBoxName.TabIndex = 3;
             // 
             // label2
             // 
@@ -148,13 +159,12 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Name";
             // 
-            // textBox1
+            // textBoxOrgId
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(93, 24);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(95, 20);
-            this.textBox1.TabIndex = 1;
+            this.textBoxOrgId.Location = new System.Drawing.Point(93, 24);
+            this.textBoxOrgId.Name = "textBoxOrgId";
+            this.textBoxOrgId.Size = new System.Drawing.Size(95, 20);
+            this.textBoxOrgId.TabIndex = 1;
             // 
             // label1
             // 
@@ -186,15 +196,16 @@
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.ListBox listBoxMembers;
+        private System.Windows.Forms.Button buttonAddMember;
+        private System.Windows.Forms.TextBox textBoxMembers;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxFacNumber;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxOrgId;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonLoadId;
     }
 }

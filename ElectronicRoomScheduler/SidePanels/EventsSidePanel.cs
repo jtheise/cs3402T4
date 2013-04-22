@@ -19,8 +19,8 @@ namespace ElectronicRoomScheduler.SidePanels
         private void EventsSidePanel_Load(object sender, EventArgs e)
         {
             this.Dock = DockStyle.Fill;
-            linkLabel2.Visible = false;
-            linkLabel3.Visible = false;
+            linkLabelEditEvent.Visible = false;
+            linkLabelDeleteEvent.Visible = false;
             
 
         }

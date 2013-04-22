@@ -31,8 +31,8 @@ namespace ElectronicRoomScheduler.Screens
 
             SidePanels.EventsSidePanel sidePanel = ((SidePanels.EventsSidePanel)controls[0]);
 
-            sidePanel.linkLabel2.Visible = false;
-            sidePanel.linkLabel3.Visible = false;
+            sidePanel.linkLabelEditEvent.Visible = false;
+            sidePanel.linkLabelDeleteEvent.Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)

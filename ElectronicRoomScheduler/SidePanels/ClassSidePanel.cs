@@ -25,7 +25,19 @@ namespace ElectronicRoomScheduler.SidePanels
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((LinkLabel)sender).Text, "Click" });
-            Program.GetParent().ClassToLoad = -1;
+
+            List<Control> controls = Program.GetParent().Controls.Find("DefaultClassScreen", true).ToList();
+
+            if (controls.Count == 1)
+            {
+                if (((Screens.DefaultClassScreen)controls[0]).listView.SelectedItems.Count == 1)
+                    Program.GetParent().ClassToLoad = ((Screens.DefaultClassScreen)controls[0]).listView.SelectedItems[0].Index;
+                else
+                    Program.GetParent().ClassToLoad = -1;
+            }
+            else
+                Program.GetParent().ClassToLoad = -1;
+            
             Program.GetParent().LoadScreen("EditClass");
         }
 
@@ -57,6 +69,24 @@ namespace ElectronicRoomScheduler.SidePanels
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((LinkLabel)sender).Text, "Click" });
+
+
+
+
+            List<Control> controls = Program.GetParent().Controls.Find("DefaultClassScreen", true).ToList();
+
+
+
+            if (controls.Count == 1)
+            {
+                if (((Screens.DefaultClassScreen)controls[0]).listView.SelectedItems.Count == 1)
+                    Program.GetParent().ClassToLoad = ((Screens.DefaultClassScreen)controls[0]).listView.SelectedItems[0].Index;
+                else
+                    Program.GetParent().ClassToLoad = -1;
+            }
+            else
+                Program.GetParent().ClassToLoad = -1;
+
             Program.GetParent().LoadScreen("DeleteClass");
         }
 

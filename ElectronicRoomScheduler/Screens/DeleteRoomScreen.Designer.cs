@@ -30,13 +30,13 @@
         {
             this.labelTitle = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.buttonDelete = new System.Windows.Forms.Button();
+            this.textBoxRoomNumber = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxBuildingName = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxBuildingId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -54,8 +54,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.buttonDelete);
+            this.groupBox1.Controls.Add(this.textBoxRoomNumber);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Location = new System.Drawing.Point(15, 47);
@@ -65,21 +65,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Room Information";
             // 
-            // button1
+            // buttonDelete
             // 
-            this.button1.Location = new System.Drawing.Point(274, 110);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 25);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Delete";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonDelete.Location = new System.Drawing.Point(274, 110);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(75, 25);
+            this.buttonDelete.TabIndex = 4;
+            this.buttonDelete.Text = "Delete";
+            this.buttonDelete.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // textBoxRoomNumber
             // 
-            this.textBox2.Location = new System.Drawing.Point(96, 113);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(128, 20);
-            this.textBox2.TabIndex = 3;
+            this.textBoxRoomNumber.Location = new System.Drawing.Point(96, 113);
+            this.textBoxRoomNumber.Name = "textBoxRoomNumber";
+            this.textBoxRoomNumber.Size = new System.Drawing.Size(128, 20);
+            this.textBoxRoomNumber.TabIndex = 3;
             // 
             // label3
             // 
@@ -92,9 +92,9 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.comboBoxBuildingName);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.textBoxBuildingId);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(6, 19);
             this.groupBox2.Name = "groupBox2";
@@ -103,13 +103,13 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Building";
             // 
-            // comboBox1
+            // comboBoxBuildingName
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(90, 47);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(253, 21);
-            this.comboBox1.TabIndex = 2;
+            this.comboBoxBuildingName.FormattingEnabled = true;
+            this.comboBoxBuildingName.Location = new System.Drawing.Point(90, 47);
+            this.comboBoxBuildingName.Name = "comboBoxBuildingName";
+            this.comboBoxBuildingName.Size = new System.Drawing.Size(253, 21);
+            this.comboBoxBuildingName.TabIndex = 2;
             // 
             // label2
             // 
@@ -120,12 +120,12 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Building Name";
             // 
-            // textBox1
+            // textBoxBuildingId
             // 
-            this.textBox1.Location = new System.Drawing.Point(90, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(105, 20);
-            this.textBox1.TabIndex = 1;
+            this.textBoxBuildingId.Location = new System.Drawing.Point(90, 13);
+            this.textBoxBuildingId.Name = "textBoxBuildingId";
+            this.textBoxBuildingId.Size = new System.Drawing.Size(105, 20);
+            this.textBoxBuildingId.TabIndex = 1;
             // 
             // label1
             // 
@@ -158,13 +158,13 @@
 
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxRoomNumber;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxBuildingName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxBuildingId;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonDelete;
     }
 }

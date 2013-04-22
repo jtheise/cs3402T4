@@ -30,18 +30,18 @@
         {
             this.labelTitle = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.buttonLoadQuestion = new System.Windows.Forms.Button();
+            this.buttonSaveQuestion = new System.Windows.Forms.Button();
+            this.textBoxQuestionId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBoxCondition = new System.Windows.Forms.TextBox();
+            this.comboBoxOperator = new System.Windows.Forms.ComboBox();
+            this.comboBoxProperty = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.checkedListBoxSelection = new System.Windows.Forms.CheckedListBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -59,9 +59,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.buttonLoadQuestion);
+            this.groupBox1.Controls.Add(this.buttonSaveQuestion);
+            this.groupBox1.Controls.Add(this.textBoxQuestionId);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
@@ -72,21 +72,30 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Question Data";
             // 
-            // button1
+            // buttonLoadQuestion
             // 
-            this.button1.Location = new System.Drawing.Point(616, 289);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 25);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonLoadQuestion.Location = new System.Drawing.Point(86, 10);
+            this.buttonLoadQuestion.Name = "buttonLoadQuestion";
+            this.buttonLoadQuestion.Size = new System.Drawing.Size(75, 25);
+            this.buttonLoadQuestion.TabIndex = 2;
+            this.buttonLoadQuestion.Text = "Load";
+            this.buttonLoadQuestion.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // buttonSaveQuestion
             // 
-            this.textBox1.Location = new System.Drawing.Point(33, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(47, 20);
-            this.textBox1.TabIndex = 3;
+            this.buttonSaveQuestion.Location = new System.Drawing.Point(616, 289);
+            this.buttonSaveQuestion.Name = "buttonSaveQuestion";
+            this.buttonSaveQuestion.Size = new System.Drawing.Size(75, 25);
+            this.buttonSaveQuestion.TabIndex = 4;
+            this.buttonSaveQuestion.Text = "Save";
+            this.buttonSaveQuestion.UseVisualStyleBackColor = true;
+            // 
+            // textBoxQuestionId
+            // 
+            this.textBoxQuestionId.Location = new System.Drawing.Point(33, 13);
+            this.textBoxQuestionId.Name = "textBoxQuestionId";
+            this.textBoxQuestionId.Size = new System.Drawing.Size(47, 20);
+            this.textBoxQuestionId.TabIndex = 3;
             // 
             // label1
             // 
@@ -101,9 +110,9 @@
             // 
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.textBox2);
-            this.groupBox3.Controls.Add(this.comboBox2);
-            this.groupBox3.Controls.Add(this.comboBox1);
+            this.groupBox3.Controls.Add(this.textBoxCondition);
+            this.groupBox3.Controls.Add(this.comboBoxOperator);
+            this.groupBox3.Controls.Add(this.comboBoxProperty);
             this.groupBox3.Location = new System.Drawing.Point(6, 185);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(685, 98);
@@ -128,39 +137,39 @@
             this.label4.Size = new System.Drawing.Size(0, 13);
             this.label4.TabIndex = 5;
             // 
-            // textBox2
+            // textBoxCondition
             // 
-            this.textBox2.Location = new System.Drawing.Point(204, 39);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(129, 20);
-            this.textBox2.TabIndex = 4;
+            this.textBoxCondition.Location = new System.Drawing.Point(204, 39);
+            this.textBoxCondition.Name = "textBoxCondition";
+            this.textBoxCondition.Size = new System.Drawing.Size(129, 20);
+            this.textBoxCondition.TabIndex = 4;
             // 
-            // comboBox2
+            // comboBoxOperator
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.comboBoxOperator.FormattingEnabled = true;
+            this.comboBoxOperator.Items.AddRange(new object[] {
             ">=",
             ">",
             "<=",
             "<",
             "=",
             "!="});
-            this.comboBox2.Location = new System.Drawing.Point(143, 39);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(55, 21);
-            this.comboBox2.TabIndex = 2;
+            this.comboBoxOperator.Location = new System.Drawing.Point(143, 39);
+            this.comboBoxOperator.Name = "comboBoxOperator";
+            this.comboBoxOperator.Size = new System.Drawing.Size(55, 21);
+            this.comboBoxOperator.TabIndex = 2;
             // 
-            // comboBox1
+            // comboBoxProperty
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(6, 39);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(131, 21);
-            this.comboBox1.TabIndex = 0;
+            this.comboBoxProperty.FormattingEnabled = true;
+            this.comboBoxProperty.Location = new System.Drawing.Point(6, 39);
+            this.comboBoxProperty.Name = "comboBoxProperty";
+            this.comboBoxProperty.Size = new System.Drawing.Size(131, 21);
+            this.comboBoxProperty.TabIndex = 0;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.checkedListBox1);
+            this.groupBox2.Controls.Add(this.checkedListBoxSelection);
             this.groupBox2.Location = new System.Drawing.Point(6, 39);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(685, 140);
@@ -168,26 +177,17 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Select";
             // 
-            // checkedListBox1
+            // checkedListBoxSelection
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
+            this.checkedListBoxSelection.FormattingEnabled = true;
+            this.checkedListBoxSelection.Items.AddRange(new object[] {
             "Students",
             "Professors",
             "Classes"});
-            this.checkedListBox1.Location = new System.Drawing.Point(6, 19);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(673, 109);
-            this.checkedListBox1.TabIndex = 0;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(86, 10);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 25);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Load";
-            this.button2.UseVisualStyleBackColor = true;
+            this.checkedListBoxSelection.Location = new System.Drawing.Point(6, 19);
+            this.checkedListBoxSelection.Name = "checkedListBoxSelection";
+            this.checkedListBoxSelection.Size = new System.Drawing.Size(673, 109);
+            this.checkedListBoxSelection.TabIndex = 0;
             // 
             // EditQuestionScreen
             // 
@@ -212,17 +212,17 @@
 
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button buttonLoadQuestion;
+        private System.Windows.Forms.Button buttonSaveQuestion;
+        private System.Windows.Forms.TextBox textBoxQuestionId;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBoxCondition;
+        private System.Windows.Forms.ComboBox comboBoxOperator;
+        private System.Windows.Forms.ComboBox comboBoxProperty;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox checkedListBoxSelection;
     }
 }

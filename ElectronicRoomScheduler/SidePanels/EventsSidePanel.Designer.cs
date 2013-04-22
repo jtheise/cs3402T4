@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.labelHeader = new System.Windows.Forms.Label();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkLabelDeleteEvent = new System.Windows.Forms.LinkLabel();
+            this.linkLabelEditEvent = new System.Windows.Forms.LinkLabel();
+            this.linkLabelAddEvent = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // labelHeader
@@ -45,46 +45,46 @@
             this.labelHeader.Text = "Manage Events";
             this.labelHeader.Click += new System.EventHandler(this.labelHeader_Click);
             // 
-            // linkLabel3
+            // linkLabelDeleteEvent
             // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Location = new System.Drawing.Point(28, 75);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(69, 13);
-            this.linkLabel3.TabIndex = 21;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "Delete Event";
-            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
+            this.linkLabelDeleteEvent.AutoSize = true;
+            this.linkLabelDeleteEvent.Location = new System.Drawing.Point(28, 75);
+            this.linkLabelDeleteEvent.Name = "linkLabelDeleteEvent";
+            this.linkLabelDeleteEvent.Size = new System.Drawing.Size(69, 13);
+            this.linkLabelDeleteEvent.TabIndex = 21;
+            this.linkLabelDeleteEvent.TabStop = true;
+            this.linkLabelDeleteEvent.Text = "Delete Event";
+            this.linkLabelDeleteEvent.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
-            // linkLabel2
+            // linkLabelEditEvent
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(28, 54);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(56, 13);
-            this.linkLabel2.TabIndex = 20;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Edit Event";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            this.linkLabelEditEvent.AutoSize = true;
+            this.linkLabelEditEvent.Location = new System.Drawing.Point(28, 54);
+            this.linkLabelEditEvent.Name = "linkLabelEditEvent";
+            this.linkLabelEditEvent.Size = new System.Drawing.Size(56, 13);
+            this.linkLabelEditEvent.TabIndex = 20;
+            this.linkLabelEditEvent.TabStop = true;
+            this.linkLabelEditEvent.Text = "Edit Event";
+            this.linkLabelEditEvent.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
-            // linkLabel1
+            // linkLabelAddEvent
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(28, 33);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(57, 13);
-            this.linkLabel1.TabIndex = 19;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Add Event";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.linkLabelAddEvent.AutoSize = true;
+            this.linkLabelAddEvent.Location = new System.Drawing.Point(28, 33);
+            this.linkLabelAddEvent.Name = "linkLabelAddEvent";
+            this.linkLabelAddEvent.Size = new System.Drawing.Size(57, 13);
+            this.linkLabelAddEvent.TabIndex = 19;
+            this.linkLabelAddEvent.TabStop = true;
+            this.linkLabelAddEvent.Text = "Add Event";
+            this.linkLabelAddEvent.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // EventsSidePanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.linkLabel3);
-            this.Controls.Add(this.linkLabel2);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.linkLabelDeleteEvent);
+            this.Controls.Add(this.linkLabelEditEvent);
+            this.Controls.Add(this.linkLabelAddEvent);
             this.Controls.Add(this.labelHeader);
             this.Name = "EventsSidePanel";
             this.Size = new System.Drawing.Size(150, 600);
@@ -97,9 +97,9 @@
         #endregion
 
         private System.Windows.Forms.Label labelHeader;
-        public System.Windows.Forms.LinkLabel linkLabel3;
-        public System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        public System.Windows.Forms.LinkLabel linkLabelDeleteEvent;
+        public System.Windows.Forms.LinkLabel linkLabelEditEvent;
+        private System.Windows.Forms.LinkLabel linkLabelAddEvent;
 
     }
 }

@@ -59,14 +59,14 @@ namespace ElectronicRoomScheduler.Screens
                 if (listView.SelectedItems.Count == 1)
                 {
                     SelectedIndex = listView.SelectedIndices[0];
-                    sidePanel.linkLabel2.Visible = true;
-                    sidePanel.linkLabel3.Visible = true;
+                    sidePanel.linkLabelEditEvent.Visible = true;
+                    sidePanel.linkLabelDeleteEvent.Visible = true;
                 }
                 else
                 {
                     SelectedIndex = -1;
-                    sidePanel.linkLabel2.Visible = false;
-                    sidePanel.linkLabel3.Visible = false;
+                    sidePanel.linkLabelEditEvent.Visible = false;
+                    sidePanel.linkLabelDeleteEvent.Visible = false;
                 }
             }
 

@@ -18,6 +18,9 @@ namespace ElectronicRoomScheduler.Screens
 
         private void DeleteClassScreen_Load(object sender, EventArgs e)
         {
+            if (Program.GetParent().ClassToLoad != -1)
+                textBoxClassLookup.Text = Program.GetParent().ClassList[Program.GetParent().ClassToLoad].CourseId;
+
             this.Dock = DockStyle.Fill;
             this.textBoxClassLookup.Select();
             Program.GetParent().AcceptButton = buttonLookupClassToDelete;

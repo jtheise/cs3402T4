@@ -30,11 +30,11 @@
         {
             this.labelTitle = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonLoad = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.listBoxQuestionReturns = new System.Windows.Forms.ListBox();
+            this.textBoxQuestionId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -52,9 +52,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.buttonLoad);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.textBoxQuestionId);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(15, 47);
             this.groupBox1.Name = "groupBox1";
@@ -63,19 +63,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Question Data";
             // 
-            // button2
+            // buttonLoad
             // 
-            this.button2.Location = new System.Drawing.Point(115, 10);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 25);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Load";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonLoad.Location = new System.Drawing.Point(115, 10);
+            this.buttonLoad.Name = "buttonLoad";
+            this.buttonLoad.Size = new System.Drawing.Size(75, 25);
+            this.buttonLoad.TabIndex = 2;
+            this.buttonLoad.Text = "Load";
+            this.buttonLoad.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.listBox1);
+            this.groupBox2.Controls.Add(this.listBoxQuestionReturns);
             this.groupBox2.Location = new System.Drawing.Point(9, 39);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(612, 255);
@@ -91,20 +91,20 @@
             this.label3.Size = new System.Drawing.Size(0, 13);
             this.label3.TabIndex = 4;
             // 
-            // listBox1
+            // listBoxQuestionReturns
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(21, 19);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(569, 212);
-            this.listBox1.TabIndex = 4;
+            this.listBoxQuestionReturns.FormattingEnabled = true;
+            this.listBoxQuestionReturns.Location = new System.Drawing.Point(21, 19);
+            this.listBoxQuestionReturns.Name = "listBoxQuestionReturns";
+            this.listBoxQuestionReturns.Size = new System.Drawing.Size(569, 212);
+            this.listBoxQuestionReturns.TabIndex = 4;
             // 
-            // textBox1
+            // textBoxQuestionId
             // 
-            this.textBox1.Location = new System.Drawing.Point(30, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(79, 20);
-            this.textBox1.TabIndex = 1;
+            this.textBoxQuestionId.Location = new System.Drawing.Point(30, 13);
+            this.textBoxQuestionId.Name = "textBoxQuestionId";
+            this.textBoxQuestionId.Size = new System.Drawing.Size(79, 20);
+            this.textBoxQuestionId.TabIndex = 1;
             // 
             // label1
             // 
@@ -137,11 +137,11 @@
 
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonLoad;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ListBox listBoxQuestionReturns;
+        private System.Windows.Forms.TextBox textBoxQuestionId;
         private System.Windows.Forms.Label label1;
     }
 }

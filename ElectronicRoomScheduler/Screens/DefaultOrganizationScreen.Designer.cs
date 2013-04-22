@@ -34,6 +34,7 @@
             this.OrgName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.OrgContact = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.OrgMembers = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.labelWarning = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelTitle
@@ -77,10 +78,22 @@
             // 
             this.OrgMembers.Text = "Members";
             // 
+            // labelWarning
+            // 
+            this.labelWarning.AutoSize = true;
+            this.labelWarning.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWarning.ForeColor = System.Drawing.Color.Yellow;
+            this.labelWarning.Location = new System.Drawing.Point(344, 20);
+            this.labelWarning.Name = "labelWarning";
+            this.labelWarning.Size = new System.Drawing.Size(212, 20);
+            this.labelWarning.TabIndex = 5;
+            this.labelWarning.Text = "Section Not Implemented";
+            // 
             // DefaultOrganizationScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.labelWarning);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.labelTitle);
             this.Name = "DefaultOrganizationScreen";
@@ -99,5 +112,6 @@
         private System.Windows.Forms.ColumnHeader OrgName;
         private System.Windows.Forms.ColumnHeader OrgContact;
         private System.Windows.Forms.ColumnHeader OrgMembers;
+        private System.Windows.Forms.Label labelWarning;
     }
 }

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.labelHeader = new System.Windows.Forms.Label();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.linkLabelEditOrg = new System.Windows.Forms.LinkLabel();
+            this.linkLabelAddOrg = new System.Windows.Forms.LinkLabel();
+            this.linkLabelDeleteOrg = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // labelHeader
@@ -45,46 +45,46 @@
             this.labelHeader.Text = "Manage Organizations";
             this.labelHeader.Click += new System.EventHandler(this.labelHeader_Click);
             // 
-            // linkLabel2
+            // linkLabelEditOrg
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(9, 54);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(87, 13);
-            this.linkLabel2.TabIndex = 21;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Edit Organization";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            this.linkLabelEditOrg.AutoSize = true;
+            this.linkLabelEditOrg.Location = new System.Drawing.Point(9, 54);
+            this.linkLabelEditOrg.Name = "linkLabelEditOrg";
+            this.linkLabelEditOrg.Size = new System.Drawing.Size(87, 13);
+            this.linkLabelEditOrg.TabIndex = 21;
+            this.linkLabelEditOrg.TabStop = true;
+            this.linkLabelEditOrg.Text = "Edit Organization";
+            this.linkLabelEditOrg.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
-            // linkLabel1
+            // linkLabelAddOrg
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(9, 33);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(88, 13);
-            this.linkLabel1.TabIndex = 20;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Add Organization";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.linkLabelAddOrg.AutoSize = true;
+            this.linkLabelAddOrg.Location = new System.Drawing.Point(9, 33);
+            this.linkLabelAddOrg.Name = "linkLabelAddOrg";
+            this.linkLabelAddOrg.Size = new System.Drawing.Size(88, 13);
+            this.linkLabelAddOrg.TabIndex = 20;
+            this.linkLabelAddOrg.TabStop = true;
+            this.linkLabelAddOrg.Text = "Add Organization";
+            this.linkLabelAddOrg.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // linkLabel3
+            // linkLabelDeleteOrg
             // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Location = new System.Drawing.Point(9, 75);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(100, 13);
-            this.linkLabel3.TabIndex = 22;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "Delete Organization";
-            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
+            this.linkLabelDeleteOrg.AutoSize = true;
+            this.linkLabelDeleteOrg.Location = new System.Drawing.Point(9, 75);
+            this.linkLabelDeleteOrg.Name = "linkLabelDeleteOrg";
+            this.linkLabelDeleteOrg.Size = new System.Drawing.Size(100, 13);
+            this.linkLabelDeleteOrg.TabIndex = 22;
+            this.linkLabelDeleteOrg.TabStop = true;
+            this.linkLabelDeleteOrg.Text = "Delete Organization";
+            this.linkLabelDeleteOrg.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
             // OrganizationsSidePanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.linkLabel3);
-            this.Controls.Add(this.linkLabel2);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.linkLabelDeleteOrg);
+            this.Controls.Add(this.linkLabelEditOrg);
+            this.Controls.Add(this.linkLabelAddOrg);
             this.Controls.Add(this.labelHeader);
             this.Name = "OrganizationsSidePanel";
             this.Size = new System.Drawing.Size(160, 600);
@@ -97,9 +97,9 @@
         #endregion
 
         private System.Windows.Forms.Label labelHeader;
-        private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.LinkLabel linkLabel3;
+        private System.Windows.Forms.LinkLabel linkLabelEditOrg;
+        private System.Windows.Forms.LinkLabel linkLabelAddOrg;
+        private System.Windows.Forms.LinkLabel linkLabelDeleteOrg;
 
     }
 }

@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.labelHeader = new System.Windows.Forms.Label();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel5 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel6 = new System.Windows.Forms.LinkLabel();
+            this.linkLabelLoadReport = new System.Windows.Forms.LinkLabel();
+            this.linkLabelNewReport = new System.Windows.Forms.LinkLabel();
+            this.linkLabelEditReport = new System.Windows.Forms.LinkLabel();
+            this.linkLabelAddQuestion = new System.Windows.Forms.LinkLabel();
+            this.linkLabelLoadQuestion = new System.Windows.Forms.LinkLabel();
+            this.linkLabelEditQuestion = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // labelHeader
@@ -48,82 +48,82 @@
             this.labelHeader.Text = "Manage Reports";
             this.labelHeader.Click += new System.EventHandler(this.labelHeader_Click);
             // 
-            // linkLabel2
+            // linkLabelLoadReport
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(25, 54);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(66, 13);
-            this.linkLabel2.TabIndex = 17;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Load Report";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            this.linkLabelLoadReport.AutoSize = true;
+            this.linkLabelLoadReport.Location = new System.Drawing.Point(25, 54);
+            this.linkLabelLoadReport.Name = "linkLabelLoadReport";
+            this.linkLabelLoadReport.Size = new System.Drawing.Size(66, 13);
+            this.linkLabelLoadReport.TabIndex = 17;
+            this.linkLabelLoadReport.TabStop = true;
+            this.linkLabelLoadReport.Text = "Load Report";
+            this.linkLabelLoadReport.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
-            // linkLabel1
+            // linkLabelNewReport
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(25, 33);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(64, 13);
-            this.linkLabel1.TabIndex = 16;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "New Report";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.linkLabelNewReport.AutoSize = true;
+            this.linkLabelNewReport.Location = new System.Drawing.Point(25, 33);
+            this.linkLabelNewReport.Name = "linkLabelNewReport";
+            this.linkLabelNewReport.Size = new System.Drawing.Size(64, 13);
+            this.linkLabelNewReport.TabIndex = 16;
+            this.linkLabelNewReport.TabStop = true;
+            this.linkLabelNewReport.Text = "New Report";
+            this.linkLabelNewReport.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // linkLabel3
+            // linkLabelEditReport
             // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Location = new System.Drawing.Point(25, 75);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(60, 13);
-            this.linkLabel3.TabIndex = 18;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "Edit Report";
-            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
+            this.linkLabelEditReport.AutoSize = true;
+            this.linkLabelEditReport.Location = new System.Drawing.Point(25, 75);
+            this.linkLabelEditReport.Name = "linkLabelEditReport";
+            this.linkLabelEditReport.Size = new System.Drawing.Size(60, 13);
+            this.linkLabelEditReport.TabIndex = 18;
+            this.linkLabelEditReport.TabStop = true;
+            this.linkLabelEditReport.Text = "Edit Report";
+            this.linkLabelEditReport.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
-            // linkLabel4
+            // linkLabelAddQuestion
             // 
-            this.linkLabel4.AutoSize = true;
-            this.linkLabel4.Location = new System.Drawing.Point(25, 106);
-            this.linkLabel4.Name = "linkLabel4";
-            this.linkLabel4.Size = new System.Drawing.Size(71, 13);
-            this.linkLabel4.TabIndex = 19;
-            this.linkLabel4.TabStop = true;
-            this.linkLabel4.Text = "Add Question";
-            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
+            this.linkLabelAddQuestion.AutoSize = true;
+            this.linkLabelAddQuestion.Location = new System.Drawing.Point(25, 106);
+            this.linkLabelAddQuestion.Name = "linkLabelAddQuestion";
+            this.linkLabelAddQuestion.Size = new System.Drawing.Size(71, 13);
+            this.linkLabelAddQuestion.TabIndex = 19;
+            this.linkLabelAddQuestion.TabStop = true;
+            this.linkLabelAddQuestion.Text = "Add Question";
+            this.linkLabelAddQuestion.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
             // 
-            // linkLabel5
+            // linkLabelLoadQuestion
             // 
-            this.linkLabel5.AutoSize = true;
-            this.linkLabel5.Location = new System.Drawing.Point(25, 127);
-            this.linkLabel5.Name = "linkLabel5";
-            this.linkLabel5.Size = new System.Drawing.Size(76, 13);
-            this.linkLabel5.TabIndex = 20;
-            this.linkLabel5.TabStop = true;
-            this.linkLabel5.Text = "Load Question";
-            this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel5_LinkClicked);
+            this.linkLabelLoadQuestion.AutoSize = true;
+            this.linkLabelLoadQuestion.Location = new System.Drawing.Point(25, 127);
+            this.linkLabelLoadQuestion.Name = "linkLabelLoadQuestion";
+            this.linkLabelLoadQuestion.Size = new System.Drawing.Size(76, 13);
+            this.linkLabelLoadQuestion.TabIndex = 20;
+            this.linkLabelLoadQuestion.TabStop = true;
+            this.linkLabelLoadQuestion.Text = "Load Question";
+            this.linkLabelLoadQuestion.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel5_LinkClicked);
             // 
-            // linkLabel6
+            // linkLabelEditQuestion
             // 
-            this.linkLabel6.AutoSize = true;
-            this.linkLabel6.Location = new System.Drawing.Point(25, 148);
-            this.linkLabel6.Name = "linkLabel6";
-            this.linkLabel6.Size = new System.Drawing.Size(70, 13);
-            this.linkLabel6.TabIndex = 21;
-            this.linkLabel6.TabStop = true;
-            this.linkLabel6.Text = "Edit Question";
-            this.linkLabel6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel6_LinkClicked);
+            this.linkLabelEditQuestion.AutoSize = true;
+            this.linkLabelEditQuestion.Location = new System.Drawing.Point(25, 148);
+            this.linkLabelEditQuestion.Name = "linkLabelEditQuestion";
+            this.linkLabelEditQuestion.Size = new System.Drawing.Size(70, 13);
+            this.linkLabelEditQuestion.TabIndex = 21;
+            this.linkLabelEditQuestion.TabStop = true;
+            this.linkLabelEditQuestion.Text = "Edit Question";
+            this.linkLabelEditQuestion.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel6_LinkClicked);
             // 
             // ReportsSidePanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.linkLabel6);
-            this.Controls.Add(this.linkLabel5);
-            this.Controls.Add(this.linkLabel4);
-            this.Controls.Add(this.linkLabel3);
-            this.Controls.Add(this.linkLabel2);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.linkLabelEditQuestion);
+            this.Controls.Add(this.linkLabelLoadQuestion);
+            this.Controls.Add(this.linkLabelAddQuestion);
+            this.Controls.Add(this.linkLabelEditReport);
+            this.Controls.Add(this.linkLabelLoadReport);
+            this.Controls.Add(this.linkLabelNewReport);
             this.Controls.Add(this.labelHeader);
             this.Name = "ReportsSidePanel";
             this.Size = new System.Drawing.Size(150, 600);
@@ -136,12 +136,12 @@
         #endregion
 
         private System.Windows.Forms.Label labelHeader;
-        private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.LinkLabel linkLabel3;
-        private System.Windows.Forms.LinkLabel linkLabel4;
-        private System.Windows.Forms.LinkLabel linkLabel5;
-        private System.Windows.Forms.LinkLabel linkLabel6;
+        private System.Windows.Forms.LinkLabel linkLabelLoadReport;
+        private System.Windows.Forms.LinkLabel linkLabelNewReport;
+        private System.Windows.Forms.LinkLabel linkLabelEditReport;
+        private System.Windows.Forms.LinkLabel linkLabelAddQuestion;
+        private System.Windows.Forms.LinkLabel linkLabelLoadQuestion;
+        private System.Windows.Forms.LinkLabel linkLabelEditQuestion;
 
     }
 }

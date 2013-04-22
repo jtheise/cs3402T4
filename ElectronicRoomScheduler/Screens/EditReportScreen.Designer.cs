@@ -30,15 +30,15 @@
         {
             this.labelTitle = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonLoadReport = new System.Windows.Forms.Button();
+            this.buttonSaveReport = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.listBoxQuestionInformation = new System.Windows.Forms.ListBox();
+            this.checkedListBoxQuestionPicker = new System.Windows.Forms.CheckedListBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxReportId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -55,10 +55,10 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.buttonLoadReport);
+            this.groupBox1.Controls.Add(this.buttonSaveReport);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.textBoxReportId);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(15, 47);
             this.groupBox1.Name = "groupBox1";
@@ -67,20 +67,29 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Report Data";
             // 
-            // button1
+            // buttonLoadReport
             // 
-            this.button1.Location = new System.Drawing.Point(546, 299);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 25);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonLoadReport.Location = new System.Drawing.Point(115, 10);
+            this.buttonLoadReport.Name = "buttonLoadReport";
+            this.buttonLoadReport.Size = new System.Drawing.Size(75, 25);
+            this.buttonLoadReport.TabIndex = 2;
+            this.buttonLoadReport.Text = "Load";
+            this.buttonLoadReport.UseVisualStyleBackColor = true;
+            // 
+            // buttonSaveReport
+            // 
+            this.buttonSaveReport.Location = new System.Drawing.Point(546, 299);
+            this.buttonSaveReport.Name = "buttonSaveReport";
+            this.buttonSaveReport.Size = new System.Drawing.Size(75, 25);
+            this.buttonSaveReport.TabIndex = 5;
+            this.buttonSaveReport.Text = "Save";
+            this.buttonSaveReport.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.listBox1);
-            this.groupBox2.Controls.Add(this.checkedListBox1);
+            this.groupBox2.Controls.Add(this.listBoxQuestionInformation);
+            this.groupBox2.Controls.Add(this.checkedListBoxQuestionPicker);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Location = new System.Drawing.Point(9, 39);
             this.groupBox2.Name = "groupBox2";
@@ -98,26 +107,26 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Selected Questions Information";
             // 
-            // listBox1
+            // listBoxQuestionInformation
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(165, 32);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(426, 199);
-            this.listBox1.TabIndex = 4;
+            this.listBoxQuestionInformation.FormattingEnabled = true;
+            this.listBoxQuestionInformation.Location = new System.Drawing.Point(165, 32);
+            this.listBoxQuestionInformation.Name = "listBoxQuestionInformation";
+            this.listBoxQuestionInformation.Size = new System.Drawing.Size(426, 199);
+            this.listBoxQuestionInformation.TabIndex = 4;
             // 
-            // checkedListBox1
+            // checkedListBoxQuestionPicker
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
+            this.checkedListBoxQuestionPicker.FormattingEnabled = true;
+            this.checkedListBoxQuestionPicker.Items.AddRange(new object[] {
             "Q1 Name",
             "Q2 Name",
             "Q3 Name",
             "Q4 Name"});
-            this.checkedListBox1.Location = new System.Drawing.Point(9, 32);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(150, 199);
-            this.checkedListBox1.TabIndex = 3;
+            this.checkedListBoxQuestionPicker.Location = new System.Drawing.Point(9, 32);
+            this.checkedListBoxQuestionPicker.Name = "checkedListBoxQuestionPicker";
+            this.checkedListBoxQuestionPicker.Size = new System.Drawing.Size(150, 199);
+            this.checkedListBoxQuestionPicker.TabIndex = 3;
             // 
             // label2
             // 
@@ -128,12 +137,12 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Pick Questions to Run";
             // 
-            // textBox1
+            // textBoxReportId
             // 
-            this.textBox1.Location = new System.Drawing.Point(30, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(79, 20);
-            this.textBox1.TabIndex = 1;
+            this.textBoxReportId.Location = new System.Drawing.Point(30, 13);
+            this.textBoxReportId.Name = "textBoxReportId";
+            this.textBoxReportId.Size = new System.Drawing.Size(79, 20);
+            this.textBoxReportId.TabIndex = 1;
             // 
             // label1
             // 
@@ -143,15 +152,6 @@
             this.label1.Size = new System.Drawing.Size(18, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(115, 10);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 25);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Load";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // EditReportScreen
             // 
@@ -175,14 +175,14 @@
 
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonLoadReport;
+        private System.Windows.Forms.Button buttonSaveReport;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.ListBox listBoxQuestionInformation;
+        private System.Windows.Forms.CheckedListBox checkedListBoxQuestionPicker;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxReportId;
         private System.Windows.Forms.Label label1;
     }
 }

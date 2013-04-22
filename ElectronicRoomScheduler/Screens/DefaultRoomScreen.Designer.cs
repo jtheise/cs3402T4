@@ -35,6 +35,7 @@
             this.cap = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.islab = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tech = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.labelWarning = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelTitle
@@ -83,10 +84,22 @@
             this.tech.Text = "Technology Available";
             this.tech.Width = 114;
             // 
+            // labelWarning
+            // 
+            this.labelWarning.AutoSize = true;
+            this.labelWarning.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWarning.ForeColor = System.Drawing.Color.Yellow;
+            this.labelWarning.Location = new System.Drawing.Point(240, 20);
+            this.labelWarning.Name = "labelWarning";
+            this.labelWarning.Size = new System.Drawing.Size(212, 20);
+            this.labelWarning.TabIndex = 7;
+            this.labelWarning.Text = "Section Not Implemented";
+            // 
             // DefaultRoomScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.labelWarning);
             this.Controls.Add(this.listviewRooms);
             this.Controls.Add(this.labelTitle);
             this.Name = "DefaultRoomScreen";
@@ -106,5 +119,6 @@
         private System.Windows.Forms.ColumnHeader cap;
         private System.Windows.Forms.ColumnHeader islab;
         private System.Windows.Forms.ColumnHeader tech;
+        private System.Windows.Forms.Label labelWarning;
     }
 }

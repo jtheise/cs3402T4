@@ -30,14 +30,14 @@
         {
             this.labelTitle = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxRoomNumber = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxBuildingName = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxBuildingId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.checkedListBoxTech = new System.Windows.Forms.CheckedListBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -57,7 +57,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.textBoxRoomNumber);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Location = new System.Drawing.Point(15, 47);
@@ -67,26 +67,12 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Room Data";
             // 
-            // checkedListBox1
+            // textBoxRoomNumber
             // 
-            this.checkedListBox1.AllowDrop = true;
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "Visual Studio",
-            "Projector",
-            "Overhead",
-            "Wi Fi"});
-            this.checkedListBox1.Location = new System.Drawing.Point(6, 19);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(253, 94);
-            this.checkedListBox1.TabIndex = 5;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(107, 120);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(58, 20);
-            this.textBox2.TabIndex = 3;
+            this.textBoxRoomNumber.Location = new System.Drawing.Point(107, 120);
+            this.textBoxRoomNumber.Name = "textBoxRoomNumber";
+            this.textBoxRoomNumber.Size = new System.Drawing.Size(58, 20);
+            this.textBoxRoomNumber.TabIndex = 3;
             // 
             // label3
             // 
@@ -99,9 +85,9 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.comboBoxBuildingName);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.textBoxBuildingId);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(17, 26);
             this.groupBox2.Name = "groupBox2";
@@ -110,13 +96,13 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Building";
             // 
-            // comboBox1
+            // comboBoxBuildingName
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(90, 47);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(253, 21);
-            this.comboBox1.TabIndex = 2;
+            this.comboBoxBuildingName.FormattingEnabled = true;
+            this.comboBoxBuildingName.Location = new System.Drawing.Point(90, 47);
+            this.comboBoxBuildingName.Name = "comboBoxBuildingName";
+            this.comboBoxBuildingName.Size = new System.Drawing.Size(253, 21);
+            this.comboBoxBuildingName.TabIndex = 2;
             // 
             // label2
             // 
@@ -127,12 +113,12 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Building Name";
             // 
-            // textBox1
+            // textBoxBuildingId
             // 
-            this.textBox1.Location = new System.Drawing.Point(90, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(105, 20);
-            this.textBox1.TabIndex = 1;
+            this.textBoxBuildingId.Location = new System.Drawing.Point(90, 13);
+            this.textBoxBuildingId.Name = "textBoxBuildingId";
+            this.textBoxBuildingId.Size = new System.Drawing.Size(105, 20);
+            this.textBoxBuildingId.TabIndex = 1;
             // 
             // label1
             // 
@@ -143,10 +129,24 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Building ID";
             // 
+            // checkedListBoxTech
+            // 
+            this.checkedListBoxTech.AllowDrop = true;
+            this.checkedListBoxTech.FormattingEnabled = true;
+            this.checkedListBoxTech.Items.AddRange(new object[] {
+            "Visual Studio",
+            "Projector",
+            "Overhead",
+            "Wi Fi"});
+            this.checkedListBoxTech.Location = new System.Drawing.Point(6, 19);
+            this.checkedListBoxTech.Name = "checkedListBoxTech";
+            this.checkedListBoxTech.Size = new System.Drawing.Size(253, 94);
+            this.checkedListBoxTech.TabIndex = 5;
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Controls.Add(this.checkedListBox1);
+            this.groupBox3.Controls.Add(this.checkedListBoxTech);
             this.groupBox3.Location = new System.Drawing.Point(15, 223);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(347, 151);
@@ -187,14 +187,14 @@
 
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxRoomNumber;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxBuildingName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxBuildingId;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox checkedListBoxTech;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button button1;
     }

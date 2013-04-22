@@ -33,17 +33,17 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxMap = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxLat = new System.Windows.Forms.TextBox();
+            this.textBoxLong = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.textBoxBuildingId = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMap)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,11 +61,11 @@
             // 
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.pictureBox1);
+            this.groupBox2.Controls.Add(this.pictureBoxMap);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.groupBox1);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.textBoxName);
+            this.groupBox2.Controls.Add(this.textBoxBuildingId);
             this.groupBox2.Location = new System.Drawing.Point(15, 47);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(594, 412);
@@ -91,20 +91,20 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Name";
             // 
-            // pictureBox1
+            // pictureBoxMap
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
-            this.pictureBox1.ImageLocation = "img23940.jpg";
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(201, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(377, 365);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxMap.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBoxMap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBoxMap.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBoxMap.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxMap.ErrorImage")));
+            this.pictureBoxMap.ImageLocation = "img23940.jpg";
+            this.pictureBoxMap.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxMap.InitialImage")));
+            this.pictureBoxMap.Location = new System.Drawing.Point(201, 9);
+            this.pictureBoxMap.Name = "pictureBoxMap";
+            this.pictureBoxMap.Size = new System.Drawing.Size(377, 365);
+            this.pictureBoxMap.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxMap.TabIndex = 9;
+            this.pictureBoxMap.TabStop = false;
             // 
             // label1
             // 
@@ -117,8 +117,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.textBoxLat);
+            this.groupBox1.Controls.Add(this.textBoxLong);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(6, 98);
@@ -128,19 +128,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Location";
             // 
-            // textBox4
+            // textBoxLat
             // 
-            this.textBox4.Location = new System.Drawing.Point(68, 39);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(112, 20);
-            this.textBox4.TabIndex = 9;
+            this.textBoxLat.Location = new System.Drawing.Point(68, 39);
+            this.textBoxLat.Name = "textBoxLat";
+            this.textBoxLat.Size = new System.Drawing.Size(112, 20);
+            this.textBoxLat.TabIndex = 9;
             // 
-            // textBox3
+            // textBoxLong
             // 
-            this.textBox3.Location = new System.Drawing.Point(68, 13);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(112, 20);
-            this.textBox3.TabIndex = 8;
+            this.textBoxLong.Location = new System.Drawing.Point(68, 13);
+            this.textBoxLong.Name = "textBoxLong";
+            this.textBoxLong.Size = new System.Drawing.Size(112, 20);
+            this.textBoxLong.TabIndex = 8;
             // 
             // label4
             // 
@@ -160,20 +160,20 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Longitude";
             // 
-            // textBox2
+            // textBoxName
             // 
-            this.textBox2.Location = new System.Drawing.Point(74, 45);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(112, 20);
-            this.textBox2.TabIndex = 5;
+            this.textBoxName.Location = new System.Drawing.Point(74, 45);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(112, 20);
+            this.textBoxName.TabIndex = 5;
             // 
-            // textBox1
+            // textBoxBuildingId
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(74, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(112, 20);
-            this.textBox1.TabIndex = 3;
+            this.textBoxBuildingId.Enabled = false;
+            this.textBoxBuildingId.Location = new System.Drawing.Point(74, 19);
+            this.textBoxBuildingId.Name = "textBoxBuildingId";
+            this.textBoxBuildingId.Size = new System.Drawing.Size(112, 20);
+            this.textBoxBuildingId.TabIndex = 3;
             // 
             // EditBuildingScreen
             // 
@@ -186,7 +186,7 @@
             this.Load += new System.EventHandler(this.EditBuildingScreen_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMap)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -200,15 +200,15 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxMap;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxLat;
+        private System.Windows.Forms.TextBox textBoxLong;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxName;
+        private System.Windows.Forms.TextBox textBoxBuildingId;
 
     }
 }

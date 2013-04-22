@@ -30,9 +30,9 @@
         {
             this.labelHeader = new System.Windows.Forms.Label();
             this.linkLabelRequestTech = new System.Windows.Forms.LinkLabel();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkLabelDelete = new System.Windows.Forms.LinkLabel();
+            this.linkLabelEditRoom = new System.Windows.Forms.LinkLabel();
+            this.linkLabelAddRoom = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // labelHeader
@@ -57,47 +57,47 @@
             this.linkLabelRequestTech.Text = "Request Technology";
             this.linkLabelRequestTech.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRequestTech_LinkClicked);
             // 
-            // linkLabel3
+            // linkLabelDelete
             // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Location = new System.Drawing.Point(22, 75);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(69, 13);
-            this.linkLabel3.TabIndex = 16;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "Delete Room";
-            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
+            this.linkLabelDelete.AutoSize = true;
+            this.linkLabelDelete.Location = new System.Drawing.Point(22, 75);
+            this.linkLabelDelete.Name = "linkLabelDelete";
+            this.linkLabelDelete.Size = new System.Drawing.Size(69, 13);
+            this.linkLabelDelete.TabIndex = 16;
+            this.linkLabelDelete.TabStop = true;
+            this.linkLabelDelete.Text = "Delete Room";
+            this.linkLabelDelete.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
-            // linkLabel2
+            // linkLabelEditRoom
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(22, 54);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(56, 13);
-            this.linkLabel2.TabIndex = 15;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Edit Room";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            this.linkLabelEditRoom.AutoSize = true;
+            this.linkLabelEditRoom.Location = new System.Drawing.Point(22, 54);
+            this.linkLabelEditRoom.Name = "linkLabelEditRoom";
+            this.linkLabelEditRoom.Size = new System.Drawing.Size(56, 13);
+            this.linkLabelEditRoom.TabIndex = 15;
+            this.linkLabelEditRoom.TabStop = true;
+            this.linkLabelEditRoom.Text = "Edit Room";
+            this.linkLabelEditRoom.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
-            // linkLabel1
+            // linkLabelAddRoom
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(22, 33);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(57, 13);
-            this.linkLabel1.TabIndex = 14;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Add Room";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.linkLabelAddRoom.AutoSize = true;
+            this.linkLabelAddRoom.Location = new System.Drawing.Point(22, 33);
+            this.linkLabelAddRoom.Name = "linkLabelAddRoom";
+            this.linkLabelAddRoom.Size = new System.Drawing.Size(57, 13);
+            this.linkLabelAddRoom.TabIndex = 14;
+            this.linkLabelAddRoom.TabStop = true;
+            this.linkLabelAddRoom.Text = "Add Room";
+            this.linkLabelAddRoom.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // RoomsSidePanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.linkLabelRequestTech);
-            this.Controls.Add(this.linkLabel3);
-            this.Controls.Add(this.linkLabel2);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.linkLabelDelete);
+            this.Controls.Add(this.linkLabelEditRoom);
+            this.Controls.Add(this.linkLabelAddRoom);
             this.Controls.Add(this.labelHeader);
             this.Name = "RoomsSidePanel";
             this.Size = new System.Drawing.Size(150, 600);
@@ -111,8 +111,8 @@
 
         private System.Windows.Forms.Label labelHeader;
         private System.Windows.Forms.LinkLabel linkLabelRequestTech;
-        private System.Windows.Forms.LinkLabel linkLabel3;
-        private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkLabelDelete;
+        private System.Windows.Forms.LinkLabel linkLabelEditRoom;
+        private System.Windows.Forms.LinkLabel linkLabelAddRoom;
     }
 }

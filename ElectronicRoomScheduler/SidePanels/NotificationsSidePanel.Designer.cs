@@ -28,45 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkLabelSetPrep = new System.Windows.Forms.LinkLabel();
+            this.linkLabelEditAlert = new System.Windows.Forms.LinkLabel();
+            this.linkLabelAddAlert = new System.Windows.Forms.LinkLabel();
             this.labelHeader = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // linkLabel3
+            // linkLabelSetPrep
             // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Location = new System.Drawing.Point(12, 80);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(79, 26);
-            this.linkLabel3.TabIndex = 20;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "Set Notification\r\nPreferences";
-            this.linkLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
+            this.linkLabelSetPrep.AutoSize = true;
+            this.linkLabelSetPrep.Location = new System.Drawing.Point(12, 80);
+            this.linkLabelSetPrep.Name = "linkLabelSetPrep";
+            this.linkLabelSetPrep.Size = new System.Drawing.Size(79, 26);
+            this.linkLabelSetPrep.TabIndex = 20;
+            this.linkLabelSetPrep.TabStop = true;
+            this.linkLabelSetPrep.Text = "Set Notification\r\nPreferences";
+            this.linkLabelSetPrep.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.linkLabelSetPrep.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
-            // linkLabel2
+            // linkLabelEditAlert
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(12, 54);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(49, 13);
-            this.linkLabel2.TabIndex = 19;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Edit Alert";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            this.linkLabelEditAlert.AutoSize = true;
+            this.linkLabelEditAlert.Location = new System.Drawing.Point(12, 54);
+            this.linkLabelEditAlert.Name = "linkLabelEditAlert";
+            this.linkLabelEditAlert.Size = new System.Drawing.Size(49, 13);
+            this.linkLabelEditAlert.TabIndex = 19;
+            this.linkLabelEditAlert.TabStop = true;
+            this.linkLabelEditAlert.Text = "Edit Alert";
+            this.linkLabelEditAlert.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
-            // linkLabel1
+            // linkLabelAddAlert
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(12, 33);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(50, 13);
-            this.linkLabel1.TabIndex = 18;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Add Alert";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.linkLabelAddAlert.AutoSize = true;
+            this.linkLabelAddAlert.Location = new System.Drawing.Point(12, 33);
+            this.linkLabelAddAlert.Name = "linkLabelAddAlert";
+            this.linkLabelAddAlert.Size = new System.Drawing.Size(50, 13);
+            this.linkLabelAddAlert.TabIndex = 18;
+            this.linkLabelAddAlert.TabStop = true;
+            this.linkLabelAddAlert.Text = "Add Alert";
+            this.linkLabelAddAlert.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // labelHeader
             // 
@@ -83,9 +83,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.linkLabel3);
-            this.Controls.Add(this.linkLabel2);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.linkLabelSetPrep);
+            this.Controls.Add(this.linkLabelEditAlert);
+            this.Controls.Add(this.linkLabelAddAlert);
             this.Controls.Add(this.labelHeader);
             this.Name = "NotificationsSidePanel";
             this.Size = new System.Drawing.Size(160, 600);
@@ -97,9 +97,9 @@
 
         #endregion
 
-        private System.Windows.Forms.LinkLabel linkLabel3;
-        private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkLabelSetPrep;
+        private System.Windows.Forms.LinkLabel linkLabelEditAlert;
+        private System.Windows.Forms.LinkLabel linkLabelAddAlert;
         private System.Windows.Forms.Label labelHeader;
 
     }

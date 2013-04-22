@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.labelTitle = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBoxSMSMessages = new System.Windows.Forms.CheckBox();
+            this.checkBoxSendMapAlert = new System.Windows.Forms.CheckBox();
             this.buttonSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -44,25 +44,25 @@
             this.labelTitle.TabIndex = 2;
             this.labelTitle.Text = "Set Notification Preferences";
             // 
-            // checkBox1
+            // checkBoxSMSMessages
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(41, 47);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(142, 17);
-            this.checkBox1.TabIndex = 3;
-            this.checkBox1.Text = "Receive SMS messages";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxSMSMessages.AutoSize = true;
+            this.checkBoxSMSMessages.Location = new System.Drawing.Point(41, 47);
+            this.checkBoxSMSMessages.Name = "checkBoxSMSMessages";
+            this.checkBoxSMSMessages.Size = new System.Drawing.Size(142, 17);
+            this.checkBoxSMSMessages.TabIndex = 3;
+            this.checkBoxSMSMessages.Text = "Receive SMS messages";
+            this.checkBoxSMSMessages.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // checkBoxSendMapAlert
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(41, 70);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(121, 17);
-            this.checkBox2.TabIndex = 4;
-            this.checkBox2.Text = "Send Map with Alert";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBoxSendMapAlert.AutoSize = true;
+            this.checkBoxSendMapAlert.Location = new System.Drawing.Point(41, 70);
+            this.checkBoxSendMapAlert.Name = "checkBoxSendMapAlert";
+            this.checkBoxSendMapAlert.Size = new System.Drawing.Size(121, 17);
+            this.checkBoxSendMapAlert.TabIndex = 4;
+            this.checkBoxSendMapAlert.Text = "Send Map with Alert";
+            this.checkBoxSendMapAlert.UseVisualStyleBackColor = true;
             // 
             // buttonSave
             // 
@@ -79,8 +79,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.buttonSave);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.checkBoxSendMapAlert);
+            this.Controls.Add(this.checkBoxSMSMessages);
             this.Controls.Add(this.labelTitle);
             this.Name = "SetNotificationPreferencesScreen";
             this.Size = new System.Drawing.Size(820, 480);
@@ -93,8 +93,8 @@
         #endregion
 
         private System.Windows.Forms.Label labelTitle;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBoxSMSMessages;
+        private System.Windows.Forms.CheckBox checkBoxSendMapAlert;
         private System.Windows.Forms.Button buttonSave;
     }
 }
