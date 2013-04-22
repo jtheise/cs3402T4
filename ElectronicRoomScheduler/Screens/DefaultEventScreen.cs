@@ -1,4 +1,13 @@
-﻿using System;
+﻿/***************************************************
+ * CS3240 Electronic Room Seceduler
+ * Coded: Rob Risner
+ * Commented: Justin Theisen
+ *
+ * 
+ * Default event screen
+ * *************************************************/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -16,7 +25,7 @@ namespace ElectronicRoomScheduler.Screens
 
         public DefaultEventScreen()
         {
-            InitializeComponent();
+            InitializeComponent(); //load screen
         }
 
         private void DefaultEventScreen_Load(object sender, EventArgs e)
@@ -34,6 +43,7 @@ namespace ElectronicRoomScheduler.Screens
 
             if (listView.Items.Count > 0)
             {
+                //size listview properly
                 listView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
                 listView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
             }
@@ -52,6 +62,7 @@ namespace ElectronicRoomScheduler.Screens
         {
             List<Control> controls = Program.GetParent().Controls.Find("EventsSidePanel", true).ToList();
 
+            //if something is selected enable edit and delete
             if (controls.Count == 1)
             {
                 SidePanels.EventsSidePanel sidePanel = ((SidePanels.EventsSidePanel)controls[0]);

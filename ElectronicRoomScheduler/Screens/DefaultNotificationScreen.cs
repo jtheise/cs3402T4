@@ -1,4 +1,13 @@
-﻿using System;
+﻿/***************************************************
+ * CS3240 Electronic Room Seceduler
+ * Coded: Rob Risner
+ * Commented: Justin Theisen
+ *
+ * 
+ * Default notifcications screen
+ * *************************************************/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -25,6 +34,7 @@ namespace ElectronicRoomScheduler.Screens
 
             listView.Items.Clear();
 
+            //set up the list veiw
             foreach (Notification item in Program.GetParent().NotificationList)
             {
                 string sentTo = "";
