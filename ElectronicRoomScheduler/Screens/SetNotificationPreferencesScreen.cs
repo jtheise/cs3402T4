@@ -23,7 +23,11 @@ namespace ElectronicRoomScheduler.Screens
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
+            // settings would be saved here
+
             Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" });
+
+            // settings are not actually saved. load new screen
             Program.GetParent().LoadScreen("DefaultNotification");
         }
     }
