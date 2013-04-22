@@ -1,4 +1,13 @@
-﻿using System;
+﻿/***************************************************
+ * CS3240 Electronic Room Seceduler
+ * Coded: Rob Risner
+ * Commented: Justin Theisen
+ *
+ * 
+ * Edit Notifications Screens
+ * *************************************************/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -24,6 +33,8 @@ namespace ElectronicRoomScheduler.Screens
             this.Dock = DockStyle.Fill;
             Program.GetParent().AcceptButton = buttonSaveNotification;
 
+            //canned data
+
             EmailsAndPhoneNumbers.Add("(419) 867 - 5309");
             EmailsAndPhoneNumbers.Add("Blah@bgsu.edu");
 
@@ -38,6 +49,7 @@ namespace ElectronicRoomScheduler.Screens
 
             foreach (var item in EmailsAndPhoneNumbers)
             {
+                //labels for drag and drop
 
                 Label newLabel = new Label();
                 newLabel.AutoSize = true;
@@ -61,6 +73,8 @@ namespace ElectronicRoomScheduler.Screens
 
             foreach (var item in Program.GetParent().EventList)
             {
+                //drag and drop labels
+
                 Label newLabel2 = new Label();
                 newLabel2.AutoSize = true;
                 newLabel2.Text = item.Host + ": " + item.Name;
@@ -82,6 +96,7 @@ namespace ElectronicRoomScheduler.Screens
 
             foreach (var item in Program.GetParent().ClassList)
             {
+                //draw labels for drag and drop
 
                 Label newLabel = new Label();
                 newLabel.AutoSize = true;

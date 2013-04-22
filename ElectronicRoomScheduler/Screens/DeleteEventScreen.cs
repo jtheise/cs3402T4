@@ -1,4 +1,13 @@
-﻿using System;
+﻿/***************************************************
+ * CS3240 Electronic Room Seceduler
+ * Coded: Rob Risner
+ * Commented: Justin Theisen
+ *
+ * 
+ * Delete Events screen
+ * *************************************************/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -22,6 +31,8 @@ namespace ElectronicRoomScheduler.Screens
         {
             this.Dock = DockStyle.Fill;
 
+            //load the event
+
             labelMsg.Text = labelMsg.Text.Replace("%0", Program.GetParent().EventList[LoadedId].Name);
 
             List<Control> controls = Program.GetParent().Controls.Find("EventsSidePanel", true).ToList();
@@ -37,8 +48,9 @@ namespace ElectronicRoomScheduler.Screens
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" });
+            Program.LogButtonClick(new string[] { DateTime.Now.ToString(), ((Button)sender).Name, "Click" }); //log data
 
+            //delete the event
             Program.GetParent().EventList.RemoveAt(LoadedId);
 
             MessageBox.Show("Event was deleted successfully. If the notify checkbox was selected, notifications have been sent.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
