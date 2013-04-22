@@ -23,32 +23,31 @@ namespace ElectronicRoomScheduler.Screens
 
             // pick some random classes and events to add to the calendar....
 
-
             DateTime start = new DateTime(2013, 4, 15, 8, 0, 0);
-            Random r = new Random((int)DateTime.Now.Ticks);
+            Random r = new Random((int)DateTime.Now.Ticks); // seed random 
 
-            List<string> ClassesAdded = new List<string>();
+            List<string> ClassesAdded = new List<string>(); // list to hold classes added
             int classAddCount = 0;
-            List<int> RandomNumbers = new List<int>();
+            List<int> RandomNumbers = new List<int>(); // randomly generated numbers used for class numbers
             
             
             // pull 3 random classes and 3 events to add to the student's schedule
 
-            for (int i = 0; i < Program.GetParent().ClassList.Count; i++)
+            for (int i = 0; i < Program.GetParent().ClassList.Count; i++) 
             {
                 int random = -1;
 
                 while (random == -1 || RandomNumbers.Contains(random))
-                    random = r.Next(0, Program.GetParent().ClassList.Count);
+                    random = r.Next(0, Program.GetParent().ClassList.Count); // generate a random class number
 
-                RandomNumbers.Add(random);
+                RandomNumbers.Add(random); // add it to the list
             }
 
             List<string> entries = new List<string>(210); // row number * columns + (column number (day of the week))
 
             for (int i = 0; i < 210; i++)
             {
-                entries.Add("");
+                entries.Add(""); // pre-populate 
             }
 
             for (int i = 0; i < RandomNumbers.Count; i++)
@@ -64,6 +63,9 @@ namespace ElectronicRoomScheduler.Screens
                 Days = Days.Trim();
 
                 string classinfo = "";
+
+                // build the class information to show on a message box
+
                 classinfo += "Course Id: " + c.CourseId + "\r\n";
                 classinfo += "Course Name: " + c.CourseName + "\r\n";
                 classinfo += "Section Number: " + c.SectionNumber + "\r\n";
@@ -72,21 +74,20 @@ namespace ElectronicRoomScheduler.Screens
                 classinfo += "Department: " + c.Department + "\r\n";
                 classinfo += "Instructor: " + c.Instructor + "\r\n";
 
-
+                // create a new widget to hold the information
                 Widgets.ScheduleWidget schdule = new Widgets.ScheduleWidget(r.Next(int.MaxValue), classinfo);
                 schdule.labelName.Text = c.CourseName;
                 schdule.labelTime.Text = c.StartTime.ToString("hh:mm tt") + " - " + c.EndTime.ToString("hh:mm tt") +"  " +  Days;
 
                 flowLayoutPanel1.Controls.Add(schdule);
 
-
+                // calculate the class hours to place on listview
                 int hour = (c.StartTime.Hour * 2) + (c.StartTime.Minute / 30) - 16;
                 int hour_end = (c.EndTime.Hour * 2) + (c.EndTime.Minute / 30) - 15;
 
-                for (int j = hour; j < hour_end; j++)
+                for (int j = hour; j < hour_end; j++) // loop through the class hours
                 {
-
-                    foreach (var item in c.Days)
+                    foreach (var item in c.Days) // for each day in the week (M-SUN)
                     {
                         int dayNumber = 0;
 
@@ -105,7 +106,6 @@ namespace ElectronicRoomScheduler.Screens
                         if (item == "Sun")
                             dayNumber = 7;
 
-
                         if (j == hour)
                             entries[j * 6 + dayNumber] = c.CourseName;
                         else if (j == hour_end - 1 && (hour_end - hour) > 2)
@@ -116,19 +116,14 @@ namespace ElectronicRoomScheduler.Screens
                             entries[j * 6 + dayNumber] = c.StartTime.ToString("hh:mm") + "-" + c.EndTime.ToString("hh:mm");
                         else 
                             entries[j * 6 + dayNumber] = "...";
-
                     }
-
-
-
                 }
 
-                if (i == 2)
+                if (i == 2) // break if more than 1 class conflicts
                     break;
             }
             
-
-            for (int i = 0; i < 31; i++)
+            for (int i = 0; i < 31; i++) // loop though an entire day
             {
                 ListViewItem item = new ListViewItem(start.ToString("hh:mm tt"));
 
@@ -142,7 +137,7 @@ namespace ElectronicRoomScheduler.Screens
                 if (!string.IsNullOrWhiteSpace(result))
                 {
                     item.SubItems.Add(result);
-                    item.SubItems[1].BackColor = Color.Red;
+                    item.SubItems[1].BackColor = Color.Red; // color filled in schedule in red
                 }
                 else
                     item.SubItems.Add(result);
@@ -150,7 +145,7 @@ namespace ElectronicRoomScheduler.Screens
                 if (!string.IsNullOrWhiteSpace(result2))
                 {
                     item.SubItems.Add(result2);
-                    item.SubItems[2].BackColor = Color.Red;
+                    item.SubItems[2].BackColor = Color.Red; // color filled in schedule in red
                 }
                 else
                     item.SubItems.Add(result2);
@@ -158,7 +153,7 @@ namespace ElectronicRoomScheduler.Screens
                 if (!string.IsNullOrWhiteSpace(result3))
                 {
                     item.SubItems.Add(result3);
-                    item.SubItems[3].BackColor = Color.Red;
+                    item.SubItems[3].BackColor = Color.Red; // color filled in schedule in red
                 }
                 else
                     item.SubItems.Add(result3);
@@ -167,7 +162,7 @@ namespace ElectronicRoomScheduler.Screens
                 if (!string.IsNullOrWhiteSpace(result4))
                 {
                     item.SubItems.Add(result4);
-                    item.SubItems[4].BackColor = Color.Red;
+                    item.SubItems[4].BackColor = Color.Red; // color filled in schedule in red
                 }
                 else
                     item.SubItems.Add(result4);
@@ -175,7 +170,7 @@ namespace ElectronicRoomScheduler.Screens
                 if (!string.IsNullOrWhiteSpace(result5))
                 {
                     item.SubItems.Add(result5);
-                    item.SubItems[5].BackColor = Color.Red;
+                    item.SubItems[5].BackColor = Color.Red; // color filled in schedule in red
                 }
                 else
                     item.SubItems.Add(result5);
@@ -183,16 +178,16 @@ namespace ElectronicRoomScheduler.Screens
                 if (!string.IsNullOrWhiteSpace(result6))
                 {
                     item.SubItems.Add(result6);
-                    item.SubItems[6].BackColor = Color.Red;
+                    item.SubItems[6].BackColor = Color.Red; // color filled in schedule in red
                 }
                 else
                     item.SubItems.Add(result6);
 
-                item.UseItemStyleForSubItems = false;
+                item.UseItemStyleForSubItems = false; // each sub-item has its own style
 
                 listView.Items.Add(item);
 
-                start = start.AddMinutes(30);
+                start = start.AddMinutes(30); // day begins at 8:00 AM
             }
 
             
