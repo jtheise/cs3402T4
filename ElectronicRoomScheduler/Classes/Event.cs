@@ -1,4 +1,13 @@
-﻿using System;
+﻿/***************************************************
+ * CS3240 Electronic Room Seceduler
+ * Coded: Rob Risner
+ * Commented: Justin Theisen
+ *
+ * 
+ * Class Definition for our data on events
+ * *************************************************/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
